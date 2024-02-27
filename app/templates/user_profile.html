@@ -8,7 +8,17 @@
 <body>
     <h2>User Profile</h2>
     <!-- Add user profile details here -->
-    <p>Welcome, {{ username }}!</p>
+    <p>Welcome, <span id="username">{{ username }}</span>!</p>
     <p>This is your user profile page.</p>
+    
+    <div>
+        <h3>User Details:</h3>
+        <ul>
+            <li><strong>Name:</strong> John Doe</li>
+            <li><strong>Email:</strong> johndoe@example.com</li>
+            <li><strong>Age:</strong> 30</li>
+            <!-- Add more details as needed -->
+        </ul>
+    </div>
 </body>
 </html>
