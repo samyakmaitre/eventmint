@@ -1,7 +1,0 @@
-# HTTrack Website Copier Cookie File
-# This file format is compatible with Netscape cookies
-.bookmyshow.com	TRUE	/	FALSE	1999999999	__cf_bm	Dl5CqQ6wtL1_gMs9rm3InL6Nw0spxbbRxstjRTITnhg-1709199884-1.0-AZi1B32VBGhLz27oz1ZCVvszBgsYck8zF60bxQOcTssSUF4zMKJVwUi9zLeiMCKR33gZz3lu+1VqgwSFz78p1PA=
-in.bookmyshow.com	TRUE	/	FALSE	1999999999	SameSite	None
-.themeforest.net	TRUE	/	FALSE	1999999999	__cf_bm	acS76iMuClh_B83eYGU8zJBbKJme4OwJmNPMFNxomtE-1709200124-1.0-AYQme0+2MZz79A9f/1AEtEnxTnTFG7Dfz6ubM/ihF4DGhTlB9RxSxAznNA2VeeL65lbDm9v4rb2GP/B/YMgCa8c=
-preview.themeforest.net	TRUE	/	FALSE	1999999999	SameSite	None
-
