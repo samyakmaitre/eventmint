@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 function Movie({ title, description }) {
   return (
     <div className="movie">
