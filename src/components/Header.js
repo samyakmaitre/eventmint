@@ -4,7 +4,7 @@ import React from 'react';
 function Header() {
   return (
     <header>
-      <h1>BookMyShow</h1>
+      <h1>Event Mint</h1>
       <nav>
         <ul>
           <li>Home</li>

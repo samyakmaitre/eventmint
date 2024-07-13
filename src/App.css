@@ -1,3 +1,8 @@
+/* Add this to your index.css or App.css */
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+
+
 .App {
   text-align: center;
 }
@@ -122,19 +127,5 @@ header nav ul li {
   background-color: #ff1f1f;
 }
 
-/* Footer Styles */
-footer {
-  background-color: #333;
-  color: white;
-  padding: 1rem 0;
-  text-align: center;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
 
-footer p {
-  margin: 0;
-  font-size: 1rem;
-}
 
