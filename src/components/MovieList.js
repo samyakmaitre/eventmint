@@ -7,8 +7,6 @@ import poster2 from '../assets/images/poster2.jpg';
 import poster3 from '../assets/images/poster3.jpg';
 import poster4 from '../assets/images/poster4.jpg';
 import poster5 from '../assets/images/poster5.jpg';
- 
-
 
 function MovieList() {
   const movies = [

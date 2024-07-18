@@ -1,6 +1,7 @@
 // Header.js
 import React from 'react';
-import '../assets/styles/Header.css'; // Import a CSS file for additional styling if needed
+import { Link } from 'react-router-dom';
+import '../assets/styles/Header.css';
 
 function Header() {
   return (
@@ -22,9 +23,10 @@ function Header() {
           <option value="Delhi">Delhi</option>
           <option value="Bangalore">Bangalore</option>
           <option value="Pune">Pune</option>
-          {/* Add more locations as needed */}
         </select>
-        <button className="btn btn-outline-primary">Sign in</button>
+        <button className="btn btn-outline-primary">
+          <Link to="/login">Sign in</Link>
+        </button>
       </div>
     </header>
   );

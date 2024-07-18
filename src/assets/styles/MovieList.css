@@ -1,6 +1,19 @@
+/* MovieList.css */
+
 .movie-list {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  .movie-list::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for better UX */
+  }
+  
+  .movie-list > div {
+    flex: 0 0 calc(20% - 10px); /* 20% width minus the gap between items */
+    scroll-snap-align: start;
   }
   
