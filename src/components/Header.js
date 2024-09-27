@@ -1,7 +1,9 @@
 // Header.js
-import React from 'react';
+import React from 'react'; // Add this line
 import { Link } from 'react-router-dom';
 import '../assets/styles/Header.css';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';  
+
 
 function Header() {
   return (

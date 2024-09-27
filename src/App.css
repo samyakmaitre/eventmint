@@ -1,7 +1,5 @@
-/* Add this to your index.css or App.css */
-@import '~slick-carousel/slick/slick.css';
-@import '~slick-carousel/slick/slick-theme.css';
-
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
 
 .App {
   text-align: center;
