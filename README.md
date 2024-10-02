@@ -1,7 +1,7 @@
 #  **Event Mint : Where every event is a masterpiece**
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/dc67f190-6fed-43d5-acd3-53720916f033" />
+  <img src="https://github.com/user-attachments/assets/c2a3721e-2002-42bb-aea1-796ed182937d" />
 </p>
 
 **Event Mint** is a dynamic web application built for managing events in educational institutions such as schools, colleges, and universities. Inspired by platforms like *BookMyShow*, it simplifies event discovery, registration, payments, and management for organizers and attendees alike.
