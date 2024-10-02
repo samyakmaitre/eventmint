@@ -1,4 +1,4 @@
-#  **Event Mint : Where every event is a masterpiece**
+#  **Event Mint : Seamless Event Experience**
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/c2a3721e-2002-42bb-aea1-796ed182937d" />
