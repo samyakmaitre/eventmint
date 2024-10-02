@@ -39,14 +39,28 @@
     font-size: 1rem;
     margin-right: 10px;
   }
-  
-  .signin-button {
-    font-size: 1.2rem;
-    padding: 0px;
-    background-color: blue;
+
+  .btn-outline-primary{
+    padding: 10px;
+    height: 40px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .btn-outline-primary :first-child{
+    text-decoration: none;
+  }
+
+  .btn-outline-primary:hover :first-child{
     color: white;
-    border: none;
-    border-radius: 5px;
+  }
+
+  .btn-outline-primary:hover{
+    background-color: #0D6EFD;
+    color: white;
   }
   
   /* NavBar.css */
