@@ -2,6 +2,7 @@
 import React from 'react'; // Add this line
 import { Link } from 'react-router-dom';
 import '../assets/styles/Header.css';
+import projectLogo from '../assets/images/logo8.png';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';  
 
 
@@ -9,7 +10,7 @@ function Header() {
   return (
     <header className="header container-fluid d-flex align-items-center justify-content-between p-3 bg-light">
       <div className="logo">
-        <span>book</span><span className="highlight">my</span><span>show</span>
+        <img src={projectLogo} alt="logo"/>
       </div>
       <div className="search-bar input-group">
         <input 

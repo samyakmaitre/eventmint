@@ -8,8 +8,8 @@
   }
   
   .logo {
-    font-weight: bold;
-    font-size: 1.5rem;
+    height: 40px;
+    width: auto;
   }
   
   .logo .highlight {
