@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 import Offers from './components/Offers';
 import './App.css'; // Your custom CSS
 
+
 function App() {
   return (
     <Router>
