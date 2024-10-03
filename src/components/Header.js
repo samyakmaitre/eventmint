@@ -15,7 +15,7 @@ function Header() {
 	const { user } = useSelector((state) => state.profile);
 
 	return (
-		<header className="header container-fluid d-flex align-items-center justify-content-between p-3 bg-white">
+		<header className="header fixed z-10 container-fluid d-flex align-items-center justify-content-between p-3 bg-white">
 			<div className="logo">
 				<span>book</span>
 				<span className="highlight">my</span>
