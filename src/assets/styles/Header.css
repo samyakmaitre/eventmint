@@ -1,84 +1,68 @@
 /* Header.css */
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    color: #000000;
-  }
-  
-  .logo {
-    font-weight: bold;
-    font-size: 1.5rem;
-  }
-  
-  .logo .highlight {
-    color: #ff5733; /* Customize highlight color */
-  }
-  
-  .logo span {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .search-bar {
-    width: 50%; /* Adjust width as needed */
-  }
-  
-  .search-bar input {
-    padding: 5px;
-    width: 300px;
-  }
-  
-  .location-signin {
-    display: flex;
-    align-items: center;
-  }
-  
-  .location {
-    font-size: 1rem;
-    margin-right: 10px;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  color: #000000;
+  background-color: white; /* Ensures the header has a solid background */
+  position: sticky; /* Make it sticky */
+  top: 0; /* Stick to the top */
+  z-index: 1000; /* Ensure it appears above other elements */
+}
 
-  .btn-outline-primary{
-    padding: 10px;
-    height: 40px;
-    width: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-  }
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
 
-  .btn-outline-primary :first-child{
-    text-decoration: none;
-  }
+.logo .highlight {
+  color: #ff5733; /* Customize highlight color */
+}
 
-  .btn-outline-primary:hover :first-child{
-    color: white;
-  }
+.logo span {
+  font-size: 24px;
+  font-weight: bold;
+}
 
-  .btn-outline-primary:hover{
-    background-color: #0D6EFD;
-    color: white;
-  }
-  
-  /* NavBar.css */
-  .navbar {
-    background-color: #0b0404;
-    padding: 10px;
-  }
-  
-  .main-nav ul, .additional-links ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .main-nav ul li, .additional-links ul li {
-    margin: 0 10px;
-    cursor: pointer;
-  }
-  
+.search-bar {
+  width: 50%; /* Adjust width as needed */
+}
+
+.search-bar input {
+  padding: 5px;
+  width: 300px;
+}
+
+.location-signin {
+  display: flex;
+  align-items: center;
+}
+
+.location {
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
+.btn-outline-primary {
+  padding: 10px;
+  height: 40px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.btn-outline-primary :first-child {
+  text-decoration: none;
+}
+
+.btn-outline-primary:hover :first-child {
+  color: white;
+}
+
+.btn-outline-primary:hover {
+  background-color: #0d6efd;
+  color: white;
+}
