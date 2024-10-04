@@ -1,44 +1,54 @@
-/* NavBar.css */
+/* General styles for the navbar */
 .navbar {
-    background-color: #e8e8e8;
-    padding: 10px;
-    display: flex;
-    width: 100%;
-    /* flex-direction: column; */
-    align-items: center;
-  }
-  
-  .main-nav ul{
-    list-style: none;
-    display: flex;
-    justify-content: left;
-    padding: 0;
-    margin: 10px 0;
-    width: 100%;
-    /* min-width: 1200px; */
-    
-  }
+  display: flex;
+  justify-content: space-between; /* Space out main and additional links */
+  align-items: center;
+  padding: 10px 50px;
+  background-color: #333;
+  color: white;
+}
 
-  .additional-links ul {
-    list-style: none;
-    display: flex;
-    /* justify-content: right; */
-    padding: 0;
-    margin: 10px 0;
-    /* width: 100%; */
-    /* max-width: 1200px; */
-    
-  }
-  
-  .main-nav ul li, .additional-links ul li {
-    margin: 0 10px;
-    cursor: pointer;
-    font-size: 16px;
-    color: #333;
-    transition: color 0.3s;
-  }
-  
-  .main-nav ul li:hover, .additional-links ul li:hover {
-    color: #007bff;
-  }
-  
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 30px; /* Add space between items */
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect */
+.navbar a:hover {
+  color: #f44336; /* Change color on hover */
+}
+
+/* For the additional links */
+.additional-links ul {
+  gap: 20px;
+}
+
+/* Underline hover effect */
+.navbar li a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #f44336;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar li a:hover::before {
+  visibility: visible;
+  width: 100%;
+}
