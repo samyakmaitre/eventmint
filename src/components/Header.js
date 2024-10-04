@@ -49,11 +49,6 @@ function Header() {
 							onClick={() => navigate("/login")}>
 							Sign in
 						</button>
-						<button
-							className="px-3 rounded-lg w-[120px] py-2 border-[2px] border-blue-600 hover:bg-blue-400"
-							onClick={() => navigate("/signup")}>
-							New Account
-						</button>
 					</div>
 				)}
 			</div>

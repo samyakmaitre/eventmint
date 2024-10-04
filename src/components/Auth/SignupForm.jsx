@@ -57,7 +57,7 @@ function SignupForm() {
 	};
 
 	return (
-		<div>
+		<div className="py-2">
 			{/* Form */}
 			<form
 				onSubmit={handleOnSubmit}
@@ -65,7 +65,7 @@ function SignupForm() {
 				<div className="flex gap-x-4">
 					<label>
 						<p className="mb-1 text-[0.875rem] leading-[1.375rem]">
-							First Name <sup className="text-pink-200">*</sup>
+							First Name 
 						</p>
 						<input
 							required
@@ -79,7 +79,7 @@ function SignupForm() {
 					</label>
 					<label>
 						<p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
-							Last Name <sup className="text-pink-200">*</sup>
+							Last Name 
 						</p>
 						<input
 							required
@@ -94,7 +94,7 @@ function SignupForm() {
 				</div>
 				<label className="w-full">
 					<p className="mb-1 text-[0.875rem] leading-[1.375rem] ">
-						Email Address <sup className="text-pink-200">*</sup>
+						Email Address 
 					</p>
 					<input
 						required
@@ -109,7 +109,7 @@ function SignupForm() {
 				<div className="flex gap-x-4">
 					<label className="relative">
 						<p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
-							Create Password <sup className="text-pink-200">*</sup>
+							Create Password
 						</p>
 						<input
 							required
@@ -138,7 +138,7 @@ function SignupForm() {
 					</label>
 					<label className="relative">
 						<p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
-							Confirm Password <sup className="text-pink-200">*</sup>
+							Confirm Password 
 						</p>
 						<input
 							required
@@ -171,6 +171,23 @@ function SignupForm() {
 					className="mt-6 font-semibold py-[8px] px-[12px] text-richblack-900  p-2 border-[1px] bg-yellow-400 hover:bg-yellow-500 rounded-md  text-black">
 					Create Account
 				</button>
+				<div className="flex gap-2 flex-col mt-2">
+					<div className="flex gap-2 justify-center items-center">
+						<span className="h-[1px] bg-slate-200 w-[70%]"></span>
+						<span>OR</span>
+						<span className="h-[1px] bg-slate-200 w-[70%]"></span>
+					</div>
+					<div className="flex flex-row gap-2 justify-center items-center">
+						<div className=" font-normal text-slate-300 select-none">
+							Have an account?
+						</div>
+						<button
+							className="text-blue-300 hover:text-blue-400 cursor-pointer font-normal"
+							onClick={() => navigate("/login")}>
+							Sign in
+						</button>
+					</div>
+				</div>
 			</form>
 		</div>
 	);
