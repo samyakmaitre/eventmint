@@ -2,6 +2,9 @@
 .header {
     display: flex;
     justify-content: space-between;
+    position: fixed ;
+    z-index: 1000;
+    width: 100%;
     align-items: center;
     padding: 10px;
     color: #000000;
