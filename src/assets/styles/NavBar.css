@@ -1,13 +1,14 @@
 /* NavBar.css */
 .navbar {
     background-color: #e8e8e8;
-    padding-top: 80px;
+    padding-top: 81px;
     padding-bottom:10px;
     display: flex;
     width: 100%;
     /* flex-direction: column; */
     align-items: center;
     overflow-x: auto; /* Enable horizontal scrolling if needed */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); 
   }
 
   .main-nav ul{
