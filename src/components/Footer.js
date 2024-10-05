@@ -1,70 +1,54 @@
-import React from 'react';
-import '../assets/styles/Footer.css';
+import React, { useEffect } from 'react'
+import '../assets/styles/Footer.css'
+import { assets } from '../assets/assets';
 
-// import React from 'react';
+const Footer = () => {
 
+    const handleScroll=()=>{
+        window.scrollTo(0, 0);
+    }
 
-// function Footer() {
-//   return (
-//     <footer>
-//       <p>&copy; 2024 BookMyShow. All rights reserved.</p>
-//     </footer>
-//   );
-// }
-
-// export default Footer;
-
-
-function Footer() {
   return (
-    <footer>
-      <div className="footer-container">
-        <div className="footer-column">
-          <h5>Column 1</h5>
-          <ul>
-            <li><a href="#">Item 1</a></li>
-            <li><a href="#">Item 2</a></li>
-            <li><a href="#">Item 3</a></li>
-          </ul>
+    <div className='footer' id='footer'>
+        <hr />
+        <div className="footer-content">
+            <div className="footer-content-left">
+                <img src="/logo.png" alt="logo" style={{width: '320px'}} />
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit eveniet mollitia dolor, accusantium exercitationem reiciendis magni. Doloremque praesentium ut, veniam mollitia ea dolorum qui atque consequuntur pariatur vitae laboriosam quod!</p>
+                <div className="footer-social-icons">
+                    <img src={assets.facebook_icon} alt="fb" />
+                    <img src={assets.linkedin_icon} alt="linked" />
+                    <img src={assets.twitter_icon} alt="twitter" />
+                </div>
+                
+            </div>
+            <div className="footer-content-center">
+                <h2>COMPANY</h2>
+                <ul>
+                    <li>Home</li>
+                    <li>About Us</li>
+                    <li>Delivery</li>
+                    <li>Privacy Policy</li>
+                </ul>
+                <div className="footer-scroll offset-2">
+                    <button onClick={handleScroll} className='btn btn-outline-danger'>Back to Top</button>
+                </div>
+            </div>
+            <div className="footer-content-right">
+                <h2>GET IN TOUCH</h2>
+                <ul>
+                    <li>+1 254641254</li>
+                    <li>email@EventMint.com</li>
+                </ul>
+                <br />
+               
+            </div>
         </div>
-        <div className="footer-column">
-          <h5>Column 2</h5>
-          <ul>
-            <li><a href="#">Item 1</a></li>
-            <li><a href="#">Item 2</a></li>
-            <li><a href="#">Item 3</a></li>
-          </ul>
-        </div>
-        <div className="footer-column">
-          <h5>Column 3</h5>
-          <ul>
-            <li><a href="#">Item 1</a></li>
-            <li><a href="#">Item 2</a></li>
-            <li><a href="#">Item 3</a></li>
-          </ul>
-        </div>
-        <div className="footer-column">
-          <h5>Column 4</h5>
-          <ul>
-            <li><a href="#">Item 1</a></li>
-            <li><a href="#">Item 2</a></li>
-            <li><a href="#">Item 3</a></li>
-          </ul>
-        </div>
-        <div className="footer-column">
-          <h5>Column 5</h5>
-          <ul>
-            <li><a href="#">Item 1</a></li>
-            <li><a href="#">Item 2</a></li>
-            <li><a href="#">Item 3</a></li>
-          </ul>
-        </div>
-      </div>
-      <div className="footer-bottom">
-        <p>&copy; 2024 BookMyShow. All rights reserved.</p>
-      </div>
-    </footer>
-  );
+        <hr />
+        <p className="footer-copyright">Copyright 2024 &copy; EventMint.com - All Rights Reserved.</p>
+
+    </div>
+  )
 }
 
-export default Footer;
+export default Footer

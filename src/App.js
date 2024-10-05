@@ -1,27 +1,34 @@
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom'; // Import Router from react-router-dom
-import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
-
+import { Route, Routes } from 'react-router-dom'; 
+import 'bootstrap/dist/css/bootstrap.min.css'; 
 import Header from './components/Header';
 import NavBar from './components/NavBar'; 
-import MovieList from './components/MovieList';
-import ImageSlider from './components/ImageSlider';
 import Footer from './components/Footer';
-import Offers from './components/Offers';
-import './App.css'; // Your custom CSS
+import Home from './pages/Home/Home';
+import Signup from './pages/AuthGuard/Signup';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import './App.css';
+import Login from './pages/AuthGuard/Login.jsx';
+import Dashboard from './pages/Dashboard/Dashboard.jsx';
 
-function App() {
+const App=()=> {
   return (
-    <Router>
+    <>
+    <ToastContainer />
       <div className="App">
-        <Header />
-        <NavBar />
-        <ImageSlider />
-        <MovieList />
-        <Offers />
+      <Header />
+      
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/user/dashboard' element={<Dashboard />} />
+          <Route path='/user/signup' element={<Signup />} />
+          <Route path='/user/login' element={<Login />} />
+        </Routes>
         <Footer />
       </div>
-    </Router>
+
+    </>
   );
 }
 

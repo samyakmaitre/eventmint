@@ -1,0 +1,32 @@
+/* MovieList.css */
+
+.event-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin: 8.5rem ;
+  align-items: center;
+  justify-content: flex-start;
+}
+.event-wrapper .event-header{
+  align-self: self-start;
+  font-size: 3.34rem;
+  color: #fff;
+}
+.movie-list {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  .movie-list::-webkit-scrollbar {
+    display: none; 
+  }
+  
+  .movie-list > div {
+    flex: 0 0 calc(20% - 10px); 
+    scroll-snap-align: start;
+  }
+  
