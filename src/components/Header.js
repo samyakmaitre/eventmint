@@ -45,7 +45,7 @@ function Header() {
 				) : (
 					<div className=" flex flex-row gap-2 justify-center items-center">
 						<button
-							className="px-3 rounded-lg w-[120px] py-2 border-[2px] border-blue-600 hover:bg-blue-400"
+							className="px-3 rounded-lg w-[120px] py-2 border-[2px] text-black font-semibold hover:font-semibold border-red-600 hover:bg-red-300"
 							onClick={() => navigate("/login")}>
 							Sign in
 						</button>
