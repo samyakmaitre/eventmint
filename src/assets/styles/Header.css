@@ -8,69 +8,45 @@
     align-items: center;
     padding: 10px;
     color: #000000;
-    background-color: #fff;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1); 
   }
   
-  
-  .logo img {
-    height: 50px; /* Adjust the height as per your design */
-    width: auto; /* This keeps the image's aspect ratio */
-    display: block; /* Ensures the image is displayed properly */
-  }
-  
-   
   .logo {
-    margin-right: 20px; /* Adjust spacing around the logo */
+    font-weight: bold;
+    font-size: 1.5rem;
   }
   
-  /* Responsive design: Adjust the logo size for smaller screens */
-  @media (max-width: 768px) {
-    .logo img {
-      height: 40px; /* Adjust the size for smaller devices */
-    }
+  .logo .highlight {
+    color: #ff5733; /* Customize highlight color */
   }
   
-  .search-bar {
-    width: 50%; /* Adjust width as needed */
+  .logo span {
+    font-size: 24px;
+    font-weight: bold;
   }
-  
-  .search-bar input {
-    padding: 5px;
-    width: 300px;
+  .navbar-brand img{
+    width: 210px;
+    height: 80px;
+    border-radius: 50%;
   }
   
   .location-signin {
     display: flex;
     align-items: center;
+    gap: 20px;
   }
   
   .location {
     font-size: 1rem;
     margin-right: 10px;
   }
-
-  .btn-outline-primary{
-    padding: 10px;
-    height: 40px;
-    width: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-  }
-
-  .btn-outline-primary :first-child{
-    text-decoration: none;
-  }
-
-  .btn-outline-primary:hover :first-child{
+  
+  .signin-button {
+    font-size: 1.2rem;
+    padding: 0px;
+    background-color: blue;
     color: white;
-  }
-
-  .btn-outline-primary:hover{
-    background-color: #0D6EFD;
-    color: white;
+    border: none;
+    border-radius: 5px;
   }
   
   /* NavBar.css */
@@ -86,9 +62,11 @@
     padding: 0;
     margin: 0;
   }
-  
-  .main-nav ul li, .additional-links ul li {
-    margin: 0 10px;
-    cursor: pointer;
+
+  .search-bar .btn {
+    font-size: 16px;
+    padding: 8px 15px;
   }
+}
+
   
