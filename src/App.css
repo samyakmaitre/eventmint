@@ -128,5 +128,98 @@ header nav ul li {
   background-color: #ff0000;
 }
 
+/* Media Queries */
 
+/* For small devices (mobile phones, 350px to 600px wide) */
+@media (min-width: 350px) and (max-width: 600px) {
+  .movie-list {
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center;    /* Center the cards */
+  }
+
+  .movie {
+    width: 100%; 
+    max-width: 350px; 
+    margin: 0.5rem 0;
+  }
+
+  .movie h2 {
+    font-size: 1.2rem;
+  }
+
+  .movie p {
+    font-size: 0.9rem;
+  }
+
+  .movie button {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+/* For medium devices (601px to 900px wide) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .movie-list {
+    flex-direction: row; /* Use row layout */
+    justify-content: center; /* Center the movies */
+  }
+
+  .movie {
+    width: 48%; /* Two movies per row */
+    margin: 0.5rem; /* Add some margin between the movie cards */
+  }
+
+  .movie h2 {
+    font-size: 1.4rem;
+  }
+
+  .movie p {
+    font-size: 1rem;
+  }
+
+  .movie button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+
+/* For large devices (901px to 1200px wide) */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .movie {
+    width: 30%; /* Three movies per row */
+  }
+
+  .movie h2 {
+    font-size: 1.5rem;
+  }
+
+  .movie p {
+    font-size: 1.1rem;
+  }
+
+  .movie button {
+    font-size: 1rem;
+    padding: 0.5rem 1.2rem;
+  }
+}
+
+/* For extra large devices (1201px to 1400px wide) */
+@media (min-width: 1201px) and (max-width: 1400px) {
+  .movie {
+    width: 25%; /* Four movies per row */
+  }
+
+  .movie h2 {
+    font-size: 1.6rem;
+  }
+
+  .movie p {
+    font-size: 1.2rem;
+  }
+
+  .movie button {
+    font-size: 1.1rem;
+    padding: 0.6rem 1.4rem;
+  }
+}
 
