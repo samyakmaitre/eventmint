@@ -54,7 +54,7 @@ body {
 
 /* Header Styles */
 header {
-  background-color: #ff4b2b;
+  background-color: #ff0000;
   color: white;
   padding: 1rem 0;
   text-align: center;
@@ -116,7 +116,7 @@ header nav ul li {
 }
 
 .movie button {
-  background-color: #ff4b2b;
+  background-color: #ff0000;
   border: none;
   color: white;
   cursor: pointer;
@@ -127,7 +127,7 @@ header nav ul li {
 }
 
 .movie button:hover {
-  background-color: #ff1f1f;
+  background-color: #ff0000;
 }
 
 
