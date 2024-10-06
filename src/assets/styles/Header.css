@@ -12,18 +12,23 @@
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1); 
   }
   
+  
+  .logo img {
+    height: 50px; /* Adjust the height as per your design */
+    width: auto; /* This keeps the image's aspect ratio */
+    display: block; /* Ensures the image is displayed properly */
+  }
+  
+   
   .logo {
-    font-weight: bold;
-    font-size: 1.5rem;
+    margin-right: 20px; /* Adjust spacing around the logo */
   }
   
-  .logo .highlight {
-    color: #ff5733; /* Customize highlight color */
-  }
-  
-  .logo span {
-    font-size: 24px;
-    font-weight: bold;
+  /* Responsive design: Adjust the logo size for smaller screens */
+  @media (max-width: 768px) {
+    .logo img {
+      height: 40px; /* Adjust the size for smaller devices */
+    }
   }
   
   .search-bar {
