@@ -1,7 +1,7 @@
 
 .footer{
-  color: #fff;
-  background-color: #c31210;
+    /* background-color: #bbb7b7; */
+    color: #000;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,22 +25,28 @@
     align-items: start;
     gap: 20px;
 }
+.footer-content-left p{
+    align-self: flex-start;
+    text-align: left;
+}
 .footer-content-left li, .footer-content-center li, .footer-content-right li{
     list-style-type: none;
     margin-bottom: 10px;
     cursor: pointer;
 }
  .footer-content-center h2, .footer-content-right h2{
-    color: white;
+    color: #000;
     margin-bottom: 10px;
 }
 .footer-social-icons img{
     width: 40px;
     margin-right: 15px;
     cursor: pointer;
+    background: #000;color: #000;
+    border-radius: 50%;
 }
 .footer-social-icons img:hover{
-    background-color: #2926f3;
+    background-color: #c31210;
     border-radius: 50%;
     transform: translateX(45deg);
 }

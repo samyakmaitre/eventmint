@@ -14,7 +14,9 @@ const Footer = () => {
         <div className="footer-content">
             <div className="footer-content-left">
                 <img src="/logo.png" alt="logo" style={{width: '320px'}} />
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit eveniet mollitia dolor, accusantium exercitationem reiciendis magni. Doloremque praesentium ut, veniam mollitia ea dolorum qui atque consequuntur pariatur vitae laboriosam quod!</p>
+                <p>Event Mint is a dynamic web application built for managing events in educational institutions such as schools, colleges, and universities.simplifies event discovery, registration, payments, and management for organizers and attendees alike.
+
+</p>
                 <div className="footer-social-icons">
                     <img src={assets.facebook_icon} alt="fb" />
                     <img src={assets.linkedin_icon} alt="linked" />

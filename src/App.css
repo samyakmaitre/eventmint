@@ -52,8 +52,8 @@ body {
 
 /* Header Styles */
 header {
-  background-color: #c31210;
-  color: white;
+  background-color: #fff;
+  color: #000;
   padding: 1rem 0;
   text-align: center;
   
@@ -80,9 +80,6 @@ header nav ul li {
   border-radius: 10px;
   background-color: #282c34;
 }
-
-
-
 
 /* Movie List Styles */
 .movie-list {
