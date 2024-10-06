@@ -1,11 +1,9 @@
 /* NavBar.css */
 .navbar {
     background-color: #e8e8e8;
-    padding-top: 81px;
-    padding-bottom:10px;
+    padding: 10px;
     display: flex;
     width: 100%;
-    /* flex-direction: column; */
     align-items: center;
     overflow-x: auto; /* Enable horizontal scrolling if needed */
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); 
@@ -36,12 +34,21 @@
   .main-nav ul li, .additional-links ul li {
     margin: 0 10px;
     cursor: pointer;
-    font-size: 16px;
-    color: #333;
-    transition: color 0.3s;
+    font-size: 19px;
+    color: #000;
+    font-weight: 500;
+    transition: all 0.3s;
+  }
+  .main-nav li a{
+    text-decoration: none;
+    color: inherit;
+    font-weight: 500;
   }
   
-  .main-nav ul li:hover, .additional-links ul li:hover {
-    color: #007bff;
+  .main-nav ul li:hover, .main-nav li a:hover, .additional-links ul li:hover {
+    color: #c31210;
+    font-weight: 600;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in;
   }
   
