@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { logout } from "../services/operations/authAPI";
 import { useDispatch } from "react-redux";
+import logo from '../assets/images/logo1.png';
 
 function Header() {
 	const navigate = useNavigate();
@@ -17,9 +18,7 @@ function Header() {
 	return (
 		<header className="header container-fluid d-flex align-items-center justify-content-between p-3 bg-white">
 			<div className="logo">
-				<span>book</span>
-				<span className="highlight">my</span>
-				<span>show</span>
+			<img src={logo} alt="Logo" className="logo-image" />
 			</div>
 			<div className="search-bar input-group">
 				<input
