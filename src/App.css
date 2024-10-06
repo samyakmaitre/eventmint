@@ -5,7 +5,6 @@
   text-align: center;
   margin: 0px;
   padding: 0px;
-  background-color: #000;
 }
 
 .App-logo {
@@ -27,7 +26,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #000;
 }
 
 .App-link {
@@ -53,7 +52,7 @@ body {
 
 /* Header Styles */
 header {
-  background-color: #ff4b2b;
+  background-color: #c31210;
   color: white;
   padding: 1rem 0;
   text-align: center;
@@ -95,6 +94,7 @@ header nav ul li {
 
 .movie {
   background-color: white;
+  color: #000;
   border: 1px solid #ddd;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);

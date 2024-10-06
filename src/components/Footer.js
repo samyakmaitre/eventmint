@@ -31,7 +31,7 @@ const Footer = () => {
                     <li>Privacy Policy</li>
                 </ul>
                 <div className="footer-scroll offset-2">
-                    <button onClick={handleScroll} className='btn btn-outline-danger'>Back to Top</button>
+                    <button onClick={handleScroll} className='btn btn-dark'>Back to Top</button>
                 </div>
             </div>
             <div className="footer-content-right">

@@ -32,7 +32,7 @@ const Header = () => {
             {userEmail || ""}
           </Link>
         ) : (
-          <Link className="btn btn-outline-danger" to={"/user/signup"}>
+          <Link className="btn btn-dark" to={"/user/signup"}>
             Sign up
           </Link>
         )}

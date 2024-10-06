@@ -1,7 +1,7 @@
 
 .footer{
-  color: #d9d9d9;
-  /* background-color: #2d2679; */
+  color: #fff;
+  background-color: #c31210;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,7 +40,7 @@
     cursor: pointer;
 }
 .footer-social-icons img:hover{
-    background-color: #c31210;
+    background-color: #2926f3;
     border-radius: 50%;
     transform: translateX(45deg);
 }
