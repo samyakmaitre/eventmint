@@ -1,8 +1,11 @@
+
 /* .footer {
+
   background: linear-gradient(to bottom, #1a202c, #000000);
   color: #d1d5db;
   padding: 3rem 0 0;
 }
+
 
 .container {
   max-width: 1200px;
@@ -15,6 +18,20 @@
   grid-template-columns: repeat(1, 1fr);
   gap: 2rem;
 }
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+
 
 @media (min-width: 768px) {
   .footer-grid {
@@ -73,9 +90,12 @@
   border-bottom: 1px solid #4a5568;
 }
 
+
+
 .accordion-item {
   border-bottom: 1px solid #4a5568;
 }
+
 
 .accordion-title {
   display: flex;
@@ -113,6 +133,7 @@
   color: #d1d5db;
   text-decoration: none;
   transition: color 0.3s;
+
 }
 
 .footer-list a:hover {
@@ -145,6 +166,40 @@
   color: #a0aec0;
 }
 
+
+}
+
+.footer-list a:hover {
+  color: #ffffff;
+}
+
+.section-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.subscribe-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.email-input {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #2d3748;
+  border: 1px solid #4a5568;
+  border-radius: 0.25rem;
+  color: #ffffff;
+}
+
+.email-input::placeholder {
+  color: #a0aec0;
+}
+
+
 .email-input:focus {
   outline: none;
   box-shadow: 0 0 0 2px #8b5cf6;
@@ -176,6 +231,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+
 }
 
 .copyright {
@@ -205,6 +261,36 @@
   padding: 1rem 0;
 }
 
+}
+
+.copyright {
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-links a {
+  font-size: 0.875rem;
+  color: #d1d5db;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+.footer-info {
+  margin-top: 2rem;
+  background-color: #2d3748;
+  padding: 1rem 0;
+}
+
+
 .footer-info-content {
   display: flex;
   flex-wrap: wrap;
@@ -228,6 +314,8 @@
   color: #8b5cf6;
 }
 
+
+
 .back-to-top {
   position: fixed;
   bottom: 20px;
@@ -250,6 +338,7 @@
   background: linear-gradient(to right, #7C3AED, #DB2777);
 }
 
+
 @media (max-width: 768px) {
   .footer-bottom-content, .footer-info-content {
     flex-direction: column;
@@ -259,4 +348,7 @@
   .footer-links, .contact-info {
     margin-top: 1rem;
   }
+
+}
 } */
+
