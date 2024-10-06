@@ -150,12 +150,45 @@ const Footer = () => {
           </div>
 
           <div className="footer-section">
+            <Accordion title="About">
+              <ul className="footer-list">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Press</a></li>
+              </ul>
+            </Accordion>
+          </div>
+
+          <div className="footer-section">
+            <Accordion title="Services">
+              <ul className="footer-list">
+                <li><a href="#">Ticket Booking</a></li>
+                <li><a href="#">Event Management</a></li>
+                <li><a href="#">Corporate Bookings</a></li>
+                <li><a href="#">Gift Cards</a></li>
+              </ul>
+            </Accordion>
+          </div>
+
+          <div className="footer-section">
+            <Accordion title="Legal">
+              <ul className="footer-list">
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Refund Policy</a></li>
+                <li><a href="#">Cookie Policy</a></li>
+              </ul>
+            </Accordion>
+          </div>
+
+          <div className="footer-section">
             <Accordion title="Help & Support">
               <ul className="footer-list">
                 <li><a href="#">FAQs</a></li>
-                <li><a href="#">Terms of Service</a></li>
-                <li><a href="#">Privacy Policy</a></li>
                 <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Feedback</a></li>
+                <li><a href="#">Report an Issue</a></li>
               </ul>
             </Accordion>
           </div>

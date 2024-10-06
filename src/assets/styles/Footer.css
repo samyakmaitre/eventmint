@@ -255,3 +255,8 @@
 .back-to-top:hover {
   background: linear-gradient(to right, #7C3AED, #DB2777);
 }
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
