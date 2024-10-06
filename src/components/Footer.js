@@ -1,16 +1,36 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaLinkedinIn } from 'react-icons/fa';
-import { FaLocationDot, FaPhone, FaChevronUp } from 'react-icons/fa6';
+import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaLinkedinIn, FaChevronDown, FaChevronUp } from 'react-icons/fa';
+import { FaLocationDot, FaPhone } from 'react-icons/fa6';
 import { MdEmail } from 'react-icons/md';
-
-import "../assets/styles/Footer.css";
 
 const Logo = () => (
   <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect width="40" height="40" rx="8" fill="url(#gradient)" />
-    <path d="M20 10L28 25H12L20 10Z" fill="white" />
-    <circle cx="20" cy="28" r="3" fill="white" />
+    <motion.rect 
+      width="40" 
+      height="40" 
+      rx="8" 
+      fill="url(#gradient)"
+      initial={{ scale: 0 }}
+      animate={{ scale: 1 }}
+      transition={{ type: "spring", stiffness: 260, damping: 20 }}
+    />
+    <motion.path 
+      d="M20 10L28 25H12L20 10Z" 
+      fill="white"
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.2 }}
+    />
+    <motion.circle 
+      cx="20" 
+      cy="28" 
+      r="3" 
+      fill="white"
+      initial={{ opacity: 0, scale: 0 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ delay: 0.4 }}
+    />
     <defs>
       <linearGradient id="gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
         <stop stopColor="#8B5CF6" />
@@ -20,48 +40,65 @@ const Logo = () => (
   </svg>
 );
 
-const SocialIcon = ({ icon: Icon, href, color }) => (
-  <a href={href} target="_blank" rel="noopener noreferrer" className="social-icon">
-    <motion.div
-      whileHover={{ scale: 1.2, rotate: 360 }}
-      transition={{ type: "spring", stiffness: 260, damping: 20 }}
-      className="social-icon-inner"
-      style={{ backgroundColor: color }}
-    >
-      <Icon size={20} />
-    </motion.div>
-  </a>
+const SocialIcon = ({ icon: Icon, href }) => (
+  <motion.a 
+    href={href} 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    className="text-gray-400 hover:text-white transition-colors"
+    whileHover={{ scale: 1.2 }}
+    whileTap={{ scale: 0.9 }}
+  >
+    <Icon size={20} />
+  </motion.a>
 );
 
-const Accordion = ({ title, children }) => {
+const AccordionItem = ({ title, children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="accordion">
-      <button
-        className="accordion-title"
+    <div className="border-b border-gray-700">
+      <motion.button
+        className="flex justify-between items-center w-full py-4 text-left text-gray-300 hover:text-white transition-colors"
         onClick={() => setIsOpen(!isOpen)}
+        whileHover={{ x: 5 }}
+        whileTap={{ scale: 0.95 }}
       >
         {title}
-        <span>{isOpen ? '−' : '+'}</span>
-      </button>
-      {isOpen && (
         <motion.div
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: "auto" }}
-          exit={{ opacity: 0, height: 0 }}
+          animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.3 }}
-          className="accordion-content"
         >
-          {children}
+          {isOpen ? <FaChevronUp /> : <FaChevronDown />}
         </motion.div>
-      )}
+      </motion.button>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <div className="pb-4">
+              {children}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
 
-const BackToTop = () => {
+export default function Footer() {
+  const [email, setEmail] = useState('');
   const [isVisible, setIsVisible] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Subscribed:', email);
+    setEmail('');
+  };
 
   useEffect(() => {
     const toggleVisibility = () => {
@@ -85,181 +122,177 @@ const BackToTop = () => {
   };
 
   return (
-    <AnimatePresence>
-      {isVisible && (
-        <motion.button
-          className="back-to-top"
-          onClick={scrollToTop}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 20 }}
-          transition={{ duration: 0.2 }}
-          whileHover={{ scale: 1.1 }}
-          aria-label="Back to top"
-        >
-          <FaChevronUp size={24} />
-        </motion.button>
-      )}
-    </AnimatePresence>
-  );
-};
-
-const Footer = () => {
-  const [email, setEmail] = useState('');
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Subscribed:', email);
-    setEmail('');
-  };
-
-  return (
-    <footer className="footer">
-      <div className="container">
-        <div className="footer-grid">
-          <div className="footer-section">
-            <motion.div 
-              className="logo-container"
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
+    <footer className="bg-gradient-to-b from-gray-900 to-black text-gray-300">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <motion.div 
+            className="space-y-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="flex items-center space-x-3">
               <Logo />
-              <h3 className="logo-text">BookMyShow</h3>
-            </motion.div>
-            <p className="tagline">Your gateway to entertainment!</p>
-            <div className="social-icons">
-              <SocialIcon icon={FaFacebookF} href="#" color="#1877f2" />
-              <SocialIcon icon={FaTwitter} href="#" color="#1da1f2" />
-              <SocialIcon icon={FaInstagram} href="#" color="#e4405f" />
-              <SocialIcon icon={FaYoutube} href="#" color="#ff0000" />
-              <SocialIcon icon={FaLinkedinIn} href="#" color="#0077b5" />
+              <h3 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
+                Book<span className="text-red-600">My</span>Show
+              </h3>
             </div>
-          </div>
+            <div className="flex space-x-4">
+            <p className="text-sm ml-50 ">Your gateway to entertainment!</p>
+            </div>
+           <div className='flex space-x-4'>
+           <SocialIcon icon={FaFacebookF} href="#" />
+              <SocialIcon icon={FaTwitter} href="#" />
+              <SocialIcon icon={FaInstagram} href="#" />
+              <SocialIcon icon={FaYoutube} href="#" />
+              <SocialIcon icon={FaLinkedinIn} href="#" />
+           </div> 
+              </motion.div>
 
-          <div className="footer-section">
-            <Accordion title="Discover">
-              <ul className="footer-list">
-                <li><a href="#">Movies</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="#">Plays</a></li>
-                <li><a href="#">Sports</a></li>
-                <li><a href="#">Activities</a></li>
-              </ul>
-            </Accordion>
-          </div>
+          <motion.div 
+            className="grid grid-cols-2 gap-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <div>
+              <AccordionItem title="Discover">
+                <ul className="space-y-2 text-sm">
+                  <li><a href="#" className="hover:text-white transition-colors">Movies</a></li>
+                  <li><a href="#" className="hover:text-white transition-colors">Events</a></li>
+                  <li><a href="#" className="hover:text-white transition-colors">Plays</a></li>
+                  <li><a href="#" className="hover:text-white transition-colors">Sports</a></li>
+                  <li><a href="#" className="hover:text-white transition-colors">Activities</a></li>
+                </ul>
+              </AccordionItem>
+              <AccordionItem title="About">
+                <ul className="space-y-2 text-sm">
+                  <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
+                  <li><a href="#" className="hover:text-white transition-colors">Our Team</a></li>
+                  <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
+                </ul>
+              </AccordionItem>
+              <AccordionItem title="Services">
+                <ul className="space-y-2 text-sm">
+                  <li><a href="#" className="hover:text-white transition-colors">Corporate Booking</a></li>
+                  <li><a href="#" className="hover:text-white transition-colors">Gift Cards</a></li>
+                  <li><a href="#" className="hover:text-white transition-colors">Rewards</a></li>
+                </ul>
+              </AccordionItem>
+            </div>
+            <div>
+              <AccordionItem title="Help & Support">
+                <ul className="space-y-2 text-sm">
+                  <li><a href="#" className="hover:text-white transition-colors">FAQs</a></li>
+                  <li><a href="#" className="hover:text-white transition-colors">Contact Us</a></li>
+                  <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
+                </ul>
+              </AccordionItem>
+              <AccordionItem title="Legal">
+                <ul className="space-y-2 text-sm">
+                  <li><a href="#" className="hover:text-white transition-colors">Terms of Use</a></li>
+                  <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
+                </ul>
+              </AccordionItem>
+            </div>
+          </motion.div>
 
-          <div className="footer-section">
-            <Accordion title="About">
-              <ul className="footer-list">
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Our Team</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Press</a></li>
-              </ul>
-            </Accordion>
-          </div>
-
-          <div className="footer-section">
-            <Accordion title="Services">
-              <ul className="footer-list">
-                <li><a href="#">Ticket Booking</a></li>
-                <li><a href="#">Event Management</a></li>
-                <li><a href="#">Corporate Bookings</a></li>
-                <li><a href="#">Gift Cards</a></li>
-              </ul>
-            </Accordion>
-          </div>
-
-          <div className="footer-section">
-            <Accordion title="Legal">
-              <ul className="footer-list">
-                <li><a href="#">Terms of Service</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Refund Policy</a></li>
-                <li><a href="#">Cookie Policy</a></li>
-              </ul>
-            </Accordion>
-          </div>
-
-          <div className="footer-section">
-            <Accordion title="Help & Support">
-              <ul className="footer-list">
-                <li><a href="#">FAQs</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Feedback</a></li>
-                <li><a href="#">Report an Issue</a></li>
-              </ul>
-            </Accordion>
-          </div>
-
-          <div className="footer-section">
-            <h5 className="section-title">Stay Connected</h5>
-            <form onSubmit={handleSubmit} className="subscribe-form">
-              <input 
-                type="email" 
-                placeholder="Enter your email" 
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="email-input"
-                required
-              />
-              <button 
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+          >
+            <h5 className="font-semibold text-white mb-4 text-lg">Stay Connected</h5>
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div className="relative">
+                <input 
+                  type="email" 
+                  placeholder="Enter your email" 
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all duration-300"
+                  required
+                />
+                <motion.span 
+                  className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-gray-400"
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.6 }}
+                >
+                  <MdEmail size={20} />
+                </motion.span>
+              </div>
+              <motion.button 
                 type="submit" 
-                className="subscribe-button"
+                className="w-full px-4 py-3 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white rounded-md transition-all duration-300 transform hover:scale-105"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
                 Subscribe
-              </button>
+              </motion.button>
             </form>
-          </div>
+          </motion.div>
         </div>
 
         <motion.div 
-          className="footer-bottom"
+          className="mt-12 pt-8 border-t border-gray-800 flex flex-wrap justify-between items-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
         >
-          <div className="footer-bottom-content">
-            <div className="copyright">
-              &copy; 2024 BookMyShow. All rights reserved.
-            </div>
-            <div className="footer-links">
-              <a href="#">Terms of Use</a>
-              <a href="#">Privacy Policy</a>
-              <a href="#">Sitemap</a>
-            </div>
+          <div className="text-sm">
+            &copy; 2024 BookMyShow. All rights reserved.
+          </div>
+          <div className="flex space-x-4 text-sm">
+            <a href="#" className="hover:text-white transition-colors">Terms of Use</a>
+            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-white transition-colors">Sitemap</a>
           </div>
         </motion.div>
       </div>
 
       <motion.div 
-        className="footer-info"
+        className="bg-gray-800 py-4"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.4 }}
+        transition={{ duration: 0.5, delay: 0.8 }}
       >
-        <div className="container footer-info-content">
-          <div className="location">
-            <FaLocationDot size={20} className="icon" />
-            <span>Mumbai, India</span>
-          </div>
-          <div className="contact-info">
-            <div className="phone">
-              <FaPhone size={20} className="icon" />
-              <span>1800-889-1999</span>
+        <div className="container mx-auto px-4 flex flex-wrap items-center justify-between">
+          <div className="flex items-center space-x-4">
+            <div className="flex items-center">
+              <FaLocationDot className="text-purple-500 mr-2" />
+              <span className="text-sm">Mumbai, India</span>
             </div>
-            <div className="email">
-              <MdEmail size={20} className="icon" />
-              <span>support@BookMyShow.com</span>
+          </div>
+          <div className="flex items-center space-x-4">
+            <div className="flex items-center">
+              <FaPhone className="text-purple-500 mr-2" />
+              <span className="text-sm">1800-889-1999</span>
+            </div>
+            <div className="flex items-center">
+              <MdEmail className="text-purple-500 mr-2" />
+              <span className="text-sm">support@BookMyShow.com</span>
             </div>
           </div>
         </div>
       </motion.div>
 
-      <BackToTop />
+      <AnimatePresence>
+        {isVisible && (
+          <motion.button
+            className="fixed bottom-4 right-4 p-3 bg-purple-600 text-white rounded-full shadow-lg"
+            onClick={scrollToTop}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 20 }}
+            transition={{ duration: 0.2 }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            <FaChevronUp size={24} />
+          </motion.button>
+        )}
+      </AnimatePresence>
     </footer>
   );
-};
-
-export default Footer;
+}
