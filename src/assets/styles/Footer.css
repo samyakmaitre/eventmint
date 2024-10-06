@@ -234,3 +234,24 @@
     margin-top: 1rem;
   }
 }
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(to right, #8B5CF6, #EC4899);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.back-to-top:hover {
+  background: linear-gradient(to right, #7C3AED, #DB2777);
+}

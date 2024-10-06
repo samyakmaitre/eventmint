@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaLinkedinIn } from 'react-icons/fa';
-import { FaLocationDot, FaPhone } from 'react-icons/fa6';
+import { FaLocationDot, FaPhone, FaChevronUp } from 'react-icons/fa6';
 import { MdEmail } from 'react-icons/md';
 
 import "../assets/styles/Footer.css";
@@ -57,6 +57,50 @@ const Accordion = ({ title, children }) => {
         </motion.div>
       )}
     </div>
+  );
+};
+
+const BackToTop = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.pageYOffset > 300) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener('scroll', toggleVisibility);
+
+    return () => window.removeEventListener('scroll', toggleVisibility);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  return (
+    <AnimatePresence>
+      {isVisible && (
+        <motion.button
+          className="back-to-top"
+          onClick={scrollToTop}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 20 }}
+          transition={{ duration: 0.2 }}
+          whileHover={{ scale: 1.1 }}
+          aria-label="Back to top"
+        >
+          <FaChevronUp size={24} />
+        </motion.button>
+      )}
+    </AnimatePresence>
   );
 };
 
@@ -179,6 +223,8 @@ const Footer = () => {
           </div>
         </div>
       </motion.div>
+
+      <BackToTop />
     </footer>
   );
 };
