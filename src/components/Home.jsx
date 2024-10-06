@@ -10,18 +10,19 @@ import Header from "./Header";
 import "../App.css";
 
 const Home = () => {
-	return (
-		<div>
-			<div className="App">
-				<Header />
-				<NavBar />
-				<ImageSlider />
-				<MovieList />
-				<Offers />
-				<Footer />
-			</div>
-		</div>
-	);
+
+  return (
+    <div>
+      <div className="App">
+        <Header />
+        <NavBar/>
+        <ImageSlider />
+        <MovieList />
+        <Offers />
+        <Footer />
+      </div>
+    </div>
+  );
 };
 
 export default Home;

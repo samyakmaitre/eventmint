@@ -8,22 +8,22 @@ import Template from "./components/Auth/Template";
 import { fairyDustCursor } from "./components/FairyDust"; // Import the fairy-dust effect
 
 function App() {
-	// Initialize the fairy-dust cursor effect globally
-	useEffect(() => {
-		fairyDustCursor();
-	}, []);
+  // Initialize the fairy-dust cursor effect globally
+  useEffect(() => {
+    fairyDustCursor();
+  }, []);
 
-	return (
-		<div>
-			<Router>
-				<Routes>
-					<Route path="/" element={<Home />} />
-					<Route path="/login" element={<Template formType={"login"} />} />
-					<Route path="/signup" element={<Template formType={"signup"} />} />
-				</Routes>
-			</Router>
-		</div>
-	);
+  return (
+    <div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Template formType={"login"} />} />
+          <Route path="/signup" element={<Template formType={"signup"} />} />
+        </Routes>
+      </Router>
+    </div>
+  );
 }
 
 export default App;
