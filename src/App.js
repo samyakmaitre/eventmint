@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
 import Home from "./components/Home";
 import Template from "./components/Auth/Template";
 
+
 function App() {
 	return (
 		<div>
