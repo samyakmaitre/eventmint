@@ -4,7 +4,7 @@ import '../assets/styles/NavBar.css'; // Import a CSS file for styling
 
 function NavBar() {
   return (
-    <nav className="navbar">
+    <nav className="flex flex-row p-4 gap-2 justify-between items-center bg-[#E8E8E8]">
       <div className="main-nav">
         <ul>
           <li>Movies</li>
