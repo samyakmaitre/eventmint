@@ -8,6 +8,27 @@
   margin: 0px;
   padding: 0px;
 }
+/* App.css */
+.fairy-dust-particle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: pink;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: fade-out 1s forwards;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
 
 .App-logo {
   height: 40vmin;

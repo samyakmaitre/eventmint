@@ -14,10 +14,16 @@
     align-items: center;
     border: 1px solid #ddd;
     border-radius: 10px;
+    transition: all .1s ease;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     margin: 20px;
+    transition-delay: 0.1s;
   }
-  
+  .offer-card:hover{
+    transform: scale(1.1) translateX(5px) translateY(5px);
+    box-shadow: 1px 1px 7px rgb(207, 72, 201),
+    1px 1px 7px rgb(207, 72, 201);
+  }
   .offer-image {
     max-width: 100%;
     max-height: 100%;

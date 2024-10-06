@@ -145,6 +145,19 @@ We welcome contributions to improve EventMint! Whether you're adding features or
 
 ---
 
+## 👀 Our Contributors
+
+- We extend our heartfelt gratitude for your invaluable contribution to our project! Your efforts play a pivotal role in elevating this project to greater heights.
+- Make sure you show some love by giving ⭐ to our repository.
+
+<div align="center">
+  <a href="https://github.com/samyakmaitre/eventmint">
+    <img src="https://contrib.rocks/image?repo=samyakmaitre/eventmint&&max=100" />
+  </a>
+</div>
+
+---
+
 ##  **📞 Contact**
 
 Feel free to reach out with questions or suggestions!
