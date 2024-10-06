@@ -1,6 +1,7 @@
 /* NavBar.css */
 .navbar {
-    background-color: #eb2421;
+    background-color: #bbb7b7;
+    color: #000;
     padding: 10px;
     display: flex;
     width: 100%;
@@ -32,19 +33,21 @@
   .main-nav ul li, .additional-links ul li {
     margin: 0 10px;
     cursor: pointer;
-    font-size: 18px;
-    color: #fff;
+    font-size: 19px;
+    color: #000;
     font-weight: 500;
     transition: all 0.3s;
   }
   .main-nav li a{
     text-decoration: none;
-    color: #fff;
+    color: inherit;
     font-weight: 500;
   }
   
-  .main-nav ul li:hover, .additional-links ul li:hover {
-    color: #000;
+  .main-nav ul li:hover, .main-nav li a:hover, .additional-links ul li:hover {
+    color: #c31210;
     font-weight: 600;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in;
   }
   
