@@ -5,15 +5,16 @@
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     gap: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin-inline: auto;
+    position: relative;
     padding: 10px;
+    flex-wrap: wrap;
   }
   
   .movie-list::-webkit-scrollbar {
     display: none; /* Hide scrollbar for better UX */
-  }
-  
-  .movie-list > div {
-    flex: 0 0 calc(20% - 10px); /* 20% width minus the gap between items */
-    scroll-snap-align: start;
   }
   
