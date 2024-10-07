@@ -1,4 +1,10 @@
 /* Header.css */
+.main-header-div{
+  position: fixed;
+  width: 100vw;
+  background: red;
+  z-index: 1000;
+}
 .header {
     display: flex;
     justify-content: space-between;

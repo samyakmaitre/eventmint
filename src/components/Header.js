@@ -1,7 +1,10 @@
 /** @format */
 
-import React from "react"; 
-import { Link, useNavigate, useLocation } from "react-router-dom"; // Added useLocation
+// Header.js
+import React from "react"; // Add this line
+import NavBar from "./NavBar";
+import { Link, useNavigate } from "react-router-dom";
+
 import "../assets/styles/Header.css";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../services/operations/authAPI";
@@ -13,7 +16,7 @@ function Header() {
     
     const location = useLocation(); // Get the current path
 
-    // If the current path is "/signup" or "/login", don't render the Header
+// If the current path is "/signup" or "/login", don't render the Header
     if (location.pathname === "/signup" || location.pathname === "/login") {
         return null;
     }
