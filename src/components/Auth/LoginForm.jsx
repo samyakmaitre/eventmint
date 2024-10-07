@@ -1,11 +1,14 @@
 /** @format */
 
 import { useState } from "react";
-import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
+import { AiOutlineEye, AiOutlineEyeInvisible, AiOutlineGoogle } from "react-icons/ai";
 import { useDispatch } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
 import { login } from "../../services/operations/authAPI";
+
+// Import Firebase Auth and Google Auth Provider
+import { auth, provider, signInWithPopup } from "./Firebase";
+
 
 function LoginForm() {
 	const navigate = useNavigate();
@@ -31,11 +34,25 @@ function LoginForm() {
 		dispatch(login(email, password, navigate));
 	};
 
+	// Function to handle Google Sign-In
+	const handleGoogleSignIn = () => {
+		signInWithPopup(auth, provider)
+			.then((result) => {
+				// Handle successful Google sign-in
+				console.log("Google sign-in successful:", result.user);
+				navigate("/");
+			})
+			.catch((error) => {
+				// Handle errors
+				console.log("Google sign-in error:", error.message);
+			});
+	};
+
 	return (
 		<div className="">
 			<form
 				onSubmit={handleOnSubmit}
-				className="flex w-full font-semibold flex-col gap-y-6  border-[2px] border-black p-6 rounded-md">
+				className="flex w-full font-semibold flex-col gap-y-6 border-[2px] border-black p-6 rounded-md">
 				<label className="w-full">
 					<p className="mb-1 text-[1rem] leading-[1.375rem] font-semibold text-richblack-5">
 						Email Address
@@ -55,36 +72,42 @@ function LoginForm() {
 						Password
 					</p>
 					<div className="flex items-center">
-					<input
-						required
-						type={showPassword ? "text" : "password"}
-						name="password"
-						value={password}
-						onChange={handleOnChange}
-						placeholder="Enter Password"
-						className="form-style w-full font-semibold !pr-10 p-2 border-[1px] bg-white rounded-md border-black  text-black"
-					/>
-					<span
-						onClick={() => setShowPassword((prev) => !prev)}
-						className="absolute right-3 top-[45 px] z-[10] cursor-pointer">
-						{showPassword ? (
-							<AiOutlineEyeInvisible
-								fontSize={24}
-								fill="#000000"
-							/>
-						) : (
-							<AiOutlineEye
-								fontSize={24}
-								fill="#000000"
-							/>
-						)}
-					</span>
+						<input
+							required
+							type={showPassword ? "text" : "password"}
+							name="password"
+							value={password}
+							onChange={handleOnChange}
+							placeholder="Enter Password"
+							className="form-style w-full font-semibold !pr-10 p-2 border-[1px] bg-white rounded-md border-black text-black"
+						/>
+						<span
+							onClick={() => setShowPassword((prev) => !prev)}
+							className="absolute right-3 top-[45 px] z-[10] cursor-pointer">
+							{showPassword ? (
+								<AiOutlineEyeInvisible
+									fontSize={24}
+									fill="#000000"
+								/>
+							) : (
+								<AiOutlineEye fontSize={24} fill="#000000" />
+							)}
+						</span>
 					</div>
 				</label>
 				<button
 					type="submit"
-					className="mt-6 font-semibold py-[8px] px-[12px] p-2 text-white bg-red-600 hover:bg-red-700  rounded-md border-[2px] border-red-800">
+					className="mt-6 font-semibold py-[8px] px-[12px] p-2 text-white bg-red-600 hover:bg-red-700 rounded-md border-[2px] border-red-800">
 					Sign In
+				</button>
+
+				{/* Google Sign-In Button */}
+				<button
+					type="button"
+					onClick={handleGoogleSignIn}
+					className="flex items-center justify-center gap-2 font-semibold py-[8px] px-[12px] mt-4 p-2 text-white bg-blue-600 hover:bg-blue-700 rounded-md border-[2px] border-blue-800">
+					<AiOutlineGoogle size={24} /> {/* Google Icon */}
+					Sign in with Google
 				</button>
 
 				<div className="flex gap-2 flex-col mt-2">
