@@ -1,4 +1,13 @@
+
+// Header.js
+import React from 'react'; // Add this line
+import { Link } from 'react-router-dom';
+import '../assets/styles/Header.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';  
+
 /** @format */
+
 
 import React from "react"; 
 import { Link, useNavigate, useLocation } from "react-router-dom"; // Added useLocation
@@ -7,6 +16,9 @@ import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../services/operations/authAPI";
 
 function Header() {
+
+  
+
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const { user } = useSelector((state) => state.profile);
@@ -58,6 +70,7 @@ function Header() {
             </div>
         </header>
     );
+
 }
 
 export default Header;
