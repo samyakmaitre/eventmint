@@ -1,16 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaSearch } from 'react-icons/fa';  // Import the search icon
 import '../assets/styles/Header.css';
+import { FaSearch } from 'react-icons/fa';  
 
 function Header() {
   return (
     <header className="header container-fluid d-flex align-items-center justify-content-between p-3 bg-light">
-      <Link to="/" className="logo-link">
+      <Link to="/"  className="logo-link no-underline">
         <div className="logo">
-          <span>book</span><br />
-          <span className="highlight">my</span><br />
-          <span>show</span>
+          <span className="text-black p-1" >book</span>
+          <span className=" text-red-700 p-1">my</span>
+          <span className="text-black">show</span>
         </div>
       </Link>
       
@@ -21,7 +21,7 @@ function Header() {
           placeholder="Search for Movies, Events, Plays, Sports and Activities" 
         />
         <span className="input-group-text search-icon">
-          <FaSearch />  {/* Add search icon next to the input field */}
+          <FaSearch />
         </span>
       </div>
       
