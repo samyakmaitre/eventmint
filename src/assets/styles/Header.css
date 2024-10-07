@@ -1,9 +1,14 @@
 /* Header.css */
+.main-header-div{
+  position: fixed;
+  width: 100vw;
+  background: red;
+  z-index: 1000;
+}
 .header {
     display: flex;
     justify-content: space-between;
-    position: fixed ;
-    z-index: 1000;
+    /* position: fixed ; */
     width: 100%;
     align-items: center;
     padding: 10px;

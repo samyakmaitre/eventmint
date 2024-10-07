@@ -2,6 +2,7 @@
 
 // Header.js
 import React from "react"; // Add this line
+import NavBar from "./NavBar";
 import { Link, useNavigate } from "react-router-dom";
 import "../assets/styles/Header.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -15,7 +16,9 @@ function Header() {
 	const { user } = useSelector((state) => state.profile);
 
 	return (
-		<header className="header container-fluid d-flex align-items-center justify-content-between p-3 bg-white">
+		<>
+		<div className="main-header-div">
+		<header className="header container-fluid d-flex align-items-center sticky justify-content-between p-3 bg-white">
 			<div className="logo">
 				<span>book</span>
 				<span className="highlight">my</span>
@@ -53,6 +56,9 @@ function Header() {
 				)}
 			</div>
 		</header>
+		<NavBar />
+		</div>
+		</>
 	);
 }
 

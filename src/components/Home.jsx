@@ -1,7 +1,6 @@
 /** @format */
 
 import React from "react";
-import NavBar from "./NavBar";
 import ImageSlider from "./ImageSlider";
 import MovieList from "./MovieList";
 import Offers from "./Offers";
@@ -14,7 +13,6 @@ const Home = () => {
 		<div>
 			<div className="App">
 				<Header />
-				<NavBar />
 				<ImageSlider />
 				<MovieList />
 				<Offers />
