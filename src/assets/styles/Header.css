@@ -1,72 +1,131 @@
-/* Header.css */
+/* General header styles */
 .header {
-    display: flex;
-    justify-content: space-between;
-    position: fixed ;
-    z-index: 1000;
-    width: 100%;
-    align-items: center;
-    padding: 10px;
-    color: #000000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px; /* Increased padding for a more spacious look */
+  background-color: #f8f9fa; /* Light background for a modern feel */
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  border-bottom: 1px solid #e0e0e0; /* Subtle border to separate header */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+/* Logo styles */
+.logo {
+  font-size: 1.8rem; /* Slightly larger font size */
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.logo .highlight {
+  color: #ff5733; /* Highlight color */
+}
+
+.logo span {
+  margin-right: 5px; /* Add slight spacing between words */
+}
+
+/* Search bar styles */
+.search-bar {
+  flex: 1; /* Expand search bar to take available space */
+  margin: 0 20px; /* Space between search bar and other elements */
+  max-width: 500px; /* Limit maximum width for better alignment */
+}
+
+.search-bar input {
+  width: 100%; /* Ensure search bar takes full width */
+  padding: 10px 15px; /* Comfortable padding for input field */
+  border-radius: 25px; /* Rounded corners for a modern feel */
+  border: 1px solid #ccc;
+  box-shadow: none; /* No shadow for cleaner look */
+}
+
+.search-bar input:focus {
+  outline: none;
+  border-color: #ff5733; /* Border color change on focus */
+}
+
+/* Location and sign-in styles */
+.location-signin {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Space between location dropdown and sign-in button */
+}
+
+.location {
+  font-size: 1rem;
+  padding: 5px 10px; /* Padding inside the dropdown */
+  border-radius: 5px;
+  border: 1px solid #ccc; /* Border around dropdown */
+}
+
+.btn-outline-primary {
+  font-size: 1rem;
+  padding: 8px 15px; /* Padding for a modern button feel */
+  border-radius: 25px; /* Rounded button */
+  border-color: #ff5733;
+  color: #ff5733;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  background-color: #ff5733;
+  color: white;
+  border-color: #ff5733;
+}
+
+.btn-outline-primary a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* NavBar styles (if used below the header) */
+.navbar {
+  background-color: #0b0404;
+  padding: 10px 20px;
+}
+
+.main-nav ul, .additional-links ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+}
+
+.search-bar .btn {
+  font-size: 16px;
+  padding: 8px 14px;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px;
   }
-  
-  .logo {
-    font-weight: bold;
-    font-size: 1.5rem;
+
+  .search-bar {
+      margin: 10px 0;
+      max-width: 100%;
   }
-  
-  .logo .highlight {
-    color: #ff5733; /* Customize highlight color */
-  }
-  
-  .logo span {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  .navbar-brand img{
-    width: 210px;
-    height: 80px;
-    border-radius: 50%;
-  }
-  
+
   .location-signin {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
   }
-  
+
+  .btn-outline-primary {
+      width: 100%;
+  }
+
   .location {
-    font-size: 1rem;
-    margin-right: 10px;
-  }
-  
-  .signin-button {
-    font-size: 1.2rem;
-    padding: 0px;
-    background-color: blue;
-    color: white;
-    border: none;
-    border-radius: 5px;
-  }
-  
-  /* NavBar.css */
-  .navbar {
-    background-color: #0b0404;
-    padding: 10px;
-  }
-  
-  .main-nav ul, .additional-links ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    padding: 0;
-    margin: 0;
+      width: 100%;
   }
 
-  .search-bar .btn {
-    font-size: 16px;
-    padding: 8px 15px;
-  }
-
-
-  
