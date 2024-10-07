@@ -2,6 +2,7 @@
 import React from 'react'; // Add this line
 import { Link } from 'react-router-dom';
 import '../assets/styles/Header.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';  
 
 
@@ -17,6 +18,11 @@ function Header() {
           className="form-control" 
           placeholder="Search for Movies, Events, Plays, Sports and Activities" 
         />
+        <div className="input-group-prepend">
+          <span className="input-group-text">
+            <i className="bi bi-search"></i> {/* Bootstrap Icon */}
+          </span>
+        </div>
       </div>
       <div className="location-signin d-flex align-items-center">
         <select className="location me-3 form-select">

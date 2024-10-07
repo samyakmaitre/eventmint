@@ -16,7 +16,7 @@
   }
   
   .logo .highlight {
-    color: #ff5733; /* Customize highlight color */
+    color: #ff5733; 
   }
   
   .logo span {
@@ -68,5 +68,45 @@
     padding: 8px 15px;
   }
 
-
+  .search-bar {
+    border-radius: 50px; 
+    width: 50vw;
+    overflow: hidden; 
+    display: flex;
+  }
   
+  .search-bar input {
+    border: 2px solid rgb(217, 202, 202);
+    border-right: none;
+    border-radius: 50px 0 0 50px; 
+    padding: 10px 15px;
+    width: 100%; 
+    outline: none;
+    
+  }
+  
+  .input-group-text {
+    background-color: white; 
+    border: 2px solid rgb(217, 202, 202);
+    border-left: none;
+    border-radius: 0 50px 50px 0; 
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  .bi-search {
+    font-size: 18px;
+    color: #000; 
+  }
+  
+  .search-bar .form-control:focus {
+    box-shadow: none; 
+  }
+  
+  
+  .search-bar:focus-within .input-group-text {
+    box-shadow: 4px 4px 8px rgba(0, 123, 255, 0.5); 
+    border-color:rgba(0, 123, 255, 0.5);
+  }
