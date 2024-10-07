@@ -1,6 +1,8 @@
 import React from 'react';
 import Movie from './Movie';
 import '../assets/styles/MovieList.css';
+import MovieList from './components/MovieList';
+
 
 import poster1 from '../assets/images/poster1.jpg';
 import poster2 from '../assets/images/poster2.jpg';
