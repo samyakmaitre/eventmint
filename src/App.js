@@ -1,13 +1,17 @@
-/** @format */
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom'; // Import Router from react-router-dom
+import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 
-import React, { useEffect } from "react";
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom"; // Import Router from react-router-dom
-import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
-import Home from "./components/Home";
-import Template from "./components/Auth/Template";
-import { fairyDustCursor } from "./components/FairyDust"; // Import the fairy-dust effect
+import Header from './components/Header';
+import NavBar from './components/NavBar'; 
+import MovieList from './components/MovieList';
+import ImageSlider from './components/ImageSlider';
+import Footer from './components/Footer';
+import Offers from './components/Offers';
+import './App.css'; // Your custom CSS
 
 function App() {
+
   // Initialize the fairy-dust cursor effect globally
   useEffect(() => {
     fairyDustCursor();
@@ -23,6 +27,19 @@ function App() {
         </Routes>
       </Router>
     </div>
+
+  return (
+    <Router>
+      <div className="App">
+        <Header />
+        <NavBar />
+        <ImageSlider />
+        <MovieList />
+        <Offers />
+        <Footer />
+      </div>
+    </Router>
+
   );
 }
 
