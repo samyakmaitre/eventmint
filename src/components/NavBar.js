@@ -7,9 +7,9 @@ function NavBar() {
     <nav className="navbar">
       <div className="main-nav">
         <ul>
-          <li><a href='#movies'>Movies</a></li>
-          <li><a href='#events'>Events</a></li>
+          <li>Movies</li>
           <li>Stream</li>
+          <li>Events</li>
           <li>Plays</li>
           <li>Sports</li>
           <li>Activities</li>
