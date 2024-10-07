@@ -1,7 +1,7 @@
 import React from 'react';
-import '../assets/styles/Movie.css';
+import '../assets/styles/Event.css';
 
-function Movie({ poster, title, rating, votes, genre }) {
+function Event({ poster, title, rating, votes, genre }) {
   return (
     <div className="movie">
       <img src={poster} alt={`${title} poster`} className="movie-poster" />
@@ -15,4 +15,4 @@ function Movie({ poster, title, rating, votes, genre }) {
   );
 }
 
-export default Movie;
+export default Event;

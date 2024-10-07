@@ -8,7 +8,6 @@ module.exports = {
   plugins: [],
 }
 
-
 /**
  * @format
  * @type {import('tailwindcss').Config}
