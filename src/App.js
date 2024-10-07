@@ -8,6 +8,7 @@ import Template from "./components/Auth/Template";
 
 
 function App() {
+
 	return (
 		<div>
 			<Router>
@@ -27,6 +28,7 @@ function App() {
 			</Router>
 		</div>
 	);
+
 }
 
 export default App;

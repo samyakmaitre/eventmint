@@ -63,9 +63,9 @@ function SignupForm() {
 				onSubmit={handleOnSubmit}
 				className="flex w-full font-semibold flex-col gap-y-6 text-black border-[2px] border-black p-6 rounded-md">
 				<div className="flex gap-x-4">
-					<label>
+					<label className="w-full">
 						<p className="mb-1 text-[0.95rem] leading-[1.375rem]">
-							First Name 
+							First Name
 						</p>
 						<input
 							required
@@ -77,9 +77,9 @@ function SignupForm() {
 							className="form-style w-full  p-2 border-[1px] bg-white border-black rounded-md  text-black"
 						/>
 					</label>
-					<label>
-						<p className="mb-1 text-[0.95rem] leading-[1.375rem] text-richblack-5">
-							Last Name 
+					<label className="w-full">
+						<p className="mb-1 text-[0.95rem] leading-[1.375rem]">
+							Last Name
 						</p>
 						<input
 							required
@@ -94,7 +94,7 @@ function SignupForm() {
 				</div>
 				<label className="w-full">
 					<p className="mb-1 text-[0.95rem] leading-[1.375rem] ">
-						Email Address 
+						Email Address
 					</p>
 					<input
 						required
@@ -103,67 +103,71 @@ function SignupForm() {
 						value={email}
 						onChange={handleOnChange}
 						placeholder="Enter email address"
-						className="form-style w-[96%]  p-2 border-[1px] bg-white border-black rounded-md  text-black"
+						className="form-style w-full p-2 border-[1px] bg-white border-black rounded-md  text-black"
 					/>
 				</label>
 				<div className="flex gap-x-4">
-					<label className="relative">
+					<label className="relative w-full">
 						<p className="mb-1 text-[0.95rem] leading-[1.375rem] text-richblack-5">
 							Create Password
 						</p>
-						<input
-							required
-							type={showPassword ? "text" : "password"}
-							name="password"
-							value={password}
-							onChange={handleOnChange}
-							placeholder="Enter Password"
-							className="form-style w-full !pr-10  p-2 border-[1px] bg-white border-black rounded-md  text-black"
-						/>
-						<span
-							onClick={() => setShowPassword((prev) => !prev)}
-							className="absolute right-3 top-[26px] z-[10] cursor-pointer">
-							{showPassword ? (
-								<AiOutlineEyeInvisible
-									fontSize={24}
-									fill="#000000"
-								/>
-							) : (
-								<AiOutlineEye
-									fontSize={24}
-									fill="#000000"
-								/>
-							)}
-						</span>
+						<div className="flex items-center">
+							<input
+								required
+								type={showPassword ? "text" : "password"}
+								name="password"
+								value={password}
+								onChange={handleOnChange}
+								placeholder="Enter Password"
+								className="form-style w-full !pr-10 p-2 border-[1px] bg-white border-black rounded-md text-black"
+							/>
+							<span
+								onClick={() => setShowPassword((prev) => !prev)}
+								className="absolute right-3 top-[35px] z-[10] cursor-pointer">
+								{showPassword ? (
+									<AiOutlineEyeInvisible
+										fontSize={24}
+										fill="#000000"
+									/>
+								) : (
+									<AiOutlineEye
+										fontSize={24}
+										fill="#000000"
+									/>
+								)}
+							</span>
+						</div>
 					</label>
-					<label className="relative">
+					<label className="relative w-full">
 						<p className="mb-1 text-[0.95rem] leading-[1.375rem] text-richblack-5">
-							Confirm Password 
+							Confirm Password
 						</p>
-						<input
-							required
-							type={showConfirmPassword ? "text" : "password"}
-							name="confirmPassword"
-							value={confirmPassword}
-							onChange={handleOnChange}
-							placeholder="Confirm Password"
-							className="form-style w-full !pr-10 border-black  p-2 border-[1px] bg-white rounded-md  text-black"
-						/>
-						<span
-							onClick={() => setShowConfirmPassword((prev) => !prev)}
-							className="absolute right-3 top-[26px] z-[10] cursor-pointer text-black">
-							{showConfirmPassword ? (
-								<AiOutlineEyeInvisible
-									fontSize={24}
-									fill="#000000"
-								/>
-							) : (
-								<AiOutlineEye
-									fontSize={24}
-									fill="#000000"
-								/>
-							)}
-						</span>
+						<div className="flex items-center">
+							<input
+								required
+								type={showConfirmPassword ? "text" : "password"}
+								name="confirmPassword"
+								value={confirmPassword}
+								onChange={handleOnChange}
+								placeholder="Confirm Password"
+								className="form-style w-full !pr-10 border-black  p-2 border-[1px] bg-white rounded-md  text-black"
+							/>
+							<span
+								onClick={() => setShowConfirmPassword((prev) => !prev)}
+								className="absolute right-3 top-[35 px] z-[10] cursor-pointer text-black">
+								{showConfirmPassword ? (
+									<AiOutlineEyeInvisible
+										fontSize={24}
+										fill="#000000"
+									/>
+								) : (
+									<AiOutlineEye
+										fontSize={24}
+										fill="#000000"
+									/>
+								)}
+							</span>
+						</div>
 					</label>
 				</div>
 				<button
@@ -194,3 +198,4 @@ function SignupForm() {
 }
 
 export default SignupForm;
+

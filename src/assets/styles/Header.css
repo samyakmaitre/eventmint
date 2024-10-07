@@ -2,7 +2,6 @@
 .header {
     display: flex;
     justify-content: space-between;
-    position: fixed ;
     z-index: 1000;
     width: 100%;
     align-items: center;
@@ -10,6 +9,9 @@
     color: #000000;
     background-color: #fff;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1); 
+    position: relative; /* Ensure relative positioning */
+    z-index: 10; /* Set a lower z-index for the header */
+  
   }
   
   .logo {
