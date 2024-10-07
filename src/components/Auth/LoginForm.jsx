@@ -50,10 +50,11 @@ function LoginForm() {
 						className="form-style  w-full font-semibold p-2 rounded-md bg-white border-[1px] border-black text-black"
 					/>
 				</label>
-				<label className="relative">
-					<p className="mb-1 text-[1rem] leading-[1.375rem] font-semibold text-richblack-5">
+				<label className="relative w-full">
+					<p className="mb-1 text-[0.95rem] leading-[1.375rem] font-semibold text-richblack-5">
 						Password
 					</p>
+					<div className="flex items-center">
 					<input
 						required
 						type={showPassword ? "text" : "password"}
@@ -65,7 +66,7 @@ function LoginForm() {
 					/>
 					<span
 						onClick={() => setShowPassword((prev) => !prev)}
-						className="absolute right-3 top-[35px] z-[10] cursor-pointer">
+						className="absolute right-3 top-[45 px] z-[10] cursor-pointer">
 						{showPassword ? (
 							<AiOutlineEyeInvisible
 								fontSize={24}
@@ -78,6 +79,7 @@ function LoginForm() {
 							/>
 						)}
 					</span>
+					</div>
 				</label>
 				<button
 					type="submit"

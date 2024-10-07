@@ -2,12 +2,16 @@
 .header {
     display: flex;
     justify-content: space-between;
-    position: fixed ;
     z-index: 1000;
     width: 100%;
     align-items: center;
     padding: 10px;
     color: #000000;
+    background-color: #fff;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1); 
+    position: relative; /* Ensure relative positioning */
+    z-index: 10; /* Set a lower z-index for the header */
+  
   }
   
   .logo {
@@ -23,30 +27,47 @@
     font-size: 24px;
     font-weight: bold;
   }
-  .navbar-brand img{
-    width: 210px;
-    height: 80px;
-    border-radius: 50%;
+  
+  .search-bar {
+    width: 50%; /* Adjust width as needed */
+  }
+  
+  .search-bar input {
+    padding: 5px;
+    width: 300px;
   }
   
   .location-signin {
     display: flex;
     align-items: center;
-    gap: 20px;
   }
   
   .location {
     font-size: 1rem;
     margin-right: 10px;
   }
-  
-  .signin-button {
-    font-size: 1.2rem;
-    padding: 0px;
-    background-color: blue;
+
+  .btn-outline-primary{
+    padding: 10px;
+    height: 40px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .btn-outline-primary :first-child{
+    text-decoration: none;
+  }
+
+  .btn-outline-primary:hover :first-child{
     color: white;
-    border: none;
-    border-radius: 5px;
+  }
+
+  .btn-outline-primary:hover{
+    background-color: #0D6EFD;
+    color: white;
   }
   
   /* NavBar.css */
@@ -62,10 +83,10 @@
     padding: 0;
     margin: 0;
   }
-
-  .search-bar .btn {
-    font-size: 16px;
-    padding: 8px 15px;
+  
+  .main-nav ul li, .additional-links ul li {
+    margin: 0 10px;
+    cursor: pointer;
   }
 
   .search-bar {
@@ -110,3 +131,4 @@
     box-shadow: 4px 4px 8px rgba(0, 123, 255, 0.5); 
     border-color:rgba(0, 123, 255, 0.5);
   }
+

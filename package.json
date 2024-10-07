@@ -13,11 +13,18 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@radix-ui/react-accordion": "^1.2.1",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@reduxjs/toolkit": "^2.2.7",
     "@testing-library/user-event": "^13.5.0",
     "@types/react-router-dom": "^5.3.3",
     "axios": "^1.7.7",
     "bootstrap": "^5.3.3",
-    "bootstrap-icons": "^1.11.3",
+
+    "concurrently": "^9.0.1",
+    "framer-motion": "^11.11.1",
+    "lucide-react": "^0.447.0",
+
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-hot-toast": "^2.4.1",
@@ -26,7 +33,6 @@
     "react-router-dom": "^6.26.2",
     "react-scripts": "^5.0.1",
     "react-slick": "^0.30.2",
-    "react-toastify": "^10.0.5",
     "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4"
   },

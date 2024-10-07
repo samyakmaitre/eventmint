@@ -1,11 +1,13 @@
+
 .slider-container {
-    margin: 20px auto;
-    width: 80%;
-  }
-  
-  .slider-container img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
+  margin: 20px auto;
+  width: 80%;
+}
+
+.slider-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
   
