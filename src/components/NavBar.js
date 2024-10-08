@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <nav className="bg-white shadow">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-        {/* Left Section */}
+     
         <div className="flex space-x-4">
           <a href="#" className="text-gray-700 hover:text-blue-600 text-lg no-underline">Movies</a>
           <a href="#" className="text-gray-700 hover:text-blue-600 text-lg no-underline">Stream Events</a>
