@@ -129,4 +129,16 @@
     margin: 0 10px;
     cursor: pointer;
   }
+
+  .mode{
+    margin-right: 10px;
+  }
+
+  .mode:hover{
+    cursor:pointer;
+  }
+
+  .dark-mode{
+    background-color: #0b0404;
+  }
   
