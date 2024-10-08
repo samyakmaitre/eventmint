@@ -1,6 +1,6 @@
 import React from "react";
 import NavBar from "./NavBar";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom"; // Combined imports
 
 import "../assets/styles/Header.css";
 import { useSelector, useDispatch } from "react-redux";
@@ -11,7 +11,7 @@ function Header() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const { user } = useSelector((state) => state.profile);
-    
+
     const location = useLocation();
 
     if (location.pathname === "/signup" || location.pathname === "/login") {

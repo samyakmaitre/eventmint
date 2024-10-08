@@ -83,7 +83,7 @@ function MovieList() {
   ];
 
   return (
-    <div className="movie-list">
+    <div className="movie-list mt-20">
       {movies.map((movie, index) => (
         <Movie
           key={index}

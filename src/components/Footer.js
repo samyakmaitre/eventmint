@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaLinkedinIn, FaChevronDown, FaChevronUp } from 'react-icons/fa';
+import { FaFacebookF,FaInstagram, FaYoutube, FaLinkedinIn, FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import { FaLocationDot, FaPhone } from 'react-icons/fa6';
 import { MdEmail } from 'react-icons/md';
+import {FaXTwitter} from 'react-icons/fa6';
 
 const Logo = () => (
   <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -122,7 +123,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-gradient-to-b from-gray-900 to-black text-gray-300">
+    <footer className="bg-gradient-to-b from-gray-900 to-black text-gray-300 mt-20">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <motion.div 
@@ -142,7 +143,7 @@ export default function Footer() {
             </div>
            <div className='flex space-x-4'>
            <SocialIcon icon={FaFacebookF} href="#" />
-              <SocialIcon icon={FaTwitter} href="#" />
+              <SocialIcon icon={FaXTwitter} href="#" />
               <SocialIcon icon={FaInstagram} href="#" />
               <SocialIcon icon={FaYoutube} href="#" />
               <SocialIcon icon={FaLinkedinIn} href="#" />
