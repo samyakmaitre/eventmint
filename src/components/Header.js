@@ -3,7 +3,7 @@
 // Header.js
 import React from "react"; // Add this line
 import NavBar from "./NavBar";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate,useLocation } from "react-router-dom";
 
 import "../assets/styles/Header.css";
 import { useSelector, useDispatch } from "react-redux";
