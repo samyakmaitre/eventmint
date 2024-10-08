@@ -1,9 +1,10 @@
 /** @format */
 
-// Header.js
 import React from "react"; // Add this line
 import NavBar from "./NavBar";
-import { Link, useNavigate } from "react-router-dom";
+
+import { Link, useNavigate,useLocation } from "react-router-dom";
+
 
 import "../assets/styles/Header.css";
 import { useSelector, useDispatch } from "react-redux";
@@ -19,10 +20,10 @@ function Header() {
     
     const location = useLocation(); // Get the current path
 
-// If the current path is "/signup" or "/login", don't render the Header
+    // If the current path is "/signup" or "/login", don't render the Header
     if (location.pathname === "/signup" || location.pathname === "/login") {
         return null;
-    }
+    } 
 
     return (
         <header className="header container-fluid d-flex align-items-center justify-content-between p-3 bg-white">
@@ -70,4 +71,3 @@ function Header() {
 }
 
 export default Header;
-
