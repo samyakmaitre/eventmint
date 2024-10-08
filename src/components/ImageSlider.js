@@ -67,7 +67,7 @@ const ImageSlider = () => {
   };
 
   return (
-    <div className="slider-container">
+    <div className="slider-container h-20">
       <Slider {...settings}>
         <div>
           <ImageWithCursorEffect imageSrc={image1} altText="Image 1" />
