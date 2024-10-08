@@ -1,13 +1,16 @@
 /** @format */
 
-// Header.js
 import React from "react"; // Add this line
 import NavBar from "./NavBar";
 import { Link, useNavigate,useLocation } from "react-router-dom";
 
+
 import "../assets/styles/Header.css";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../services/operations/authAPI";
+import { useLocation } from 'react-router-dom';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+
 
 function Header() {
     const navigate = useNavigate();
@@ -16,10 +19,10 @@ function Header() {
     
     const location = useLocation(); // Get the current path
 
-// If the current path is "/signup" or "/login", don't render the Header
+    // If the current path is "/signup" or "/login", don't render the Header
     if (location.pathname === "/signup" || location.pathname === "/login") {
         return null;
-    }
+    } 
 
     return (
         <header className="header container-fluid d-flex align-items-center justify-content-between p-3 bg-white">
@@ -34,6 +37,9 @@ function Header() {
                     className="form-control"
                     placeholder="Search for Movies, Events, Plays, Sports and Activities"
                 />
+                <span className="input-group-text">
+                    <i className="bi bi-search"></i> {/* Bootstrap Icon */}
+                </span>
             </div>
             <div className="location-signin d-flex align-items-center">
                 <select className="location me-3 form-select">
@@ -64,4 +70,3 @@ function Header() {
 }
 
 export default Header;
-

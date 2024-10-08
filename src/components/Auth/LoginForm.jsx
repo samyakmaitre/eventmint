@@ -4,35 +4,38 @@ import { useState } from "react";
 import { AiOutlineEye, AiOutlineEyeInvisible, AiOutlineGoogle } from "react-icons/ai";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { login } from "../../services/operations/authAPI";
+
+import { login } from "../../services/operations/authAPI"; 
+
 
 // Import Firebase Auth and Google Auth Provider
 import { auth, provider, signInWithPopup } from "./Firebase";
 
 
 function LoginForm() {
-	const navigate = useNavigate();
-	const dispatch = useDispatch();
-	const [formData, setFormData] = useState({
-		email: "",
-		password: "",
-	});
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
 
-	const [showPassword, setShowPassword] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
-	const { email, password } = formData;
+  const { email, password } = formData;
 
-	const handleOnChange = (e) => {
-		setFormData((prevData) => ({
-			...prevData,
-			[e.target.name]: e.target.value,
-		}));
-	};
+  const handleOnChange = (e) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      [e.target.name]: e.target.value,
+    }));
+  }; 
 
-	const handleOnSubmit = (e) => {
-		e.preventDefault();
-		dispatch(login(email, password, navigate));
-	};
+  const handleOnSubmit = (e) => {
+    e.preventDefault();
+    dispatch(login(email, password, navigate));
+  }; 
+
 
 	// Function to handle Google Sign-In
 	const handleGoogleSignIn = () => {
@@ -130,6 +133,7 @@ function LoginForm() {
 			</form>
 		</div>
 	);
+
 }
 
 export default LoginForm;
