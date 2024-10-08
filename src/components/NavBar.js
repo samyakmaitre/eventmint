@@ -5,7 +5,7 @@ const Navbar = () => {
     <nav className="bg-white shadow">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
      
-        <div className="flex space-x-4">
+        <div className="flex space-x-0 float-left gap-3">
           <a href="#" className="text-gray-700 hover:text-blue-600 text-lg no-underline">Movies</a>
           <a href="#" className="text-gray-700 hover:text-blue-600 text-lg no-underline">Stream Events</a>
           <a href="#" className="text-gray-700 hover:text-blue-600 text-lg no-underline">Plays</a>

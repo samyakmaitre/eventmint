@@ -3,7 +3,7 @@ import NavBar from './NavBar';
 
 function Heading() {
     return (
-        <div className="w-screen" style={{ fontFamily: 'Roboto' }}>
+        <div className="w-screen h-2" style={{ fontFamily: 'Roboto' }}>
            <NavBar/>
         </div>
     );
