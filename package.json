@@ -20,6 +20,7 @@
     "@types/react-router-dom": "^5.3.3",
     "axios": "^1.7.7",
     "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
     "concurrently": "^9.0.1",
     "framer-motion": "^11.11.1",
     "lucide-react": "^0.447.0",

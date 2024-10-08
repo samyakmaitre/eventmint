@@ -8,6 +8,9 @@ import { Link, useNavigate } from "react-router-dom";
 import "../assets/styles/Header.css";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../services/operations/authAPI";
+import { useLocation } from 'react-router-dom';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+
 
 function Header() {
     const navigate = useNavigate();
@@ -34,6 +37,9 @@ function Header() {
                     className="form-control"
                     placeholder="Search for Movies, Events, Plays, Sports and Activities"
                 />
+                <span className="input-group-text">
+                    <i className="bi bi-search"></i> {/* Bootstrap Icon */}
+                </span>
             </div>
             <div className="location-signin d-flex align-items-center">
                 <select className="location me-3 form-select">
