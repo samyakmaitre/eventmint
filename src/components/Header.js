@@ -2,14 +2,12 @@
 
 import React from "react"; // Add this line
 import NavBar from "./NavBar";
-import { Link, useNavigate,useLocation } from "react-router-dom";
-
+import { Link, useNavigate, useLocation } from "react-router-dom"; // Combined imports
 
 import "../assets/styles/Header.css";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../services/operations/authAPI";
 import 'bootstrap-icons/font/bootstrap-icons.css';
-
 
 function Header() {
     const navigate = useNavigate();
