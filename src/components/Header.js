@@ -24,9 +24,8 @@ function Header() {
     return (
         <header className="header container-fluid d-flex align-items-center justify-content-between p-3 bg-white">
             <div className="logo">
-                <span>book</span>
-                <span className="highlight">my</span>
-                <span>show</span>
+                <span>Event</span>
+                <span className="highlight">Mint</span>
             </div>
             <div className="search-bar input-group">
                 <input

@@ -135,7 +135,7 @@ export default function Footer() {
             <div className="flex items-center space-x-3">
               <Logo />
               <h3 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
-                Book<span className="text-red-600">My</span>Show
+                Event<span className="text-red-600">Mint</span>
               </h3>
             </div>
             <div className="flex space-x-4">
@@ -272,7 +272,7 @@ export default function Footer() {
             </div>
             <div className="flex items-center">
               <MdEmail className="text-purple-500 mr-2" />
-              <span className="text-sm">support@BookMyShow.com</span>
+              <span className="text-sm">support@EventMint.com</span>
             </div>
           </div>
         </div>
