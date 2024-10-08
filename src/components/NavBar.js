@@ -1,45 +1,27 @@
 import React from 'react';
-import '../assets/styles/NavBar.css'; // Import a CSS file for styling
 
-function NavBar() {
+const Navbar = () => {
   return (
-    <nav className="navbar">
-      {/* Entertainment Dropdown */}
-      <div className="dropdown">
-        <button className="dropbtn">Entertainment</button>
-        <div className="dropdown-content">
-          <a href="#">Movies</a>
-          <a href="#">Stream</a>
-          <a href="#">Plays</a>
+    <nav className="bg-white shadow">
+      <div className="container mx-auto px-4 py-3 flex justify-between items-center">
+     
+        <div className="flex space-x-4">
+          <a href="#" className="text-gray-700 hover:text-blue-600 text-lg no-underline">Movies</a>
+          <a href="#" className="text-gray-700 hover:text-blue-600 text-lg no-underline">Stream Events</a>
+          <a href="#" className="text-gray-700 hover:text-blue-600 text-lg no-underline">Plays</a>
+          <a href="#" className="text-gray-700 hover:text-blue-600 text-lg no-underline">Sports Activities</a>
         </div>
-      </div>
-
-      {/* Events & Activities Dropdown */}
-      <div className="dropdown">
-        <button className="dropbtn">Events & Activities</button>
-        <div className="dropdown-content">
-          <a href="#">Events</a>
-          <a href="#">Sports</a>
-          <a href="#">Activities</a>
+        
+        {/* Right Section */}
+        <div className="flex space-x-4">
+          <a href="#" className="text-gray-700 hover:text-blue-600 text-lg no-underline">List Your Show</a>
+          <a href="#" className="text-gray-700 hover:text-blue-600 text-lg no-underline">Corporates</a>
+          <a href="#" className="text-gray-700 hover:text-blue-600 text-lg no-underline">Offers</a>
+          <a href="#" className="text-gray-700 hover:text-blue-600 text-lg no-underline">Gift Cards</a>
         </div>
-      </div>
-
-      {/* Corporate & Offers Dropdown */}
-      <div className="dropdown">
-        <button className="dropbtn">Corporate & Offers</button>
-        <div className="dropdown-content">
-          <a href="#">Corporates</a>
-          <a href="#">Offers</a>
-          <a href="#">Gift Cards</a>
-        </div>
-      </div>
-
-      {/* Single link */}
-      <div className="single-link">
-        <a href="#">List Your Show</a>
       </div>
     </nav>
   );
-}
+};
 
-export default NavBar;
+export default Navbar;
