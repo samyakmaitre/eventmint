@@ -1,41 +1,39 @@
+
 /** @format */
 
 import { useState } from "react";
 import { AiOutlineEye, AiOutlineEyeInvisible, AiOutlineGoogle } from "react-icons/ai";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-
-import { login } from "../../services/operations/authAPI"; 
-
+import { login } from "../../services/operations/authAPI";
 
 // Import Firebase Auth and Google Auth Provider
 import { auth, provider, signInWithPopup } from "./Firebase";
 
 
 function LoginForm() {
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
-  const [formData, setFormData] = useState({
-    email: "",
-    password: "",
-  });
+	const navigate = useNavigate();
+	const dispatch = useDispatch();
+	const [formData, setFormData] = useState({
+		email: "",
+		password: "",
+	});
 
-  const [showPassword, setShowPassword] = useState(false);
+	const [showPassword, setShowPassword] = useState(false);
 
-  const { email, password } = formData;
+	const { email, password } = formData;
 
-  const handleOnChange = (e) => {
-    setFormData((prevData) => ({
-      ...prevData,
-      [e.target.name]: e.target.value,
-    }));
-  }; 
+	const handleOnChange = (e) => {
+		setFormData((prevData) => ({
+			...prevData,
+			[e.target.name]: e.target.value,
+		}));
+	};
 
-  const handleOnSubmit = (e) => {
-    e.preventDefault();
-    dispatch(login(email, password, navigate));
-  }; 
-
+	const handleOnSubmit = (e) => {
+		e.preventDefault();
+		dispatch(login(email, password, navigate));
+	};
 
 	// Function to handle Google Sign-In
 	const handleGoogleSignIn = () => {
@@ -110,7 +108,7 @@ function LoginForm() {
 					onClick={handleGoogleSignIn}
 					className="flex items-center justify-center gap-2 font-semibold py-[8px] px-[12px] mt-4 p-2 text-white bg-blue-600 hover:bg-blue-700 rounded-md border-[2px] border-blue-800">
 					<AiOutlineGoogle size={24} /> {/* Google Icon */}
-					Sign in with Google
+					Login	 in with Google
 				</button>
 
 				<div className="flex gap-2 flex-col mt-2">
@@ -133,7 +131,9 @@ function LoginForm() {
 			</form>
 		</div>
 	);
-
 }
+
+
+
 
 export default LoginForm;
