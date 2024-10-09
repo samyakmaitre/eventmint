@@ -3,9 +3,11 @@
 import { useState } from "react";
 import { toast } from "react-hot-toast";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
+import { FaGoogle } from "react-icons/fa"; // Import Google icon
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { signUp } from "../../services/operations/authAPI";
+import { auth, provider, signInWithPopup } from "./Firebase"; // Import Firebase auth and provider
 
 function SignupForm() {
 	const navigate = useNavigate();
@@ -24,7 +26,6 @@ function SignupForm() {
 
 	const { firstName, lastName, email, password, confirmPassword } = formData;
 
-	// Handle input fields, when some value changes
 	const handleOnChange = (e) => {
 		setFormData((prevData) => ({
 			...prevData,
@@ -32,7 +33,6 @@ function SignupForm() {
 		}));
 	};
 
-	// Handle Form Submission
 	const handleOnSubmit = (e) => {
 		e.preventDefault();
 
@@ -41,12 +41,10 @@ function SignupForm() {
 			return;
 		}
 
-		// Send data to backend for create account
 		dispatch(
 			signUp(firstName, lastName, email, password, confirmPassword, navigate)
 		);
 
-		// Reset
 		setFormData({
 			firstName: "",
 			lastName: "",
@@ -56,9 +54,22 @@ function SignupForm() {
 		});
 	};
 
+	const handleGoogleSignIn = () => {
+		signInWithPopup(auth, provider)
+			.then((result) => {
+				const user = result.user;
+				// Handle user data (e.g., save to state or send to backend)
+				console.log("Google User signed in: ", user);
+				navigate("/"); // Redirect after successful sign-in
+			})
+			.catch((error) => {
+				console.error("Error during Google Sign-In: ", error);
+				toast.error("Google Sign-In Failed");
+			});
+	};
+
 	return (
 		<div className="py-2">
-			{/* Form */}
 			<form
 				onSubmit={handleOnSubmit}
 				className="flex w-full font-semibold flex-col gap-y-6 text-black border-[2px] border-black p-6 rounded-md">
@@ -74,7 +85,7 @@ function SignupForm() {
 							value={firstName}
 							onChange={handleOnChange}
 							placeholder="Enter first name"
-							className="form-style w-full  p-2 border-[1px] bg-white border-black rounded-md  text-black"
+							className="form-style w-full p-2 border-[1px] bg-white border-black rounded-md text-black"
 						/>
 					</label>
 					<label className="w-full">
@@ -93,7 +104,7 @@ function SignupForm() {
 					</label>
 				</div>
 				<label className="w-full">
-					<p className="mb-1 text-[0.95rem] leading-[1.375rem] ">
+					<p className="mb-1 text-[0.95rem] leading-[1.375rem]">
 						Email Address
 					</p>
 					<input
@@ -103,7 +114,7 @@ function SignupForm() {
 						value={email}
 						onChange={handleOnChange}
 						placeholder="Enter email address"
-						className="form-style w-full p-2 border-[1px] bg-white border-black rounded-md  text-black"
+						className="form-style w-full p-2 border-[1px] bg-white border-black rounded-md text-black"
 					/>
 				</label>
 				<div className="flex gap-x-4">
@@ -125,15 +136,9 @@ function SignupForm() {
 								onClick={() => setShowPassword((prev) => !prev)}
 								className="absolute right-3 top-[35px] z-[10] cursor-pointer">
 								{showPassword ? (
-									<AiOutlineEyeInvisible
-										fontSize={24}
-										fill="#000000"
-									/>
+									<AiOutlineEyeInvisible fontSize={24} fill="#000000" />
 								) : (
-									<AiOutlineEye
-										fontSize={24}
-										fill="#000000"
-									/>
+									<AiOutlineEye fontSize={24} fill="#000000" />
 								)}
 							</span>
 						</div>
@@ -150,21 +155,15 @@ function SignupForm() {
 								value={confirmPassword}
 								onChange={handleOnChange}
 								placeholder="Confirm Password"
-								className="form-style w-full !pr-10 border-black  p-2 border-[1px] bg-white rounded-md  text-black"
+								className="form-style w-full !pr-10 border-black p-2 border-[1px] bg-white rounded-md text-black"
 							/>
 							<span
 								onClick={() => setShowConfirmPassword((prev) => !prev)}
-								className="absolute right-3 top-[35 px] z-[10] cursor-pointer text-black">
+								className="absolute right-3 top-[35px] z-[10] cursor-pointer text-black">
 								{showConfirmPassword ? (
-									<AiOutlineEyeInvisible
-										fontSize={24}
-										fill="#000000"
-									/>
+									<AiOutlineEyeInvisible fontSize={24} fill="#000000" />
 								) : (
-									<AiOutlineEye
-										fontSize={24}
-										fill="#000000"
-									/>
+									<AiOutlineEye fontSize={24} fill="#000000" />
 								)}
 							</span>
 						</div>
@@ -172,8 +171,16 @@ function SignupForm() {
 				</div>
 				<button
 					type="submit"
-					className="mt-6 font-semibold py-[8px] px-[12px] text-white p-2 border-[1px] rounded-md  bg-red-600 hover:bg-red-700 border-red-800">
+					className="mt-6 font-semibold py-[8px] px-[12px] text-white p-2 border-[1px] rounded-md bg-red-600 hover:bg-red-700 border-red-800">
 					Create Account
+				</button>
+				{/* Google Sign-In Button */}
+				<button
+					type="button"
+					onClick={handleGoogleSignIn}
+					className="mt-4 font-semibold py-[8px] px-[12px] text-white p-2 border-[1px] rounded-md bg-blue-600 hover:bg-blue-700 border-blue-800 flex items-center justify-center">
+					<FaGoogle className="mr-2" /> {/* Add Google icon here */}
+					Sign in with Google
 				</button>
 				<div className="flex gap-2 flex-col mt-2">
 					<div className="flex gap-2 justify-center items-center">
@@ -182,7 +189,7 @@ function SignupForm() {
 						<span className="h-[1px] bg-black w-[70%]"></span>
 					</div>
 					<div className="flex flex-row gap-2 justify-center items-center">
-						<div className=" font-normal text-black select-none">
+						<div className="font-normal text-black select-none">
 							Have an account?
 						</div>
 						<button
@@ -198,4 +205,3 @@ function SignupForm() {
 }
 
 export default SignupForm;
-
