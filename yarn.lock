@@ -5440,7 +5440,10 @@ eventemitter3@^4.0.0:
     "@types/react-router-dom" "^5.3.3"
     axios "^1.7.7"
     bootstrap "^5.3.3"
+<<<<<<< HEAD
     bootstrap-icons "^1.11.3"
+=======
+>>>>>>> 3d710daf1f4d3d57d554b75d6568beb56d73fc32
     concurrently "^9.0.1"
     eventmint "file:"
     firebase "^10.14.0"
