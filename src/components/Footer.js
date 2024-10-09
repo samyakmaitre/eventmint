@@ -4,42 +4,42 @@ import { FaFacebookF,FaInstagram, FaYoutube, FaLinkedinIn, FaChevronDown, FaChev
 import { FaLocationDot, FaPhone } from 'react-icons/fa6';
 import { MdEmail } from 'react-icons/md';
 import {FaXTwitter} from 'react-icons/fa6';
-
-const Logo = () => (
-  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <motion.rect 
-      width="40" 
-      height="40" 
-      rx="8" 
-      fill="url(#gradient)"
-      initial={{ scale: 0 }}
-      animate={{ scale: 1 }}
-      transition={{ type: "spring", stiffness: 260, damping: 20 }}
-    />
-    <motion.path 
-      d="M20 10L28 25H12L20 10Z" 
-      fill="white"
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.2 }}
-    />
-    <motion.circle 
-      cx="20" 
-      cy="28" 
-      r="3" 
-      fill="white"
-      initial={{ opacity: 0, scale: 0 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ delay: 0.4 }}
-    />
-    <defs>
-      <linearGradient id="gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
-        <stop stopColor="#8B5CF6" />
-        <stop offset="1" stopColor="#EC4899" />
-      </linearGradient>
-    </defs>
-  </svg>
-);
+import removebg from '../assets/images/removebg.png';
+// const Logo = () => (
+//   <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+//     <motion.rect 
+//       width="40" 
+//       height="40" 
+//       rx="8" 
+//       fill="url(#gradient)"
+//       initial={{ scale: 0 }}
+//       animate={{ scale: 1 }}
+//       transition={{ type: "spring", stiffness: 260, damping: 20 }}
+//     />
+//     <motion.path 
+//       d="M20 10L28 25H12L20 10Z" 
+//       fill="white"
+//       initial={{ opacity: 0, y: 10 }}
+//       animate={{ opacity: 1, y: 0 }}
+//       transition={{ delay: 0.2 }}
+//     />
+//     <motion.circle 
+//       cx="20" 
+//       cy="28" 
+//       r="3" 
+//       fill="white"
+//       initial={{ opacity: 0, scale: 0 }}
+//       animate={{ opacity: 1, scale: 1 }}
+//       transition={{ delay: 0.4 }}
+//     />
+//     <defs>
+//       <linearGradient id="gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+//         <stop stopColor="#8B5CF6" />
+//         <stop offset="1" stopColor="#EC4899" />
+//       </linearGradient>
+//     </defs>
+//   </svg>
+// );
 
 const SocialIcon = ({ icon: Icon, href }) => (
   <motion.a 
@@ -133,9 +133,10 @@ export default function Footer() {
             transition={{ duration: 0.5 }}
           >
             <div className="flex items-center space-x-3">
-              <Logo />
+              {/* <Logo /> */}
               <h3 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
-                Book<span className="text-red-600">My</span>Show
+                {/* Book<span className="text-red-600">My</span>Show */}
+                <img src={removebg} alt="" className='w-100 h-100 pr-20 mt-5 pl-1 '/>
               </h3>
             </div>
             <div className="flex space-x-4">
