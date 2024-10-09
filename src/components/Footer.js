@@ -242,7 +242,7 @@ export default function Footer() {
           transition={{ duration: 0.5, delay: 0.6 }}
         >
           <div className="text-sm">
-            &copy; 2024 BookMyShow. All rights reserved.
+            &copy; 2024 EventMint. All rights reserved.
           </div>
           <div className="flex space-x-4 text-sm">
             <a href="#" className="hover:text-white transition-colors">Terms of Use</a>
@@ -272,7 +272,7 @@ export default function Footer() {
             </div>
             <div className="flex items-center">
               <MdEmail className="text-purple-500 mr-2" />
-              <span className="text-sm">support@BookMyShow.com</span>
+              <span className="text-sm">support@EventMint.com</span>
             </div>
           </div>
         </div>
