@@ -17,6 +17,7 @@
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
     position: relative;
     z-index: 1000;
+    height: 80px;
   }
   
   .logo {
@@ -114,7 +115,7 @@
   /* NavBar.css */
   .navbar {
     background-color: #0b0404;
-    padding: 10px;
+    padding: 2px;
   }
   
   .main-nav ul, .additional-links ul {
