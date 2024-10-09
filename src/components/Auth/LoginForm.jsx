@@ -107,7 +107,7 @@ function LoginForm() {
 					onClick={handleGoogleSignIn}
 					className="flex items-center justify-center gap-2 font-semibold py-[8px] px-[12px] mt-4 p-2 text-white bg-blue-600 hover:bg-blue-700 rounded-md border-[2px] border-blue-800">
 					<AiOutlineGoogle size={24} /> {/* Google Icon */}
-					Sign in with Google
+					Login in with Google
 				</button>
 
 				<div className="flex gap-2 flex-col mt-2">
