@@ -27,7 +27,7 @@ function Header({ onSearch }) {
         <header className="header container-fluid d-flex align-items-center justify-content-between p-3 bg-white">
             <div className="logo">
                 <a href="https://eventmint.vercel.app/">
-                    <img src={logo} alt="Logo" />
+                    <img src={logo} alt="Logo" className="aspect-[3/2] object-contain" />
                 </a>
             </div>
 

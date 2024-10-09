@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaFacebookF, FaInstagram, FaYoutube, FaLinkedinIn, FaChevronDown, FaChevronUp, FaLocationDot, FaPhone } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaYoutube, FaLinkedinIn, FaChevronDown, FaChevronUp, FaLocationDot, FaPhone,FaArrowUp } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { FaXTwitter } from 'react-icons/fa6';
 import logo from "../assets/images/logo4.png";
@@ -97,9 +97,9 @@ export default function Footer() {
             transition={{ duration: 0.5 }}
           >
             <div className="flex items-center space-x-3">
-              <img src={logo} alt="Logo" className='w-20 h-20'/>
+              <img src={logo} alt="Logo" className='w-[170px] aspect-[3/2] object-contain rounded-lg'/>
             </div>
-            <p className="text-sm ml-50">Your gateway to entertainment!</p>
+              <p className="text-sm ml-50 flex">Your gateway to entertainment!</p>
             <div className="flex space-x-4">
               <SocialIcon icon={FaFacebookF} href="#" />
               <SocialIcon icon={FaXTwitter} href="#" />
@@ -216,7 +216,7 @@ export default function Footer() {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            Scroll to Top
+            <SocialIcon icon={FaArrowUp} href="#" />
           </motion.button>
         )}
       </div>
