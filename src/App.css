@@ -1,0 +1,134 @@
+
+
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+.App {
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Header Styles */
+header {
+  background-color: #ff0000;
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+  
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  
+}
+
+header nav ul li {
+  margin: 0 1rem;
+  font-size: 1.2rem;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #282c34;
+}
+
+
+
+
+/* Movie List Styles */
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.movie {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 1rem;
+  padding: 1rem;
+  width: 300px;
+  text-align: center;
+}
+
+.movie h2 {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.movie p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.movie button {
+  background-color: #ff0000;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.movie button:hover {
+  background-color: #ff0000;
+}
+
+
+
