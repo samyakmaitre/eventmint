@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import NavBar from "./NavBar";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import "../assets/styles/Header.css";
-import logo from "../assets/images/logo4.png";
+import logo from "../assets/images/logo1.png";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../services/operations/authAPI";
 import 'bootstrap-icons/font/bootstrap-icons.css';
