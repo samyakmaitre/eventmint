@@ -17,6 +17,8 @@
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
     position: relative;
     z-index: 1000;
+  
+    height: 81px;
   }
   
   .logo {
@@ -114,7 +116,7 @@
   /* NavBar.css */
   .navbar {
     background-color: #0b0404;
-    padding: 10px;
+    padding: 3px;
   }
   
   .main-nav ul, .additional-links ul {
@@ -130,3 +132,24 @@
     cursor: pointer;
   }
   
+
+  .mode{
+    margin-right: 10px;
+  }
+
+  .mode:hover{
+    cursor:pointer;
+  }
+
+  .dark-mode{
+    background-color: #151414f9;
+  }
+
+  .bi-brightness-high-fill,.bi-moon-fill{
+    font-size:25px;
+  }
+
+  .bi-moon-fill{
+    color:white;
+  }
+
