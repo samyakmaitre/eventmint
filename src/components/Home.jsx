@@ -6,6 +6,7 @@ import Footer from "./Footer";
 import Header from "./Header";
 import "../App.css";
 import Heading from "./heading";
+import Chatbot from "../chatbot";
 
 const Home = () => {
     const [searchTerm, setSearchTerm] = useState(""); 
@@ -14,6 +15,7 @@ const Home = () => {
         <div>
             <div className="App">
                 <Header onSearch={setSearchTerm} /> 
+                <Chatbot />
                 <Heading />
                 <ImageSlider />
                 <MovieList searchTerm={searchTerm} /> 
