@@ -1,26 +1,29 @@
-/** @format */
-
-import React from "react";
+import React, { useState } from "react";
 import ImageSlider from "./ImageSlider";
 import MovieList from "./MovieList";
 import Offers from "./Offers";
 import Footer from "./Footer";
 import Header from "./Header";
 import "../App.css";
+import Heading from "./heading";
+import Chatbot from "../chatbot";
 
 const Home = () => {
-	return (
-		<div>
-			<div className="App">
-				<Header />
-				<ImageSlider />
-				<MovieList />
-				<Offers />
-				<Footer />
-			</div>
-		</div>
-	);
+    const [searchTerm, setSearchTerm] = useState(""); 
 
+    return (
+        <div>
+            <div className="App">
+                <Header onSearch={setSearchTerm} /> 
+                <Chatbot />
+                <Heading />
+                <ImageSlider />
+                <MovieList searchTerm={searchTerm} /> 
+                <Offers />
+                <Footer />
+            </div>
+        </div>
+    );
 };
 
 export default Home;

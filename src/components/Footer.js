@@ -1,44 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaLinkedinIn, FaChevronDown, FaChevronUp } from 'react-icons/fa';
-import { FaLocationDot, FaPhone } from 'react-icons/fa6';
+import { FaFacebookF, FaInstagram, FaYoutube, FaLinkedinIn, FaChevronDown, FaChevronUp, FaLocationDot, FaPhone,FaArrowUp } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
-
-const Logo = () => (
-  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <motion.rect 
-      width="40" 
-      height="40" 
-      rx="8" 
-      fill="url(#gradient)"
-      initial={{ scale: 0 }}
-      animate={{ scale: 1 }}
-      transition={{ type: "spring", stiffness: 260, damping: 20 }}
-    />
-    <motion.path 
-      d="M20 10L28 25H12L20 10Z" 
-      fill="white"
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.2 }}
-    />
-    <motion.circle 
-      cx="20" 
-      cy="28" 
-      r="3" 
-      fill="white"
-      initial={{ opacity: 0, scale: 0 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ delay: 0.4 }}
-    />
-    <defs>
-      <linearGradient id="gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
-        <stop stopColor="#8B5CF6" />
-        <stop offset="1" stopColor="#EC4899" />
-      </linearGradient>
-    </defs>
-  </svg>
-);
+import { FaXTwitter } from 'react-icons/fa6';
+import logo from "../assets/images/logo4.png";
 
 const SocialIcon = ({ icon: Icon, href }) => (
   <motion.a 
@@ -122,7 +87,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-gradient-to-b from-gray-900 to-black text-gray-300">
+    <footer className="bg-gradient-to-b from-gray-900 to-black text-gray-300 mt-20">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <motion.div 
@@ -132,22 +97,17 @@ export default function Footer() {
             transition={{ duration: 0.5 }}
           >
             <div className="flex items-center space-x-3">
-              <Logo />
-              <h3 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
-                Book<span className="text-red-600">My</span>Show
-              </h3>
+              <img src={logo} alt="Logo" className='w-[170px] aspect-[3/2] object-contain rounded-lg'/>
             </div>
+              <p className="text-sm ml-50 flex">Your gateway to entertainment!</p>
             <div className="flex space-x-4">
-            <p className="text-sm ml-50 ">Your gateway to entertainment!</p>
-            </div>
-           <div className='flex space-x-4'>
-           <SocialIcon icon={FaFacebookF} href="#" />
-              <SocialIcon icon={FaTwitter} href="#" />
+              <SocialIcon icon={FaFacebookF} href="#" />
+              <SocialIcon icon={FaXTwitter} href="#" />
               <SocialIcon icon={FaInstagram} href="#" />
               <SocialIcon icon={FaYoutube} href="#" />
               <SocialIcon icon={FaLinkedinIn} href="#" />
-           </div> 
-              </motion.div>
+            </div>
+          </motion.div>
 
           <motion.div 
             className="grid grid-cols-2 gap-8"
@@ -241,58 +201,25 @@ export default function Footer() {
           transition={{ duration: 0.5, delay: 0.6 }}
         >
           <div className="text-sm">
-            &copy; 2024 BookMyShow. All rights reserved.
+            &copy; 2024 EventMint. All rights reserved.
           </div>
           <div className="flex space-x-4 text-sm">
             <a href="#" className="hover:text-white transition-colors">Terms of Use</a>
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Sitemap</a>
           </div>
         </motion.div>
-      </div>
 
-      <motion.div 
-        className="bg-gray-800 py-4"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.8 }}
-      >
-        <div className="container mx-auto px-4 flex flex-wrap items-center justify-between">
-          <div className="flex items-center space-x-4">
-            <div className="flex items-center">
-              <FaLocationDot className="text-purple-500 mr-2" />
-              <span className="text-sm">Mumbai, India</span>
-            </div>
-          </div>
-          <div className="flex items-center space-x-4">
-            <div className="flex items-center">
-              <FaPhone className="text-purple-500 mr-2" />
-              <span className="text-sm">1800-889-1999</span>
-            </div>
-            <div className="flex items-center">
-              <MdEmail className="text-purple-500 mr-2" />
-              <span className="text-sm">support@BookMyShow.com</span>
-            </div>
-          </div>
-        </div>
-      </motion.div>
-
-      <AnimatePresence>
         {isVisible && (
-          <motion.button
-            className="fixed bottom-4 right-4 p-3 bg-purple-600 text-white rounded-full shadow-lg"
+          <motion.button 
+            className="fixed bottom-8 right-8 bg-purple-500 text-white p-2 rounded-full shadow-lg"
             onClick={scrollToTop}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 20 }}
-            transition={{ duration: 0.2 }}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            <FaChevronUp size={24} />
+            <SocialIcon icon={FaArrowUp} href="#" />
           </motion.button>
         )}
-      </AnimatePresence>
+      </div>
     </footer>
   );
 }
