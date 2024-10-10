@@ -1,12 +1,20 @@
-
-
 @import "slick-carousel/slick/slick.css";
 @import "slick-carousel/slick/slick-theme.css";
 
+/* General Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* App Container */
 .App {
   text-align: center;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 .App-logo {
@@ -20,9 +28,8 @@
   }
 }
 
-
 .App-header {
-  background-color: #282c34;
+  background-color: #1c1f26;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -45,26 +52,19 @@
   }
 }
 
-/* General Styles */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-}
-
 /* Header Styles */
 header {
-  background-color: #ff0000;
+  background-color: #ff4500;
   color: white;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   text-align: center;
-  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
   margin: 0;
   font-size: 2.5rem;
+  font-weight: bold;
 }
 
 header nav ul {
@@ -72,20 +72,23 @@ header nav ul {
   padding: 0;
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
-  
+  margin-top: 1.5rem;
 }
 
 header nav ul li {
-  margin: 0 1rem;
+  margin: 0 1.5rem;
   font-size: 1.2rem;
-  padding: 10px;
-  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
   background-color: #282c34;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-
-
+header nav ul li:hover {
+  background-color: #3e434c;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
 /* Movie List Styles */
 .movie-list {
@@ -96,40 +99,46 @@ header nav ul li {
 }
 
 .movie {
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin: 1rem;
-  padding: 1rem;
-  width: 300px;
+  background-color: #fff;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  margin: 1.5rem;
+  padding: 1.5rem;
+  width: 280px;
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
 .movie h2 {
-  font-size: 1.5rem;
-  margin: 0.5rem 0;
+  font-size: 1.7rem;
+  margin: 1rem 0;
+  color: #333;
 }
 
 .movie p {
   font-size: 1rem;
-  color: #555;
+  color: #666;
+  margin-bottom: 1rem;
 }
 
 .movie button {
-  background-color: #ff0000;
+  background-color: #ff4500;
   border: none;
   color: white;
   cursor: pointer;
   font-size: 1rem;
-  padding: 0.5rem 1rem;
-  border-radius: 3px;
-  transition: background-color 0.3s ease;
+  padding: 0.7rem 1.2rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .movie button:hover {
-  background-color: #ff0000;
+  background-color: #e03e00;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
-
-
-
