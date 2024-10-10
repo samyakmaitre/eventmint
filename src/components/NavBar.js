@@ -72,6 +72,7 @@ const Navbar = () => {
           >
             Gift Cards
           </a>
+
         </div>
       </div>
     </nav>
