@@ -7,6 +7,7 @@ import Home from "./components/Home";
 import Template from "./components/Auth/Template";
 import Forget from "./components/Forget";
 import MovieDetails from './components/MovieDetails';
+import ContactUs from "./components/ContactUs";
 
 
 function App() {
@@ -18,17 +19,18 @@ function App() {
 					<Route
 						path="/"
 						element={<Home />}></Route>
-					{ <Route
+					{<Route
 						path="/login"
 						element={<Template formType={"login"} />}
-					/> }
-					
+					/>}
+
 					<Route
 						path="/signup"
 						element={<Template formType={"signup"} />}
 					/>
-					<Route path="/forget" element={<Forget/>} /> 
-					<Route path="/movies/:id" element={<MovieDetails />} />					
+					<Route path="/forget" element={<Forget />} />
+					<Route path="/movies/:id" element={<MovieDetails />} />
+					<Route path="/contact-us" element={<ContactUs />} />
 				</Routes>
 			</Router>
 		</div>
