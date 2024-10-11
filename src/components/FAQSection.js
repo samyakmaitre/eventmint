@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 import Navbar from "./NavBar";
+import Footer from "./Footer";
 
 const FAQSection = () => {
     const [activeIndex, setActiveIndex] = useState(null);
@@ -47,6 +48,7 @@ const FAQSection = () => {
                 </div>
 
             </section>
+            <Footer />
         </>
     );
 };
