@@ -55,6 +55,19 @@ const ImageWithCursorEffect = ({ imageSrc, altText }) => {
   );
 };
 
+// Custom arrow components for prev and next buttons
+const PrevArrow = ({ onClick }) => (
+  <div className="custom-arrow prev-arrow" onClick={onClick}>
+    &laquo;
+  </div>
+);
+
+const NextArrow = ({ onClick }) => (
+  <div className="custom-arrow next-arrow" onClick={onClick}>
+    &raquo;
+  </div>
+);
+
 const ImageSlider = () => {
   const settings = {
     dots: true,
@@ -64,6 +77,8 @@ const ImageSlider = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
+    prevArrow: <PrevArrow />, // Adding custom prev arrow
+    nextArrow: <NextArrow />, // Adding custom next arrow
   };
 
   return (

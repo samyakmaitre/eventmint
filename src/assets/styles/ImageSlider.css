@@ -14,4 +14,24 @@
     border-radius: 10px;
   }
 
+  /*Slider button styles*/
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 4rem;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.prev-arrow {
+  left: 10px; /* Position of the prev button */
+}
+
+.next-arrow {
+  right: 10px; /* Position of the next button */
+}
+
+
   
