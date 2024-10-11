@@ -7,19 +7,21 @@ import Header from "./Header";
 import "../App.css";
 import Heading from "./heading";
 import Chatbot from "../chatbot";
+import FAQSection from "./FAQSection";
 
 const Home = () => {
-    const [searchTerm, setSearchTerm] = useState(""); 
+    const [searchTerm, setSearchTerm] = useState("");
 
     return (
         <div>
             <div className="App">
-                <Header onSearch={setSearchTerm} /> 
+                <Header onSearch={setSearchTerm} />
                 <Chatbot />
                 <Heading />
                 <ImageSlider />
-                <MovieList searchTerm={searchTerm} /> 
+                <MovieList searchTerm={searchTerm} />
                 <Offers />
+                <FAQSection />
                 <Footer />
             </div>
         </div>

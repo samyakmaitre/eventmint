@@ -17,16 +17,16 @@ function App() {
 					<Route
 						path="/"
 						element={<Home />}></Route>
-					{ <Route
+					{<Route
 						path="/login"
 						element={<Template formType={"login"} />}
-					/> }
-					
+					/>}
+
 					<Route
 						path="/signup"
 						element={<Template formType={"signup"} />}
 					/>
-					<Route path="/forget" element={<Forget/>} /> 
+					<Route path="/forget" element={<Forget />} />
 				</Routes>
 			</Router>
 		</div>
