@@ -7,6 +7,7 @@ import Home from "./components/Home";
 import Template from "./components/Auth/Template";
 import Forget from "./components/Forget";
 import FAQSection from "./components/FAQSection";
+import MovieDetails from './components/MovieDetails';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
 					/>
 					<Route path="/forget" element={<Forget />} />
 					<Route path="/faqs" element={<FAQSection />} />
+					<Route path="/movies/:id" element={<MovieDetails />} />
 				</Routes>
 			</Router>
 		</div>
