@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from './NavBar';
+import Footer from './Footer';
 
 const teamMembers = [
     {
@@ -68,6 +69,7 @@ const Team = () => {
                     ))}
                 </div>
             </div>
+            <Footer />
         </>
     );
 };

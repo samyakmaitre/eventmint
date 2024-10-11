@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from './NavBar';
+import Footer from './Footer';
 
 const PrivacyPolicy = () => {
     return (
@@ -111,6 +112,7 @@ const PrivacyPolicy = () => {
                     Last updated: October 11, 2024
                 </p>
             </section>
+            <Footer />
         </>
     );
 };
