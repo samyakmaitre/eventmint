@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../assets/styles/NavBar.css';
 
-const Navbar = () => {
+const Navbar = ({ scrolled }) => {
   const [activeLink, setActiveLink] = useState('Movies');
 
   const handleLinkClick = (link) => {
@@ -9,7 +9,20 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+      <style>
+        {`
+        .navbar {
+          position: sticky;
+          top: 10vh; /* Adjust this value based on the height of the header */
+          z-index: 999; /* Ensure it stays above other content but below the header */
+          transition: background-color 0.3s ease;
+        }
+        .navbar.scrolled {
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+        `}
+      </style>
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <div className="flex space-x-8">
           <a
@@ -72,7 +85,6 @@ const Navbar = () => {
           >
             Gift Cards
           </a>
-
         </div>
       </div>
     </nav>
