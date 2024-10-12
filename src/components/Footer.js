@@ -40,12 +40,12 @@ const Logo = () => (
   </svg>
 );
 
-const SocialIcon = ({ icon: Icon, href }) => (
+const SocialIcon = ({ icon: Icon, href, classname}) => (
   <motion.a 
     href={href} 
     target="_blank" 
     rel="noopener noreferrer" 
-    className="text-gray-400 hover:text-white transition-colors"
+    className={classname}
     whileHover={{ scale: 1.2 }}
     whileTap={{ scale: 0.9 }}
   >
@@ -141,11 +141,16 @@ export default function Footer() {
             <p className="text-sm ml-50 ">Your gateway to entertainment!</p>
             </div>
            <div className='flex space-x-4'>
-           <SocialIcon icon={FaFacebookF} href="#" />
-              <SocialIcon icon={FaTwitter} href="#" />
-              <SocialIcon icon={FaInstagram} href="#" />
-              <SocialIcon icon={FaYoutube} href="#" />
-              <SocialIcon icon={FaLinkedinIn} href="#" />
+           <SocialIcon icon={FaFacebookF} href="#" 
+           classname="text-gray-400 hover:text-blue-500 "/>
+              <SocialIcon icon={FaTwitter} href="#" 
+              classname="text-gray-400 hover:text-blue-400"/>
+              <SocialIcon icon={FaInstagram} href="#" 
+              classname="text-gray-400 hover:text-pink-500"/>
+              <SocialIcon icon={FaYoutube} href="#"
+              classname="text-gray-400 hover:text-red-600" />
+              <SocialIcon icon={FaLinkedinIn} href="#" 
+              classname="text-gray-400 hover:text-blue-800"/>
            </div> 
               </motion.div>
 
