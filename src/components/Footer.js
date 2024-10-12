@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaFacebookF, FaInstagram, FaYoutube, FaLinkedinIn, FaChevronDown, FaChevronUp, FaLocationDot, FaPhone,FaArrowUp } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaYoutube, FaLinkedinIn, FaChevronDown, FaChevronUp, FaLocationDot, FaPhone, FaArrowUp } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { FaXTwitter } from 'react-icons/fa6';
 import logo from "../assets/images/logo4.png";
 
 const SocialIcon = ({ icon: Icon, href }) => (
-  <motion.a 
-    href={href} 
-    target="_blank" 
-    rel="noopener noreferrer" 
+  <motion.a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
     className="text-gray-400 hover:text-white transition-colors"
     whileHover={{ scale: 1.2 }}
     whileTap={{ scale: 0.9 }}
@@ -90,16 +90,16 @@ export default function Footer() {
     <footer className="bg-gradient-to-b from-gray-900 to-black text-gray-300 mt-20">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          <motion.div 
+          <motion.div
             className="space-y-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
             <div className="flex items-center space-x-3">
-              <img src={logo} alt="Logo" className='w-[170px] aspect-[3/2] object-contain rounded-lg'/>
+              <img src={logo} alt="Logo" className='w-[170px] aspect-[3/2] object-contain rounded-lg' />
             </div>
-              <p className="text-sm ml-50 flex">Your gateway to entertainment!</p>
+            <p className="text-sm ml-50 flex">Your gateway to entertainment!</p>
             <div className="flex space-x-4">
               <SocialIcon icon={FaFacebookF} href="#" />
               <SocialIcon icon={FaXTwitter} href="#" />
@@ -109,7 +109,7 @@ export default function Footer() {
             </div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="grid grid-cols-2 gap-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -127,7 +127,7 @@ export default function Footer() {
               </AccordionItem>
               <AccordionItem title="About">
                 <ul className="space-y-2 text-sm">
-                  <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
+                  <li><a href="/about-us" className="hover:text-white transition-colors">About Us</a></li>
                   <li><a href="#" className="hover:text-white transition-colors">Our Team</a></li>
                   <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
                 </ul>
@@ -145,7 +145,7 @@ export default function Footer() {
                 <ul className="space-y-2 text-sm">
                   <li><a href="#" className="hover:text-white transition-colors">FAQs</a></li>
                   <li><a href="#" className="hover:text-white transition-colors">Contact Us</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
+                  <li><a href="/about-us" className="hover:text-white transition-colors">About Us</a></li>
                 </ul>
               </AccordionItem>
               <AccordionItem title="Legal">
@@ -165,15 +165,15 @@ export default function Footer() {
             <h5 className="font-semibold text-white mb-4 text-lg">Stay Connected</h5>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="relative">
-                <input 
-                  type="email" 
-                  placeholder="Enter your email" 
+                <input
+                  type="email"
+                  placeholder="Enter your email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all duration-300"
                   required
                 />
-                <motion.span 
+                <motion.span
                   className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-gray-400"
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -182,8 +182,8 @@ export default function Footer() {
                   <MdEmail size={20} />
                 </motion.span>
               </div>
-              <motion.button 
-                type="submit" 
+              <motion.button
+                type="submit"
                 className="w-full px-4 py-3 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white rounded-md transition-all duration-300 transform hover:scale-105"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -194,7 +194,7 @@ export default function Footer() {
           </motion.div>
         </div>
 
-        <motion.div 
+        <motion.div
           className="mt-12 pt-8 border-t border-gray-800 flex flex-wrap justify-between items-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -210,7 +210,7 @@ export default function Footer() {
         </motion.div>
 
         {isVisible && (
-          <motion.button 
+          <motion.button
             className="fixed bottom-8 right-8 bg-purple-500 text-white p-2 rounded-full shadow-lg"
             onClick={scrollToTop}
             whileHover={{ scale: 1.1 }}
