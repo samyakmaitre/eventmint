@@ -5,16 +5,17 @@ import { MdEmail } from 'react-icons/md';
 import { FaXTwitter } from 'react-icons/fa6';
 import logo from "../assets/images/logo4.png";
 
-const SocialIcon = ({ icon: Icon, href }) => (
+const SocialIcon = ({ icon: Icon, href,hoverColor }) => (
   <motion.a 
-    href={href} 
-    target="_blank" 
-    rel="noopener noreferrer" 
-    className="text-gray-400 hover:text-white transition-colors"
-    whileHover={{ scale: 1.2 }}
-    whileTap={{ scale: 0.9 }}
-  >
-    <Icon size={20} />
+  href={href}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-gray-400 transition-colors"
+  style={{ color: 'inherit' }} 
+  whileHover={{ scale: 1.2, color: hoverColor }} 
+  whileTap={{ scale: 0.9 }}
+>
+  <Icon size={20} />
   </motion.a>
 );
 
@@ -100,13 +101,16 @@ export default function Footer() {
               <img src={logo} alt="Logo" className='w-[170px] aspect-[3/2] object-contain rounded-lg'/>
             </div>
               <p className="text-sm ml-50 flex">Your gateway to entertainment!</p>
-            <div className="flex space-x-4">
-              <SocialIcon icon={FaFacebookF} href="#" />
-              <SocialIcon icon={FaXTwitter} href="#" />
-              <SocialIcon icon={FaInstagram} href="#" />
-              <SocialIcon icon={FaYoutube} href="#" />
-              <SocialIcon icon={FaLinkedinIn} href="#" />
-            </div>
+              <div className="flex space-x-4">
+              <div className="flex space-x-4">
+  <SocialIcon icon={FaFacebookF} href="#" hoverColor="#1877F2" /> 
+  <SocialIcon icon={FaXTwitter} href="#" hoverColor="white" /> 
+  <SocialIcon icon={FaInstagram} href="#" hoverColor="#E1306C" /> 
+  <SocialIcon icon={FaYoutube} href="#" hoverColor="#FF0000" /> 
+  <SocialIcon icon={FaLinkedinIn} href="#" hoverColor="#0077B5" /> 
+</div>
+
+             </div>
           </motion.div>
 
           <motion.div 
