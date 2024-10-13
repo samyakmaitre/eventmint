@@ -46,7 +46,7 @@ const Navbar = () => {
         {/* Right Section */}
         <div className="flex space-x-8">
           <Link
-            to="/list-your-show"
+            to="/list-shows"
             className={`nav-link ${activeLink === 'List Your Show' ? 'active' : ''}`}
             onClick={() => handleLinkClick('List Your Show')}
           >
