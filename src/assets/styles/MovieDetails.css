@@ -1,75 +1,64 @@
 /* Global Styles */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
   line-height: 1.6;
   color: #333;
   background-color: #f4f4f4;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for dark mode */
 }
 
-/* Header and Footer Styles */
-header, footer {
-  background-color: #222;
-  color: #fff;
-  padding: 1.5em;
-  text-align: center;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+.dark-mode body {
+  background-color: #181818;
+  color: #f5f5f5;
 }
 
-footer {
-  margin-top: 40px;
-}
-
-/* Movie Details Container Styles */
 .movie-details-container {
-  width: 800px;
+  width: 100%;
+  max-width: 850px; /* Responsive width */
   margin: 40px auto;
   padding: 25px;
   background-color: #fff;
   border-radius: 15px;
-  border: 1px solid #ddd;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
+  gap: 20px;
+  transition: background-color 0.3s ease;
 }
 
-/* Left Section Styles */
-.left-section {
-  flex: 1;
-  margin-right: 30px;
+.dark-mode .movie-details-container {
+  background-color: #2c2c2c;
 }
 
 .movie-poster img {
-  width: 300px;
-  height: 400px;
+  width: 100%;
+  max-width: 350px;
+  height: 450px;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  border-radius: 10px;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
 }
 
 .movie-poster img:hover {
   transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Right Section Styles */
 .right-section {
-  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .movie-title {
-  font-size: 30px;
+  font-size: 36px;
   font-weight: 700;
   margin-bottom: 15px;
-  color: #2c3e50;
+  color: #e74c3c;
 }
 
 .movie-description {
-  font-size: 16px;
+  font-size: 18px;
   color: #7f8c8d;
   margin-bottom: 20px;
 }
@@ -81,55 +70,109 @@ footer {
 }
 
 .movie-showtimes h3, .movie-cast h3, .movie-photos h3, .movie-trailer h3 {
-  font-size: 22px;
+  font-size: 24px;
   margin-bottom: 10px;
-  color: #2c3e50;
+  color: #e67e22;
 }
 
 .movie-showtimes div, .movie-cast div {
-  font-size: 16px;
+  font-size: 18px;
   color: #7f8c8d;
-  margin-bottom: 5px;
-}
-
-/* Carousel Styles */
-.carousel-container {
-  margin: 20px 0;
+  margin-bottom: 10px;
 }
 
 .cast-member, .photo {
   text-align: center;
-  margin: 10px;
+  margin: 15px;
+  transition: transform 0.3s ease;
 }
 
 .cast-member img, .photo img {
-  width: 110px;
-  height: 110px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cast-member img:hover, .photo img:hover {
   transform: scale(1.1);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
 }
 
 .cast-member div, .photo div {
-  margin-top: 8px;
-  font-size: 14px;
+  margin-top: 10px;
+  font-size: 16px;
   color: #34495e;
 }
 
-/* Movie Trailer */
+/* Buttons Section */
+.buttons-sec {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Ensures buttons wrap on smaller screens */
+  gap: 15px; /* Adds gap between buttons */
+}
+
+.book-tickets-button {
+  background-color: #e74c3c;
+  color: white;
+  padding: 15px 30px;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-tickets-button:hover {
+  background-color: #d62c1a;
+  box-shadow: 0 8px 20px rgba(231, 76, 60, 0.5);
+}
+
+/* Trailer Section */
 .movie-trailer iframe {
   border-radius: 15px;
-  width: 700px;
+  width: 100%;
   max-height: 390px;
 }
 
-/* Buttons Section */
-.buttons-sec{
-  margin-top: 30px;
-  display: flex;
-  justify-content: space-between;
+/* Dark Mode Toggle */
+.toggle-button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #34495e;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.toggle-button:hover {
+  background-color: #2c3e50;
+}
+
+/* Dark Mode Adjustments */
+.dark-mode .movie-title {
+  color: #e74c3c;
+}
+
+.dark-mode .movie-description, 
+.dark-mode .movie-genre, 
+.dark-mode .movie-rating {
+  color: #bdc3c7;
+}
+
+.dark-mode .movie-showtimes h3, 
+.dark-mode .movie-cast h3, 
+.dark-mode .movie-photos h3, 
+.dark-mode .movie-trailer h3 {
+  color: #f39c12;
+}
+
+.dark-mode .cast-member div, 
+.dark-mode .photo div {
+  color: #bdc3c7;
 }

@@ -1,57 +1,81 @@
 .movie {
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    overflow: hidden;
-    width: 200px;
-    text-align: center;
-    margin: 10px;
-    font-family: Arial, sans-serif;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: all 0.2s;
-  }
-
-.movie:hover{
-  scale: 1.02;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.384)
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 350px;
+  height: 450px; /* Adjust height for better button visibility */
+  text-align: center;
+  margin: 15px;
+  font-family: 'Arial', sans-serif;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  background-color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensure proper layout */
 }
-  
-  .movie-poster {
-    width: 100%;
-    height: auto;
-  }
-  
-  .movie-title {
-    font-size: 18px;
-    margin: 10px 0;
-  }
-  
-  .movie-rating {
-    font-size: 14px;
-    color: #888;
-  }
-  
-  .rating-star {
-    color: red;
-  }
-  
-  .votes {
-    font-size: 12px;
-  }
-  
-  .movie-genre {
-    font-size: 14px;
-    margin: 10px 0;
-  }
-  
-  .book-tickets-button {
-    background-color: #ff4500;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    cursor: pointer;
-  }
-  
-  .book-tickets-button:hover {
-    background-color: #ff6500;
-  }
+
+.movie:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.movie-poster {
+  width: 100%;
+  height: 60%; /* Adjusted image size to make room */
+  object-fit: cover;
+}
+
+/* Updated: Rating area with lighter background */
+.movie-rating {
+  font-size: 13px;
+  color: #333;
+  background-color: #f1f1f1; /* Light background */
+  padding: 5px;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #ccc; /* Add border for better separation */
+}
+
+.rating-star {
+  color: #ff4500;
+  margin-right: 5px;
+}
+
+.votes {
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.movie-title {
+  font-size: 18px;
+  margin: 8px 0;
+  color: #333;
+}
+
+.movie-genre {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+.book-tickets-button {
+  background-color: #ff4500;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding-bottom: 8px;
+  cursor: pointer;
+  margin-bottom: 10px ; /* Center the button */
+  transition: background-color 0.2s;
+  width: 90%; /* Adjust button width */
+}
+
+.book-tickets-button:hover {
+  background-color: #ff6500;
+}
