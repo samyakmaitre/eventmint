@@ -20,6 +20,7 @@ function Header({ onSearch }) {
         return null;
     }
 
+    
     function handleMode(){
         if(mode==="light"){
             setMode("dark");
