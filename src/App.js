@@ -8,6 +8,7 @@ import Template from "./components/Auth/Template";
 import Forget from "./components/Forget";
 import FAQSection from "./components/FAQSection";
 import MovieDetails from './components/MovieDetails';
+import AboutUs from "./components/AboutUs";
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
 					<Route path="/forget" element={<Forget />} />
 					<Route path="/faqs" element={<FAQSection />} />
 					<Route path="/movies/:id" element={<MovieDetails />} />
+					<Route path="/about-us" element={<AboutUs />} />
 				</Routes>
 			</Router>
 		</div>

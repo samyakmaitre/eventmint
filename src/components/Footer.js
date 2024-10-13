@@ -127,7 +127,7 @@ export default function Footer() {
               </AccordionItem>
               <AccordionItem title="About">
                 <ul className="space-y-2 text-sm">
-                  <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
+                  <li><a href="/about-us" className="hover:text-white transition-colors">About Us</a></li>
                   <li><a href="#" className="hover:text-white transition-colors">Our Team</a></li>
                   <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
                 </ul>
@@ -145,7 +145,7 @@ export default function Footer() {
                 <ul className="space-y-2 text-sm">
                   <li><a href="/faqs" className="hover:text-white transition-colors">FAQs</a></li>
                   <li><a href="#" className="hover:text-white transition-colors">Contact Us</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
+                  <li><a href="/about-us" className="hover:text-white transition-colors">About Us</a></li>
                 </ul>
               </AccordionItem>
               <AccordionItem title="Legal">
