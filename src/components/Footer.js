@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FaFacebookF, FaInstagram, FaYoutube, FaLinkedinIn, FaChevronDown, FaChevronUp, FaLocationDot, FaPhone, FaArrowUp } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { FaXTwitter } from 'react-icons/fa6';
-import logo from "../assets/images/logo4.png";
+import logo2 from "../assets/images/logo2.png";
 
 const SocialIcon = ({ icon: Icon, href }) => (
   <motion.a
@@ -97,7 +97,7 @@ export default function Footer() {
             transition={{ duration: 0.5 }}
           >
             <div className="flex items-center space-x-3">
-              <img src={logo} alt="Logo" className='w-[170px] aspect-[3/2] object-contain rounded-lg' />
+              <img src={logo2} alt="Logo" className='w-[200px] aspect-[5/2] object-contain rounded-lg' />
             </div>
             <p className="text-sm ml-50 flex">Your gateway to entertainment!</p>
             <div className="flex space-x-4">
