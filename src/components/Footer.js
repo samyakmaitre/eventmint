@@ -22,7 +22,7 @@ const AccordionItem = ({ title, children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border-b border-gray-700">
+    <div className="border-b border-gray-700 relative"> {/* Set relative positioning here */}
       <motion.button
         className="flex justify-between items-center w-full py-4 text-left text-gray-300 hover:text-white transition-colors"
         onClick={() => setIsOpen(!isOpen)}
@@ -44,8 +44,9 @@ const AccordionItem = ({ title, children }) => {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
+            className="absolute left-0 w-full bg-gray-800 mt-2 z-10" // Adjusted to ensure no extra margin
           >
-            <div className="pb-4">
+            <div className="pb-4 pt-3 mr-6"> {/* Remove left padding/margin if needed */}
               {children}
             </div>
           </motion.div>
