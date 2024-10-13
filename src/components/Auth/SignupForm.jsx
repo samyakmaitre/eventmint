@@ -24,6 +24,7 @@ function SignupForm() {
 
 	const [showPassword, setShowPassword] = useState(false);
 	const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+	const [passwordStrength, setPasswordStrength] = useState("");
 
 	const { firstName, lastName, email, password, confirmPassword } = formData;
 
@@ -32,6 +33,40 @@ function SignupForm() {
 			...prevData,
 			[e.target.name]: e.target.value,
 		}));
+
+		if (e.target.name === "password") {
+			checkPasswordStrength(e.target.value);
+		}
+	};
+
+	const checkPasswordStrength = (password) => {
+		let strength = "Weak";
+		if(password.length > 7) {
+			const UpperCase = /[A-Z]/.test(password);
+			const LowerCase = /[a-z]/.test(password);
+			const Numbers = /\d/.test(password);
+			const SpecialCharacter  = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+			const length = password.length;
+
+			if (length > 7) {
+				if (
+					UpperCase &&
+					LowerCase &&
+					Numbers &&
+					SpecialCharacter &&
+					length >= 10
+				) {
+					strength = "Strong";
+				} else if (
+					(UpperCase && LowerCase && Numbers && length >= 7) ||
+					(LowerCase && SpecialCharacter && length >= 7)
+				) {
+					strength = "Medium";
+				}
+			}
+		}
+
+		setPasswordStrength(strength);
 	};
 
 	const handleOnSubmit = (e) => {
@@ -39,6 +74,11 @@ function SignupForm() {
 
 		if (password !== confirmPassword) {
 			toast.error("Passwords Do Not Match");
+			return;
+		}
+
+		if (passwordStrength === "Weak") {
+			toast.error("Password is too weak. Please use a stronger password.");
 			return;
 		}
 
@@ -143,6 +183,11 @@ function SignupForm() {
 								)}
 							</span>
 						</div>
+
+						<p className={`mt-1 ${passwordStrength === "Weak" ? "text-red-600" : passwordStrength === "Medium" ? "text-yellow-500" : "text-green-600"}`}>
+							{passwordStrength && `Password Strength: ${passwordStrength}`}
+						</p>
+
 					</label>
 					<label className="relative w-full">
 						<p className="mb-1 text-[0.95rem] leading-[1.375rem] text-richblack-5">
