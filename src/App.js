@@ -8,6 +8,7 @@ import Template from "./components/Auth/Template";
 import Forget from "./components/Forget";
 import MovieDetails from './components/MovieDetails';
 import AboutUs from "./components/AboutUs";
+import PasswordRecovery from "./components/Auth/PasswordRecovery";
 
 
 function App() {
@@ -19,15 +20,18 @@ function App() {
 					<Route
 						path="/"
 						element={<Home />}></Route>
-					{<Route
+					<Route
 						path="/login"
 						element={<Template formType={"login"} />}
-					/>}
+					/>
 
 					<Route
 						path="/signup"
 						element={<Template formType={"signup"} />}
+
 					/>
+					 <Route path="/password-recovery" element={<PasswordRecovery />} />
+					
 					<Route path="/forget" element={<Forget />} />
 					<Route path="/movies/:id" element={<MovieDetails />} />
 					<Route path="/about-us" element={<AboutUs />} />
