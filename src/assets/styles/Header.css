@@ -27,14 +27,14 @@
     align-items: center;     /* Center the logo vertically */
     padding: 10px;           /* Add some padding around the logo */
     background-color: #fff;  /* Set background color if needed */
-    height: 100px;           /* Adjust height as per requirement */
+    height: 70px;           /* Adjust height as per requirement */
   }
 
   .logo img {
       max-width: 100%;         /* Make sure the image doesn't overflow */
-      height: 15vh; 
+      height: 10vh; 
       width: 35vh;           /* Maintain the image aspect ratio */
-      max-height: 80px;        /* Adjust max height for the image */
+      max-height: 70px;        /* Adjust max height for the image */
   }
 
   .search-bar {
