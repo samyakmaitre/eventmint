@@ -6,8 +6,6 @@ import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
 import Home from "./components/Home";
 import Template from "./components/Auth/Template";
 import Forget from "./components/Forget";
-import MovieDetails from './components/MovieDetails';
-import AboutUs from "./components/AboutUs";
 
 
 function App() {
@@ -19,18 +17,16 @@ function App() {
 					<Route
 						path="/"
 						element={<Home />}></Route>
-					{<Route
+					{ <Route
 						path="/login"
 						element={<Template formType={"login"} />}
-					/>}
-
+					/> }
+					
 					<Route
 						path="/signup"
 						element={<Template formType={"signup"} />}
 					/>
-					<Route path="/forget" element={<Forget />} />
-					<Route path="/movies/:id" element={<MovieDetails />} />
-					<Route path="/about-us" element={<AboutUs />} />
+					<Route path="/forget" element={<Forget/>} /> 
 				</Routes>
 			</Router>
 		</div>

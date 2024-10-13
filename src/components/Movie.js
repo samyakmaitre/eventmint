@@ -1,8 +1,7 @@
 import React from 'react';
 import '../assets/styles/Movie.css';
-import { Link } from 'react-router-dom';
 
-function Movie({ id, poster, title, rating, votes, genre }) {
+function Movie({ poster, title, rating, votes, genre, description }) {
   return (
     <div className="movie">
       <img src={poster} alt={`${title} poster`} className="movie-poster" />
@@ -11,9 +10,8 @@ function Movie({ id, poster, title, rating, votes, genre }) {
         <span className="rating-star">★</span> {rating}/10 <span className="votes">({votes} Votes)</span>
       </p>
       <p className="movie-genre">{genre}</p>
-      <Link to={`/movies/${id}`}>
-        <button className="book-tickets-button">More Details</button>
-      </Link>
+      {description && <p className="movie-description">{description}</p>}
+      <button className="book-tickets-button">Book Tickets</button>
     </div>
   );
 }

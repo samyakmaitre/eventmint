@@ -1,12 +1,15 @@
-
-
 @import "slick-carousel/slick/slick.css";
 @import "slick-carousel/slick/slick-theme.css";
 
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
 .App {
   text-align: center;
-  margin: 0px;
-  padding: 0px;
 }
 
 .App-logo {
@@ -20,51 +23,19 @@
   }
 }
 
-
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* General Styles */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-}
-
-/* Header Styles */
-header {
   background-color: #ff0000;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
   color: white;
-  padding: 1rem 0;
-  text-align: center;
-  
 }
 
 header h1 {
   margin: 0;
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 header nav ul {
@@ -73,7 +44,6 @@ header nav ul {
   display: flex;
   justify-content: center;
   margin-top: 1rem;
-  
 }
 
 header nav ul li {
@@ -83,9 +53,6 @@ header nav ul li {
   border-radius: 10px;
   background-color: #282c34;
 }
-
-
-
 
 /* Movie List Styles */
 .movie-list {
@@ -98,38 +65,63 @@ header nav ul li {
 .movie {
   background-color: white;
   border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   margin: 1rem;
-  padding: 1rem;
-  width: 300px;
+  padding: 1.5rem;
+  width: 300px; 
+  height: 600px; 
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+}
+
+.movie:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3); 
 }
 
 .movie h2 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   margin: 0.5rem 0;
+  color: #333;
 }
 
 .movie p {
-  font-size: 1rem;
-  color: #555;
+  font-size: 1rem; 
+  color: #666;
+  flex-grow: 1; 
 }
 
 .movie button {
-  background-color: #ff0000;
+  background-color: #ff4757; /* Vibrant red button */
   border: none;
   color: white;
   cursor: pointer;
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-  border-radius: 3px;
-  transition: background-color 0.3s ease;
+  font-size: 1.1rem; 
+  padding: 0.6rem 1.2rem; 
+  border-radius: 6px; 
+  transition: background-color 0.3s ease, transform 0.2s ease; 
 }
 
 .movie button:hover {
-  background-color: #ff0000;
+  background-color: #ff6b81; 
+  transform: scale(1.05); 
 }
 
 
+@media (max-width: 768px) {
+  .movie {
+    width: 90%; 
+  }
+}
 
+/* Footer Styles */
+footer {
+  background-color: #282c34;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}

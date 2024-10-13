@@ -14,18 +14,17 @@ function Header({ onSearch }) {
     const { user } = useSelector((state) => state.profile);
     const location = useLocation();
 
-    const [mode,setMode]=useState("light");
+    const [mode, setMode] = useState("light");
 
     if (location.pathname === "/signup" || location.pathname === "/login") {
         return null;
     }
 
-    function handleMode(){
-        if(mode==="light"){
+    function handleMode() {
+        if (mode === "light") {
             setMode("dark");
             document.body.classList.add("dark-mode");
-        }
-        else{
+        } else {
             setMode("light");
             document.body.classList.remove("dark-mode");
         }
@@ -37,33 +36,38 @@ function Header({ onSearch }) {
     };
 
     return (
-        <header className="header container-fluid d-flex align-items-center justify-content-between p-3" style={{backgroundColor:mode=="dark"?"black":"", boxShadow:mode=="dark"?"0 4px 4px rgba(255, 255, 255, 0.2)":"" }}>
-            <div className="logo">
+        <header className="header container-fluid d-flex align-items-center justify-content-between p-3" 
+            style={{
+                background: "linear-gradient(to bottom, red, transparent)",
+                boxShadow: mode === "dark" ? "0 4px 4px rgba(255, 255, 255, 0.2)" : "" 
+            }}>
+            <div className="logo" style={{ backgroundColor: "rgba(255, 255, 255, 0.7)", padding: "10px", borderRadius: "10px" }}>
                 <a href="https://eventmint.vercel.app/">
-                    <img src={logo} alt="Logo" className="aspect-[3/2] object-contain" />
+                    <img src={logo} alt="Logo" className="aspect-[3/2] object-contain" style={{ opacity: "0.9" }} />
                 </a>
             </div>
 
             <div className="search-location-container d-flex align-items-center justify-content-between w-100">
-                <div className="search-bar input-group w-75" style={{ marginLeft: "20px" }}>
+                <div className="search-bar input-group" style={{ marginLeft: "20px", background: "transparent" }}>
+                    <span className="input-group-text" style={{ background: "transparent", border: "none" }}>
+                        <i className="bi bi-search"></i>
+                    </span>
                     <input
                         type="text"
                         className="form-control"
-                        placeholder="Search for Movies, Events, Plays, Sports and Activities"
+                        style={{ 
+                            width: "200px",
+                            padding: "8px 10px",
+                            background: "rgba(255, 255, 255, 0.3)", 
+                            borderRadius: "20px",
+                            color: mode === "dark" ? "white" : "black"
+                        }}
+                        placeholder="Search for Movies, Events, Plays, Sports, and Activities..."
                         value={searchTerm}
-                        onChange={handleSearch} // Update the search term on input change
+                        onChange={handleSearch} 
                     />
-                    <span className="input-group-text">
-                        <i className="bi bi-search"></i>
-                    </span>
                 </div>
-                <div className="mode" onClick={handleMode}>
-                    {mode=="light"?
-                    <i class="bi bi-brightness-high-fill"></i>
-                    :
-                    <i class="bi bi-moon-fill"></i>}
-                </div>
-                <select className="location form-select w-auto" style={{ marginLeft: "10px" }}>
+                <select className="location form-select w-auto" style={{ marginLeft: "30px" }}>
                     <option value="Nagpur">Nagpur</option>
                     <option value="Mumbai">Mumbai</option>
                     <option value="Delhi">Delhi</option>
@@ -82,11 +86,18 @@ function Header({ onSearch }) {
                 ) : (
                     <div className="flex flex-row gap-2 justify-center items-center">
                         <button
-                            className="px-3 rounded-lg w-[120px] py-2 border-[2px] font-semibold hover:font-semibold hover:text-white border-red-600 hover:bg-red-500" onClick={() => navigate("/login")} style={{color:mode=="dark"?"white":""}}>
+                            className="px-3 rounded-lg w-[120px] py-2 border-[2px] font-semibold hover:font-semibold hover:text-white border-red-600 hover:bg-red-500" 
+                            onClick={() => navigate("/login")} 
+                            style={{color: mode === "dark" ? "white" : ""}}>
                             Sign in
                         </button>
                     </div>
                 )}
+                <div className="mode" onClick={handleMode} style={{ marginLeft: "50px" }}>
+                    {mode === "light" ? 
+                        <i className="bi bi-brightness-high-fill"></i> : 
+                        <i className="bi bi-moon-fill"></i>}
+                </div>
             </div>
         </header>
     );

@@ -17,8 +17,8 @@ const ImageWithCursorEffect = ({ imageSrc, altText }) => {
     const yPos = (e.clientY - rect.top) / rect.height - 0.5;
 
     setTransform({
-      rotateX: yPos * 20, // Tilt on the Y axis
-      rotateY: -xPos * 20, // Tilt on the X axis (negate to match cursor movement)
+      rotateX: yPos * 15, // Tilt on the Y axis
+      rotateY: -xPos * 15, // Tilt on the X axis (negate to match cursor movement)
     });
   };
 
@@ -39,9 +39,11 @@ const ImageWithCursorEffect = ({ imageSrc, altText }) => {
         src={imageSrc}
         alt={altText}
         style={{
-          maxWidth: '1250px',
-          boxShadow: '0',
-          marginRight: '90px',
+          maxWidth: '100%', // Adjust this value for image size
+          height: 'auto', // Maintain aspect ratio
+          boxShadow: '0 4px 15px rgba(0, 0, 0, 0.3)', // Added shadow for depth
+          borderRadius: '15px', // Rounded corners for a smoother look
+          transition: 'transform 0.3s ease', // Smooth transition for scaling
         }}
         initial={{ scale: 1, rotateX: 0, rotateY: 0 }}
         animate={{
@@ -64,10 +66,11 @@ const ImageSlider = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
+    arrows: true, // Add navigation arrows
   };
 
   return (
-    <div className="slider-container h-32">
+    <div className="slider-container" style={{ width: '90%', margin: '0 auto', padding: '40px 0' }}>
       <Slider {...settings}>
         <div>
           <ImageWithCursorEffect imageSrc={image1} altText="Image 1" />
