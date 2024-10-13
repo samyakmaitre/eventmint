@@ -210,145 +210,100 @@ const MovieDetails = () => {
     }
 
     return (
-        <>
-            <Header />
-            <Navbar />
-            <div className="movie-details-container">
-                <div className="left-section">
-                    <div className="movie-poster">
-                        <img src={movie.poster} alt={`${movie.title} poster`} />
-                    </div>
-                </div>
-                <div className="right-section">
-                    <div className="movie-title">{movie.title}</div>
-                    <div className="movie-description">{movie.description}</div>
-                    <div className="movie-genre">{movie.genre}</div>
-                    <div className="movie-rating">
-                        Rating: {movie.rating}/10 ({movie.votes} votes)
-                    </div>
-                    <div className="movie-showtimes">
-                        <h3>Showtimes</h3>
-                        {showtimes.map((showtime, index) => (
-                            <div key={index}>
-                                {showtime.time} ({showtime.format})
-                            </div>
-                        ))}
-                    </div>
-                    <div className="movie-cast">
-                        <h3>Cast</h3>
-                        <Carousel
-                            additionalTransfrom={0}
-                            arrows
-                            autoPlaySpeed={3000}
-                            centerMode={false}
-                            className=""
-                            containerClass="carousel-container"
-                            draggable
-                            focusOnSelect={false}
-                            infinite
-                            keyBoardControl
-                            minimumTouchDrag={80}
-                            renderButtonGroupOutside={false}
-                            renderDotsOutside={false}
-                            responsive={{
-                                desktop: {
-                                    breakpoint: { max: 3000, min: 1024 },
-                                    items: 3,
-                                    slidesToSlide: 3,
-                                },
-                                tablet: {
-                                    breakpoint: { max: 1024, min: 464 },
-                                    items: 2,
-                                    slidesToSlide: 2,
-                                },
-                                mobile: {
-                                    breakpoint: { max: 464, min: 0 },
-                                    items: 1,
-                                    slidesToSlide: 1,
-                                },
-                            }}
-                            showDots={false}
-                            sliderClass=""
-                            swipeable
-                        >
-                            {castPhotos.map((cast, index) => (
-                                <div className="cast-member" key={index}>
-                                    <img src={cast.photo} alt={`${cast.name} photo`} />
-                                    <div>{cast.name}</div>
-                                </div>
-                            ))}
-                        </Carousel>
-                    </div>
-                    <div className="movie-photos">
-                        <h3>Photos</h3>
-                        <Carousel
-                            additionalTransfrom={0}
-                            arrows
-                            autoPlaySpeed={3000}
-                            centerMode={false}
-                            className=""
-                            containerClass="carousel-container"
-                            draggable
-                            focusOnSelect={false}
-                            infinite
-                            keyBoardControl
-                            minimumTouchDrag={80}
-                            renderButtonGroupOutside={false}
-                            renderDotsOutside={false}
-                            responsive={{
-                                desktop: {
-                                    breakpoint: { max: 3000, min: 1024 },
-                                    items: 3,
-                                    slidesToSlide: 3,
-                                },
-                                tablet: {
-                                    breakpoint: { max: 1024, min: 464 },
-                                    items: 2,
-                                    slidesToSlide: 2,
-                                },
-                                mobile: {
-                                    breakpoint: { max: 464, min: 0 },
-                                    items: 1,
-                                    slidesToSlide: 1,
-                                },
-                            }}
-                            showDots={false}
-                            sliderClass=""
-                            swipeable
-                        >
-                            {photos.map((photo, index) => (
-                                <div className="photo" key={index}>
-                                    <img src={photo.url} alt={photo.alt} />
-                                </div>
-                            ))}
-                        </Carousel>
-                    </div>
-                    <div className="movie-trailer">
-                        <h3>Watch Trailer</h3>
-                        {trailerUrl && (
-                            <YouTube
-                                videoId={trailerUrl.split("v=")[1]}
-                                opts={{
-                                    height: '390',
-                                    width: '100%',
-                                    playerVars: { autoplay: 0 },
-                                }}
-                            />
-                        )}
-                    </div>
-                </div>
-                <div className='buttons-sec'>
-                  <Link to="/book-tickets">
-                    <button className='book-tickets-button'>Book Tickets</button>
-                  </Link>
-                  <Link to="/">
-                    <button className='book-tickets-button'>Back</button>
-                  </Link>
-                  
-                </div>
+<>
+  <Header />
+  <Navbar />
+  <div className="movie-details-container mt-0 flex flex-col md:flex-row p-4 md:p-8">
+    <div className="left-section w-full md:w-2/5">
+      <div className="movie-poster">
+        <img src={movie.poster} alt={`${movie.title} poster`} className="w-full h-auto" />
+      </div>
+    </div>
+    <div className="right-section w-full md:w-3/5 md:pl-6">
+      <div className="movie-title text-2xl font-bold mb-4">{movie.title}</div>
+      <div className="movie-description text-lg mb-4">{movie.description}</div>
+      <div className="movie-genre text-md text-gray-600 mb-4">{movie.genre}</div>
+      <div className="movie-rating text-md text-gray-800 mb-4">
+        Rating: {movie.rating}/10 ({movie.votes} votes)
+      </div>
+      <div className="movie-showtimes mb-6">
+        <h3 className="text-lg font-semibold mb-2">Showtimes</h3>
+        {showtimes.map((showtime, index) => (
+          <div key={index} className="text-md">
+            {showtime.time} ({showtime.format})
+          </div>
+        ))}
+      </div>
+
+      <div className="movie-cast mb-6">
+        <h3 className="text-lg font-semibold mb-4">Cast</h3>
+        <Carousel
+          className="carousel-container"
+          responsive={{
+            desktop: { breakpoint: { max: 3000, min: 1024 }, items: 3 },
+            tablet: { breakpoint: { max: 1024, min: 464 }, items: 2 },
+            mobile: { breakpoint: { max: 464, min: 0 }, items: 1 },
+          }}
+        >
+          {castPhotos.map((cast, index) => (
+            <div className="cast-member text-center" key={index}>
+              <img src={cast.photo} alt={`${cast.name} photo`} className="rounded-lg mb-2" />
+              <div className="text-sm">{cast.name}</div>
             </div>
-            <Footer />
-        </>
+          ))}
+        </Carousel>
+      </div>
+
+      <div className="movie-photos mb-6">
+        <h3 className="text-lg font-semibold mb-4">Photos</h3>
+        <Carousel
+          className="carousel-container"
+          responsive={{
+            desktop: { breakpoint: { max: 3000, min: 1024 }, items: 3 },
+            tablet: { breakpoint: { max: 1024, min: 464 }, items: 2 },
+            mobile: { breakpoint: { max: 464, min: 0 }, items: 1 },
+          }}
+        >
+          {photos.map((photo, index) => (
+            <div className="photo" key={index}>
+              <img src={photo.url} alt={photo.alt} className="rounded-lg" />
+            </div>
+          ))}
+        </Carousel>
+      </div>
+
+      <div className="movie-trailer mb-6">
+        <h3 className="text-lg font-semibold mb-4">Watch Trailer</h3>
+        {trailerUrl && (
+          <YouTube
+            videoId={trailerUrl.split("v=")[1]}
+            opts={{
+              height: '390',
+              width: '100%',
+              playerVars: { autoplay: 0 },
+            }}
+            className="w-full"
+          />
+        )}
+      </div>
+    </div>
+
+    <div className="buttons-sec flex justify-between mt-6">
+      <Link to="/book-tickets">
+        <button className="book-tickets-button bg-red-500 text-white py-2 px-6 rounded hover:bg-red-600 transition duration-300">
+          Book Tickets
+        </button>
+      </Link>
+      <Link to="/">
+        <button className="book-tickets-button bg-gray-500 text-white py-2 px-6 rounded hover:bg-gray-600 transition duration-300">
+          Back
+        </button>
+      </Link>
+    </div>
+  </div>
+  <Footer />
+</>
+
     );
 };
 
