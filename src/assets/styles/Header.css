@@ -26,7 +26,8 @@
     justify-content: center; /* Center the logo horizontally */
     align-items: center;     /* Center the logo vertically */
     padding: 10px;           /* Add some padding around the logo */
-    background-color: #fff;  /* Set background color if needed */
+    /* background-color: #fff;  */
+     /* Set background color if needed */
     height: 100px;           /* Adjust height as per requirement */
   }
 
