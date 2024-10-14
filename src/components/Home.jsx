@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import ImageSlider from "./ImageSlider";
 import MovieList from "./MovieList";
-import Offers from "./Offers";
 import Footer from "./Footer";
 import Header from "./Header";
 import "../App.css";
@@ -19,7 +18,6 @@ const Home = () => {
                 <Heading />
                 <ImageSlider />
                 <MovieList searchTerm={searchTerm} /> 
-                <Offers />
                 <Footer />
             </div>
         </div>
