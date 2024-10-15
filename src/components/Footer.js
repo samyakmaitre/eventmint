@@ -22,7 +22,7 @@ const AccordionItem = ({ title, children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border-b border-gray-700">
+    <div className="border-b border-gray-700 relative"> {/* Set relative positioning here */}
       <motion.button
         className="flex justify-between items-center w-full py-4 text-left text-gray-300 hover:text-white transition-colors"
         onClick={() => setIsOpen(!isOpen)}
@@ -44,8 +44,9 @@ const AccordionItem = ({ title, children }) => {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
+            className="absolute left-0 w-full bg-gray-800 mt-2 z-10" // Adjusted to ensure no extra margin
           >
-            <div className="pb-4">
+            <div className="pb-4 pt-3 mr-6"> {/* Remove left padding/margin if needed */}
               {children}
             </div>
           </motion.div>
@@ -67,7 +68,7 @@ export default function Footer() {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.pageYOffset > 300) {
+      if (window.scrollY > 300) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
@@ -87,7 +88,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-gradient-to-b from-gray-900 to-black text-gray-300 mt-20">
+    <footer className="bg-gradient-to-b from-gray-900  to-black text-gray-300 mt-20">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <motion.div
@@ -118,11 +119,11 @@ export default function Footer() {
             <div>
               <AccordionItem title="Discover">
                 <ul className="space-y-2 text-sm">
-                  <li><a href="#" className="hover:text-white transition-colors">Movies</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">Events</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">Plays</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">Sports</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">Activities</a></li>
+                  <li><a href="#" className="hover:text-white transition-colors no-underline text-left">Movies</a></li>
+                  <li><a href="#" className="hover:text-white transition-colors no-underline text-left">Events</a></li>
+                  <li><a href="#" className="hover:text-white transition-colors no-underline text-left">Plays</a></li>
+                  <li><a href="#" className="hover:text-white transition-colors no-underline text-left">Sports</a></li>
+                  <li><a href="#" className="hover:text-white transition-colors no-underline text-left">Activities</a></li>
                 </ul>
               </AccordionItem>
               <AccordionItem title="About">
@@ -130,28 +131,30 @@ export default function Footer() {
                   <li><a href="/our-team" className="hover:text-white transition-colors">Our Team</a></li>
                   <li><a href="/about-us" className="hover:text-white transition-colors">About Us</a></li>
                   <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
+
                 </ul>
               </AccordionItem>
               <AccordionItem title="Services">
                 <ul className="space-y-2 text-sm">
-                  <li><a href="#" className="hover:text-white transition-colors">Corporate Booking</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">Gift Cards</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">Rewards</a></li>
+                  <li><a href="#" className="hover:text-white transition-colors no-underline">Corporate Booking</a></li>
+                  <li><a href="#" className="hover:text-white transition-colors no-underline">Gift Cards</a></li>
+                  <li><a href="#" className="hover:text-white transition-colors no-underline">Rewards</a></li>
                 </ul>
               </AccordionItem>
             </div>
             <div>
               <AccordionItem title="Help & Support">
                 <ul className="space-y-2 text-sm">
-                  <li><a href="#" className="hover:text-white transition-colors">FAQs</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">Contact Us</a></li>
-                  <li><a href="/about-us" className="hover:text-white transition-colors">About Us</a></li>
+                  <li><a href="#" className="hover:text-white transition-colors no-underline">FAQs</a></li>
+                  <li><a href="#" className="hover:text-white transition-colors no-underline">Contact Us</a></li>
+                  <li><a href="/about-us" className="hover:text-white transition-colors no-underline">About Us</a></li>
                 </ul>
               </AccordionItem>
               <AccordionItem title="Legal">
                 <ul className="space-y-2 text-sm">
                   <li><a href="#" className="hover:text-white transition-colors">Terms of Use</a></li>
                   <li><a href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</a></li>
+
                 </ul>
               </AccordionItem>
             </div>
@@ -204,8 +207,8 @@ export default function Footer() {
             &copy; 2024 EventMint. All rights reserved.
           </div>
           <div className="flex space-x-4 text-sm">
-            <a href="#" className="hover:text-white transition-colors">Terms of Use</a>
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-white transition-colors no-underline">Terms of Use</a>
+            <a href="#" className="hover:text-white transition-colors no-underline">Privacy Policy</a>
           </div>
         </motion.div>
 

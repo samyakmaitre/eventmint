@@ -10,6 +10,7 @@ import OurTeam from "./components/OurTeam";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import MovieDetails from './components/MovieDetails';
 import AboutUs from "./components/AboutUs";
+import Offers from "./components/Offers";
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
 					<Route path="/forget" element={<Forget />} />
 					<Route path="/movies/:id" element={<MovieDetails />} />
 					<Route path="/about-us" element={<AboutUs />} />
+					<Route path="/offers" element={<Offers/>}/>
 				</Routes>
 			</Router>
 		</div>
