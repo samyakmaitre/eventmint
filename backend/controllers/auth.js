@@ -9,6 +9,35 @@ const User = require("../models/User");
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
 
+const checkPasswordStrength = (password) => {
+	const UpperCase = /[A-Z]/.test(password);
+	const LowerCase = /[a-z]/.test(password);
+	const Numbers = /\d/.test(password);
+	const SpecialCharacter = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+	const length = password.length;
+
+	if (length < 7) {
+		return "Weak";
+	}
+
+	if (
+		UpperCase &&
+		LowerCase &&
+		Numbers &&
+		SpecialCharacter &&
+		length >= 10
+	) {
+		return "Strong";
+	} else if (
+		(UpperCase && LowerCase && Numbers) ||
+		(LowerCase && SpecialCharacter && length >= 7)
+	) {
+		return "Medium";
+	} else {
+		return "Weak";
+	}
+};
+
 // Route for user login
 router.post("/login", async (req, res) => {
 	try {
@@ -112,6 +141,16 @@ router.post("/signup", async (req, res) => {
 				success: false,
 				message:
 					"Password and Confirm Password do not match. Please try again.",
+			});
+		}
+
+		// Check password strength
+		const passwordStrength = checkPasswordStrength(password);
+		if (passwordStrength === "Weak") {
+			return res.status(400).json({
+				success: false,
+				message:
+					"Password is too weak. Please use a stronger password with at least 8 characters, a mix of uppercase, lowercase, numbers, and special characters.",
 			});
 		}
 
