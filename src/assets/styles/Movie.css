@@ -1,9 +1,8 @@
 .movie {
   border-radius: 10px;
   overflow: hidden;
-  width: 200px;
+  width: 235px;
   text-align: center;
-  margin: 10px;
   font-family: Arial, sans-serif;
   transition: all 0.2s;
   position: relative;
@@ -16,13 +15,14 @@
 .movie-poster {
   width: 100%;
   height: auto;
+  border-radius: 5px;
 }
 
 .movie-rating {
   position: absolute;
   text-align: left;
-  bottom: 130px;
-  width: 89%;
+  bottom: 97px;
+  width: 100%;
   color: white;
   background-color: black;
   padding: 5px 10px;
@@ -52,7 +52,7 @@
 }
 
 .movie-genre {
-  font-size: 14px;
+  font-size: 10px;
   margin: 10px 0;
   text-align: left;
 }
