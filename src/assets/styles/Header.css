@@ -15,7 +15,7 @@
   padding: 10px 10px 10px 10px;
   color: #000000;
   background-color: #fff;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 4px rgba(9, 2, 2, 0.3);
   position: relative;
   z-index: 1000;
 
@@ -34,6 +34,7 @@
   /* Set background color if needed */
   height: 100px;
   /* Adjust height as per requirement */
+  position: fixed;
 }
 
 .logo img {
@@ -47,14 +48,14 @@
 }
 
 .search-bar {
-  border-radius: 50px;
+  border-radius: 60px;
   width: 50vw;
   overflow: hidden;
   display: flex;
 }
 
 .search-bar input {
-  border: 2px solid rgb(217, 202, 202);
+  border: 2px solid rgb(251, 217, 217);
   border-right: none;
   border-radius: 50px 0 0 50px;
   padding: 10px 15px;
@@ -77,6 +78,7 @@
 .bi-search {
   font-size: 18px;
   color: #000;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .search-bar .form-control:focus {
@@ -85,7 +87,7 @@
 
 
 .search-bar:focus-within .input-group-text {
-  box-shadow: 4px 4px 8px rgba(0, 123, 255, 0.5);
+  box-shadow: 4px 4px 8px rgba(10, 124, 246, 0.6);
   border-color: rgba(0, 123, 255, 0.5);
 }
 

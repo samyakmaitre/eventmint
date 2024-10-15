@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 .navbar {
-  background: rgba(42, 42, 42, 0.7);
+  background: rgba(47, 46, 46, 0.7);
   backdrop-filter: blur(10px);
   padding: 10px 20px;
   display: flex;
@@ -22,7 +22,7 @@
 }
 
 .nav-link:hover {
-  color: #FF6B6B;
+  color: #ef502c;
   transform: scale(1.05);
 }
 
@@ -71,7 +71,7 @@
 }
 
 .nav-link.active {
-  color: #FF6B6B;
+  color: #e7940f;
 }
 
 

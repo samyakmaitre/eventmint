@@ -25,6 +25,7 @@
     .movie-list{
       top: 80px;
       margin-bottom: 40px;
+    font-size: large;
     }
   }
 
@@ -32,6 +33,7 @@
     .movie-list{
       top: 0px;
       margin-bottom: -45px;
+      font-size: medium;
     }
   }
 

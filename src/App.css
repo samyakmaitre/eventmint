@@ -33,7 +33,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #3bc2e7;
 }
 
 @keyframes App-logo-spin {
@@ -113,11 +113,12 @@ header nav ul li {
 
 .movie p {
   font-size: 1rem;
-  color: #555;
+  color: #3c3838;
+  font-weight: 500;
 }
 
 .movie button {
-  background-color: #ff0000;
+  background-color: #d14a4a;
   border: none;
   color: white;
   cursor: pointer;
@@ -128,7 +129,7 @@ header nav ul li {
 }
 
 .movie button:hover {
-  background-color: #ff0000;
+  background-color: #d00404;
 }
 
 
