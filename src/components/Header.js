@@ -19,7 +19,6 @@ function Header({ onSearch }) {
     if (location.pathname === "/signup" || location.pathname === "/login") {
         return null;
     }
-
     
     function handleMode(){
         if(mode==="light"){
