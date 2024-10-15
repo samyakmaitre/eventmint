@@ -8,7 +8,11 @@ import Template from "./components/Auth/Template";
 
 import MovieDetails from './components/MovieDetails';
 import AboutUs from "./components/AboutUs";
+
 import PasswordRecovery from "./components/Auth/PasswordRecovery";
+
+import Offers from "./components/Offers";
+
 
 
 function App() {
@@ -34,6 +38,7 @@ function App() {
 					
 					<Route path="/movies/:id" element={<MovieDetails />} />
 					<Route path="/about-us" element={<AboutUs />} />
+					<Route path="/offers" element={<Offers/>}/>
 				</Routes>
 			</Router>
 		</div>
