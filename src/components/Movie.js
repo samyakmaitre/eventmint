@@ -6,7 +6,6 @@ function Movie({ id, poster, title, rating, votes, genre }) {
   return (
     <div className="movie">
       <img src={poster} alt={`${title} poster`} className="movie-poster" />
-      <span className="promoted">PROMOTED</span>
       <p className="movie-rating">
         <span className="rating-star">★</span>
         <span className="rating-points"> {rating}/10 </span>

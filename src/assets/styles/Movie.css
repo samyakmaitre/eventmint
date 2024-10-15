@@ -1,19 +1,16 @@
 .movie {
-  border: 1px solid #ccc;
   border-radius: 10px;
   overflow: hidden;
   width: 200px;
   text-align: center;
   margin: 10px;
   font-family: Arial, sans-serif;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.2s;
   position: relative;
 }
 
 .movie:hover {
   scale: 1.02;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.384);
 }
 
 .movie-poster {
@@ -73,14 +70,3 @@
   background-color: #ff6500;
 }
 
-.promoted{
-  position: absolute;
-  background-color: red;
-  color: white;
-  padding: 5px;
-  bottom: 512px;
-  left: 200px;
-  right: 20px;
-  font-size: 11px;
-  border-radius: 2px;
-}
