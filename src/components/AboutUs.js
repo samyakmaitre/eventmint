@@ -130,7 +130,7 @@ const AboutUs = () => {
             </div>
 
             <GallerySection />
-            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-300 mb-8 w-4/5 m-auto mb-5">
+            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-300 w-4/5 m-auto mb-5">
                 <h2 className="text-3xl font-semibold mb-4 text-gray-800">Get in Touch</h2>
                 <p className="text-lg text-gray-700 mb-4">
                     We love to hear from our users! If you have any questions, feedback, or suggestions, feel free to reach out to us at <a href="mailto:samyakmaitre@gmail.com" className="text-red-600 underline hover:text-red-700 transition duration-300">samyakmaitre@gmail.com</a>.

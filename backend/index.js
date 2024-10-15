@@ -4,6 +4,7 @@
 const express = require("express");
 const app = express();
 const userController = require("./controllers/auth");
+const reviewRoutes = require("./routes/reviewRoutes");
 const database = require("./config/database");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
@@ -30,6 +31,7 @@ app.use(
 
 // Setting up routes
 app.use("/api/v1/auth", userController);
+app.use("/api/v1/review", reviewRoutes);
 
 // Testing the server
 app.get("/", (req, res) => {

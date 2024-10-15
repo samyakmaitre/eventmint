@@ -1,0 +1,83 @@
+/* ReviewForm.css */
+
+.review-form {
+    max-width: 500px;
+    margin: 20px auto;
+    background: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .form-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .form-label {
+    font-size: 14px;
+    color: #555;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .form-select {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  .form-select:hover,
+  .form-select:focus {
+    border-color: #007BFF;
+  }
+  
+  .form-textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    outline: none;
+    resize: vertical;
+    transition: all 0.3s ease;
+  }
+  .form-select:focus, .form-textarea:focus {
+    border-color: #007BFF; /* Blue border on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Optional shadow effect for focus */
+    outline: none; /* Hides the default outline but keeps cursor */
+  }
+  .form-textarea:hover,
+  .form-textarea:focus {
+    border-color: #007BFF;
+  }
+  
+  .form-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form-button:hover {
+    background-color: #0958ac;
+  }
+  
