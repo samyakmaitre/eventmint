@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import NavBar from "./NavBar";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import "../assets/styles/Header.css";
-import logo from "../assets/images/logo1.png";
+import removedbg from "../assets/images/removedbg.png";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../services/operations/authAPI";
 import 'bootstrap-icons/font/bootstrap-icons.css';
@@ -37,13 +37,16 @@ function Header({ onSearch }) {
     };
 
     return (
-        <header className="header container-fluid d-flex align-items-center justify-content-between p-3" style={{backgroundColor:mode=="dark"?"black":"", boxShadow:mode=="dark"?"0 4px 4px rgba(255, 255, 255, 0.2)":"" }}>
+        <header className="header container-fluid d-flex align-items-center justify-content-between p-3" 
+        style={{
+            // backgroundColor:mode=="dark"?"black":"", 
+            backgroundColor: mode === "dark" ? "#333" : "#f8f9fa",
+        boxShadow:mode=="dark"?"0 4px 4px rgba(255, 255, 255, 0.2)":"" }}>
             <div className="logo">
                 <a href="https://eventmint.vercel.app/">
-                    <img src={logo} alt="Logo" className="aspect-[3/2] object-contain" />
+                    <img src={removedbg} alt="Logo" className="aspect-[3/2] object-contain" />
                 </a>
             </div>
-
             <div className="search-location-container d-flex align-items-center justify-content-between w-100">
                 <div className="search-bar input-group w-75" style={{ marginLeft: "20px" }}>
                     <input

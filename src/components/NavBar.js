@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import '../assets/styles/NavBar.css';
 
 const Navbar = () => {
@@ -12,67 +13,66 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <div className="flex space-x-8">
-          <a
-            href="#"
+          <Link
+            to="/movies"
             className={`nav-link ${activeLink === 'Movies' ? 'active' : ''}`}
             onClick={() => handleLinkClick('Movies')}
           >
             Movies
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to="/stream-events"
             className={`nav-link ${activeLink === 'Stream Events' ? 'active' : ''}`}
             onClick={() => handleLinkClick('Stream Events')}
           >
             Stream Events
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to="/plays"
             className={`nav-link ${activeLink === 'Plays' ? 'active' : ''}`}
             onClick={() => handleLinkClick('Plays')}
           >
             Plays
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to="/sports-activities"
             className={`nav-link ${activeLink === 'Sports Activities' ? 'active' : ''}`}
             onClick={() => handleLinkClick('Sports Activities')}
           >
             Sports Activities
-          </a>
+          </Link>
         </div>
 
         {/* Right Section */}
         <div className="flex space-x-8">
-          <a
-            href="#"
+          <Link
+            to="/list-your-show"
             className={`nav-link ${activeLink === 'List Your Show' ? 'active' : ''}`}
             onClick={() => handleLinkClick('List Your Show')}
           >
             List Your Show
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to="/corporates"
             className={`nav-link ${activeLink === 'Corporates' ? 'active' : ''}`}
             onClick={() => handleLinkClick('Corporates')}
           >
             Corporates
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to="/offers"
             className={`nav-link ${activeLink === 'Offers' ? 'active' : ''}`}
             onClick={() => handleLinkClick('Offers')}
           >
             Offers
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to="/gift-cards"
             className={`nav-link ${activeLink === 'Gift Cards' ? 'active' : ''}`}
             onClick={() => handleLinkClick('Gift Cards')}
           >
             Gift Cards
-          </a>
-
+          </Link>
         </div>
       </div>
     </nav>
