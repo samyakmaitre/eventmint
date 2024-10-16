@@ -84,9 +84,6 @@ header nav ul li {
   border-radius: 10px;
   background-color: #282c34;
 }
-header nav ul li:hover{
-  color: rgb(236, 36, 5);
-}
 
 
 
@@ -116,9 +113,9 @@ header nav ul li:hover{
 }
 
 .movie p {
-  font-size: 1rem;
-  color: #3c3838;
-  font-weight: 500;
+  font-size: 14px;
+  color: #555;
+  
 }
 
 .movie button {

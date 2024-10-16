@@ -45,7 +45,7 @@
   }
   
   .book-tickets-button {
-    background-color: #ff4500;
+    background-color: #0e8ce6;
     color: white;
     border: none;
     border-radius: 5px;
@@ -54,5 +54,5 @@
   }
   
   .book-tickets-button:hover {
-    background-color: #db0d4e;
+    background-color: #290af3;
   }
