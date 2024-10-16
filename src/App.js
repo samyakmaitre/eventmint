@@ -9,6 +9,7 @@ import Forget from "./components/Forget";
 import MovieDetails from './components/MovieDetails';
 import AboutUs from "./components/AboutUs";
 import Offers from "./components/Offers";
+import ListShows from "./components/ListShows";
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
 					<Route path="/movies/:id" element={<MovieDetails />} />
 					<Route path="/about-us" element={<AboutUs />} />
 					<Route path="/offers" element={<Offers/>}/>
+					<Route path="/list-shows" element={<ListShows/>}/>
 				</Routes>
 			</Router>
 		</div>
