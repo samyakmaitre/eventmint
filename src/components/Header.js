@@ -6,6 +6,7 @@ import removedbg from "../assets/images/removedbg.png";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../services/operations/authAPI";
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import SideMenu from "./SideMenu";
 
 function Header({ onSearch }) { 
     const [searchTerm, setSearchTerm] = useState(""); 
@@ -39,6 +40,8 @@ function Header({ onSearch }) {
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
+        console.log(isMenuOpen);
+        
     };
 
     return (
@@ -92,25 +95,17 @@ function Header({ onSearch }) {
                         </button>
                     </div>
                 )}
-            </div>
-                        <div className="side-menu-toggle ml-4">
+            <div className="side-menu-toggle ml-4">
                 <button
                     className="btn btn-outline-secondary"
                     onClick={toggleMenu}>
                     ☰
                 </button>
             </div>
-            
-            {isMenuOpen && (
-                <div className="fixed top-0 right-0 w-64 h-full bg-gray-900 text-white shadow-lg p-6 transition-transform transform translate-x-0">
-                    <button className="text-2xl mb-4 focus:outline-none" onClick={toggleMenu}>×</button>
-                    <ul className="space-y-4">
-                        <li><a href="/profile" className="hover:underline">Profile</a></li>
-                        <li><a href="/settings" className="hover:underline">Settings</a></li>
-                        <li><a href="/help" className="hover:underline">Help</a></li>
-                    </ul>
-                </div>
-            )}
+                
+                
+            <SideMenu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} /> 
+            </div>
         </header>
     );
 }
