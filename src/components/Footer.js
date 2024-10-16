@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FaFacebookF, FaInstagram, FaYoutube, FaLinkedinIn, FaChevronDown, FaChevronUp, FaLocationDot, FaPhone, FaArrowUp } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { FaXTwitter } from 'react-icons/fa6';
-import logo from "../assets/images/logo4.png";
+import logo from "../assets/images/logo2.png";
 
 const SocialIcon = ({ icon: Icon, href }) => (
   <motion.a
