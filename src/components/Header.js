@@ -13,6 +13,7 @@ function Header({ onSearch }) {
     const dispatch = useDispatch();
     const { user } = useSelector((state) => state.profile);
     const location = useLocation();
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const [mode,setMode]=useState("light");
 
@@ -36,13 +37,14 @@ function Header({ onSearch }) {
         onSearch(e.target.value); 
     };
 
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
     return (
-        <header className="header container-fluid d-flex align-items-center justify-content-between p-3" 
-        style={{
-            // backgroundColor:mode=="dark"?"black":"", 
-            backgroundColor: mode === "dark" ? "#333" : "#f8f9fa",
-        boxShadow:mode=="dark"?"0 4px 4px rgba(255, 255, 255, 0.2)":"" }}>
-            <div className="logo">
+
+        <header className="header container-fluid d-flex align-items-center justify-content-between p-3" style={{backgroundColor:mode=="dark"?"black":"", boxShadow:mode=="dark"?"0 4px 4px rgba(255, 255, 255, 0.2)":"" }}>
+            <div className="logo ">
                 <a href="https://eventmint.vercel.app/">
                     <img src={removedbg} alt="Logo" className="aspect-[3/2] object-contain" />
                 </a>
@@ -91,6 +93,24 @@ function Header({ onSearch }) {
                     </div>
                 )}
             </div>
+                        <div className="side-menu-toggle ml-4">
+                <button
+                    className="btn btn-outline-secondary"
+                    onClick={toggleMenu}>
+                    ☰
+                </button>
+            </div>
+            
+            {isMenuOpen && (
+                <div className="fixed top-0 right-0 w-64 h-full bg-gray-900 text-white shadow-lg p-6 transition-transform transform translate-x-0">
+                    <button className="text-2xl mb-4 focus:outline-none" onClick={toggleMenu}>×</button>
+                    <ul className="space-y-4">
+                        <li><a href="/profile" className="hover:underline">Profile</a></li>
+                        <li><a href="/settings" className="hover:underline">Settings</a></li>
+                        <li><a href="/help" className="hover:underline">Help</a></li>
+                    </ul>
+                </div>
+            )}
         </header>
     );
 }
