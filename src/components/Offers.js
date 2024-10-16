@@ -1,4 +1,5 @@
 import React from "react";
+import NavBar from "./NavBar.js";
 
 function Offers() {
   const offers = [
@@ -38,12 +39,14 @@ function Offers() {
 
   return (
     <div className="min-h-screen bg-gray-100 py-10">
+      <NavBar /> {/* Included NavBar component*/}
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold text-red-600 mb-6 text-center">
           Special Offers
         </h1>
         <p className="text-lg text-gray-700 mb-12 text-center">
-          Explore the latest offers and discounts to make your event experience even more rewarding.
+          Explore the latest offers and discounts to make your event experience
+          even more rewarding.
         </p>
         <div className="grid gap-6 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
           {offers.map((offer) => (
@@ -59,7 +62,9 @@ function Offers() {
                 Validity: {offer.validity}
               </p>
               <div className="flex items-center justify-between">
-                <span className="font-bold text-red-700">Code: {offer.code}</span>
+                <span className="font-bold text-red-700">
+                  Code: {offer.code}
+                </span>
                 <button className="py-2 px-4 bg-red-600 text-white font-semibold rounded-md hover:bg-red-700 transition-all transform hover:scale-110">
                   Apply Offer
                 </button>
