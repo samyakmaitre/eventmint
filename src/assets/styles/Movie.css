@@ -1,5 +1,5 @@
 .movie {
-    border: 1px solid hsla(0, 15%, 87%, 0.968);
+    border: 1px solid #ccc;
     border-radius: 10px;
     overflow: hidden;
     width: 200px;
@@ -23,7 +23,6 @@
   .movie-title {
     font-size: 18px;
     margin: 10px 0;
-    font-weight: 300;
   }
   
   .movie-rating {
@@ -45,7 +44,7 @@
   }
   
   .book-tickets-button {
-    background-color: #0e8ce6;
+    background-color: #ff4500;
     color: white;
     border: none;
     border-radius: 5px;
@@ -54,5 +53,5 @@
   }
   
   .book-tickets-button:hover {
-    background-color: #290af3;
+    background-color: #ff4500;
   }
