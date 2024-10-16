@@ -19,11 +19,38 @@
   text-decoration: none;
   font-size: 18px;
   transition: color 0.3s, transform 0.3s;
+  position: relative;
+  
 }
 
 .nav-link:hover {
   color: #FF6B6B;
   transform: scale(1.05);
+  
+}
+.nav-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #FF6B6B;
+  transition: width 0.3s ease;
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after{
+  width: 100%;
+}
+.nav-link.active {
+  color: #FF6B6B;
+}
+
+
+.nav-link.active::after{
+  width: 0%;
 }
 
 @media (max-width: 768px) {
@@ -67,7 +94,7 @@
 }
 
 .nav-link.active::after {
-  width: 100%;
+  width: 0%;
 }
 
 .nav-link.active {
