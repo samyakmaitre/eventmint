@@ -50,7 +50,7 @@
 
 
 .nav-link.active::after{
-  width: 0%;
+  width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -94,7 +94,7 @@
 }
 
 .nav-link.active::after {
-  width: 0%;
+  width: 100%;
 }
 
 .nav-link.active {
