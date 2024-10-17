@@ -9,6 +9,7 @@ import Forget from "./components/Forget";
 import MovieDetails from './components/MovieDetails';
 import AboutUs from "./components/AboutUs";
 import Offers from "./components/Offers";
+import MoviesPage from "./Pages/MoviesPage";
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
 					/>
 					<Route path="/forget" element={<Forget />} />
 					<Route path="/movies/:id" element={<MovieDetails />} />
+					 <Route path="/movies" element={<MoviesPage/>} /> 
 					<Route path="/about-us" element={<AboutUs />} />
 					<Route path="/offers" element={<Offers/>}/>
 				</Routes>
