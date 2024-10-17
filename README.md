@@ -7,7 +7,12 @@
 **Event Mint** is a dynamic web application built for managing events in educational institutions such as schools, colleges, and universities. Inspired by platforms like *BookMyShow*, it simplifies event discovery, registration, payments, and management for organizers and attendees alike. red hex code : #e72927
 
 ---
+## 👥 Team
+| ![Samyak Maitre](https://avatars.githubusercontent.com/u/130790017?v=4&s=80) | ![Swanand Deshpande](https://avatars.githubusercontent.com/u/117746995?v=4&s=80) |
+|:--:|:--:|
+| *Samyak Maitre* <br> <sub>Project Admin</sub> <br> [![LinkedIn](https://img.icons8.com/fluency/32/000000/linkedin.png)](https://www.linkedin.com/in/samyakmaitre/) [![Gmail](https://img.icons8.com/fluency/32/000000/gmail.png)](mailto:samyakmaitre@gmail.com) [![GitHub](https://img.icons8.com/?size=33&id=63777&format=png&color=000000)](https://github.com/samyakmaitre) | *Swanand Deshpande* <br> <sub>Maintainer</sub> <br> [![LinkedIn](https://img.icons8.com/fluency/32/000000/linkedin.png)](https://www.linkedin.com/in/swananddeshpande121/) [![Gmail](https://img.icons8.com/fluency/32/000000/gmail.png)](mailto:swananddeshpande121@gmail.com) [![GitHub](https://img.icons8.com/?size=33&id=63777&format=png&color=000000)](https://github.com/swanandd121) |
 
+---
 ## 🚀 **Live Demo & Backend Links**
 
 - **Live Application**: [Event Mint](https://eventmint.vercel.app/)  
