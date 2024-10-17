@@ -13,7 +13,8 @@ body {
 }
 
 /* Header and Footer Styles */
-header, footer {
+header,
+footer {
   background-color: #222;
   color: #fff;
   padding: 1.5em;
@@ -25,9 +26,9 @@ footer {
   margin-top: 40px;
 }
 
-/* Movie Details Container Styles */
 .movie-details-container {
   width: 800px;
+
   margin: 40px auto;
   padding: 25px;
   background-color: #fff;
@@ -35,14 +36,14 @@ footer {
   border: 1px solid #ddd;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
-/* Left Section Styles */
+
 .left-section {
-  flex: 1;
-  margin-right: 30px;
+  flex: 50%;
+  margin-right: 5px;
 }
 
 .movie-poster img {
@@ -56,14 +57,14 @@ footer {
   transform: scale(1.05);
 }
 
-/* Right Section Styles */
+
 .right-section {
-  flex: 2;
+  flex: 50%;
 }
 
 .movie-title {
   font-size: 30px;
-  font-weight: 700;
+  font-weight: bold;
   margin-bottom: 15px;
   color: #2c3e50;
 }
@@ -74,19 +75,36 @@ footer {
   margin-bottom: 20px;
 }
 
-.movie-genre, .movie-rating {
+.right-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-genre {
   font-size: 18px;
-  color: #34495e;
   margin-bottom: 15px;
 }
 
-.movie-showtimes h3, .movie-cast h3, .movie-photos h3, .movie-trailer h3 {
+.rating {
+  font-size: 18px;
+  background-color: black;
+  color: yellow;
+  width: 300px;
+  align-self: flex-start;
+  font-weight: bold;
+}
+
+.movie-showtimes h3,
+.movie-cast h3,
+.movie-photos h3,
+.movie-trailer h3 {
   font-size: 22px;
   margin-bottom: 10px;
   color: #2c3e50;
 }
 
-.movie-showtimes div, .movie-cast div {
+.movie-showtimes div,
+.movie-cast div {
   font-size: 16px;
   color: #7f8c8d;
   margin-bottom: 5px;
@@ -97,12 +115,14 @@ footer {
   margin: 20px 0;
 }
 
-.cast-member, .photo {
+.cast-member,
+.photo {
   text-align: center;
   margin: 10px;
 }
 
-.cast-member img, .photo img {
+.cast-member img,
+.photo img {
   width: 110px;
   height: 110px;
   border-radius: 50%;
@@ -110,11 +130,13 @@ footer {
   transition: transform 0.3s ease;
 }
 
-.cast-member img:hover, .photo img:hover {
+.cast-member img:hover,
+.photo img:hover {
   transform: scale(1.1);
 }
 
-.cast-member div, .photo div {
+.cast-member div,
+.photo div {
   margin-top: 8px;
   font-size: 14px;
   color: #34495e;
@@ -128,8 +150,41 @@ footer {
 }
 
 /* Buttons Section */
-.buttons-sec{
+.buttons-sec {
   margin-top: 30px;
   display: flex;
   justify-content: space-between;
+}
+
+@media(min-width: 300px) {
+  .movie-details-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .left-section {
+    flex: 1;
+    min-width: 400px;
+    margin-right: 5px;
+  }
+
+  .right-section {
+    flex: 1;
+  }
+
+  .bottom-section {
+    flex-basis: 100%;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .book-tickets-button {
+    justify-content: end;
+  }
+
+  .buttons-sec {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
 }

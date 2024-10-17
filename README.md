@@ -7,7 +7,50 @@
 **Event Mint** is a dynamic web application built for managing events in educational institutions such as schools, colleges, and universities. Inspired by platforms like *BookMyShow*, it simplifies event discovery, registration, payments, and management for organizers and attendees alike. red hex code : #e72927
 
 ---
+## 👥 **Meet Our Team**
 
+<table align="center" style="width:100%;">
+  <tr>
+    <td align="center" style="width:50%;">
+      <img src="https://avatars.githubusercontent.com/u/130790017?v=4&s=100" width="100px;" alt="Samyak Maitre"/>
+      <br />
+      <h3>&nbsp;&nbsp;   Samyak Maitre &nbsp; &nbsp; </h3>
+      <sub><strong>🚀 Project Admin</strong></sub>
+      <br />
+      <p>
+        <a href="https://www.linkedin.com/in/samyakmaitre/">
+          <img src="https://img.icons8.com/fluency/32/000000/linkedin.png" alt="LinkedIn" />
+        </a>
+        <a href="mailto:samyakmaitre@gmail.com">
+          <img src="https://img.icons8.com/fluency/32/000000/gmail.png" alt="Gmail" />
+        </a>
+        <a href="https://github.com/samyakmaitre">
+          <img src="https://img.icons8.com/?size=33&id=63777&format=png&color=000000" alt="GitHub" />
+        </a>
+      </p>
+    </td>
+    <td align="center" style="width:50%;">
+      <img src="https://avatars.githubusercontent.com/u/117746995?v=4&s=100" width="100px;" alt="Swanand Deshpande"/>
+      <br />
+      <h3>Swanand Deshpande</h3>
+      <sub><strong>⚙️ Maintainer</strong></sub>
+      <br />
+      <p>
+        <a href="https://www.linkedin.com/in/swananddeshpande121/">
+          <img src="https://img.icons8.com/fluency/32/000000/linkedin.png" alt="LinkedIn" />
+        </a>
+        <a href="mailto:swananddeshpande121@gmail.com">
+          <img src="https://img.icons8.com/fluency/32/000000/gmail.png" alt="Gmail" />
+        </a>
+        <a href="https://github.com/swanandd121">
+          <img src="https://img.icons8.com/?size=33&id=63777&format=png&color=000000" alt="GitHub" />
+        </a>
+      </p>
+    </td>
+  </tr>
+</table>
+
+---
 ## 🚀 **Live Demo & Backend Links**
 
 - **Live Application**: [Event Mint](https://eventmint.vercel.app/)  
