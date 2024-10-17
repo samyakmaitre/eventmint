@@ -1,4 +1,6 @@
-#  **Event Mint : Seamless Event Experience**
+<div align="center">
+<h1>Event Mint : Seamless Event Experience</h1>
+</div>
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/c2a3721e-2002-42bb-aea1-796ed182937d" alt="eventmint"/>
@@ -6,7 +8,29 @@
 
 **Event Mint** is a dynamic web application built for managing events in educational institutions such as schools, colleges, and universities. Inspired by platforms like *BookMyShow*, it simplifies event discovery, registration, payments, and management for organizers and attendees alike. red hex code : #e72927
 
+<table align="center">
+    <thead align="center">
+        <tr border: 2px;>
+            <td><b>🌟 Stars</b></td>
+            <td><b>🍴 Forks</b></td>
+            <td><b>🐛 Issues</b></td>
+            <td><b>🔔 Open PRs</b></td>
+            <td><b>🔕 Close PRs</b></td>
+        </tr>
+     </thead>
+    <tbody>
+         <tr>
+            <td><img alt="Stars" src="https://img.shields.io/github/stars/samyakmaitre/eventmint?style=flat&logo=github"/></td>
+             <td><img alt="Forks" src="https://img.shields.io/github/forks/samyakmaitre/eventmint?style=flat&logo=github"/></td>
+            <td><img alt="Issues" src="https://img.shields.io/github/issues/samyakmaitre/eventmint?style=flat&logo=github"/></td>
+            <td><img alt="Open Pull Requests" src="https://img.shields.io/github/issues-pr/samyakmaitre/eventmint?style=flat&logo=github"/></td>
+           <td><img alt="Close Pull Requests" src="https://img.shields.io/github/issues-pr-closed/samyakmaitre/eventmint?style=flat&color=green&logo=github"/></td>
+        </tr>
+    </tbody>
+</table>
+
 ---
+
 ## 👥 **Meet Our Team**
 
 <table align="center" style="width:100%;">
@@ -185,6 +209,18 @@ We welcome contributions to improve EventMint! Whether you're adding features or
 - Test your changes before submitting a pull request.
 - Keep your branch updated with the main branch to avoid conflicts.
 - Be clear and concise in your pull request titles and descriptions.
+
+---
+
+## 👥 Our Contributors
+
+- We truly appreciate your incredible contributions to this project! Your dedication and hard work are vital to its continued growth and success. If you’ve found value in it, don’t forget to show your support by giving our repository a star! ⭐
+
+<div align="center">
+  <a href="https://github.com/samyakmaitre/eventmint">
+    <img src="https://contrib.rocks/image?repo=samyakmaitre/eventmint&&max=1000&&cachebust=1" />
+  </a>
+</div>
 
 ---
 
