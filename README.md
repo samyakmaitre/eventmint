@@ -9,12 +9,12 @@
 ---
 ## 👥 **Meet Our Team**
 
-<table align="center">
+<table align="center" style="width:100%;">
   <tr>
-    <td align="center">
+    <td align="center" style="width:50%;">
       <img src="https://avatars.githubusercontent.com/u/130790017?v=4&s=100" width="100px;" alt="Samyak Maitre"/>
       <br />
-      <h3>  <t>Samyak Maitre<t>  </h3>
+      <h3>Samyak Maitre</h3>
       <sub><strong>🚀 Project Admin</strong></sub>
       <br />
       <p>
@@ -29,7 +29,7 @@
         </a>
       </p>
     </td>
-    <td align="center">
+    <td align="center" style="width:50%;">
       <img src="https://avatars.githubusercontent.com/u/117746995?v=4&s=100" width="100px;" alt="Swanand Deshpande"/>
       <br />
       <h3>Swanand Deshpande</h3>
