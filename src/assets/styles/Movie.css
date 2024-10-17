@@ -70,3 +70,8 @@
   background-color: #ff6500;
 }
 
+@media (min-width: 768px) { 
+  .movie{
+    width: 500px;
+  }
+ }
