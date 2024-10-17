@@ -339,9 +339,7 @@ const MovieDetails = () => {
                     </div>
                 </div>
                 <div className='buttons-sec'>
-                  <Link to="/book-tickets">
-                    <button className='book-tickets-button'>Book Tickets</button>
-                  </Link>
+                  
                   <Link to={`/book-tickets/${id}`}>
                       <button className="book-tickets-button">Book Tickets</button>
                   </Link>
