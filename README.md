@@ -14,7 +14,7 @@
     <td align="center" style="width:50%;">
       <img src="https://avatars.githubusercontent.com/u/130790017?v=4&s=100" width="100px;" alt="Samyak Maitre"/>
       <br />
-      <h3>&nbsp;  Samyak Maitre &nbsp; </h3>
+      <h3>&nbsp;&nbsp;   Samyak Maitre &nbsp; &nbsp; </h3>
       <sub><strong>🚀 Project Admin</strong></sub>
       <br />
       <p>
