@@ -85,7 +85,7 @@ function Header({ onSearch }) {
                 ) : (
                     <div className="flex flex-row gap-2 justify-center items-center">
                         <button
-                            className="px-3 rounded-lg w-[120px] py-2 border-[2px] font-semibold hover:font-semibold hover:text-white border-red-600 hover:bg-red-500" onClick={() => navigate("/login")} style={{color:mode=="dark"?"white":""}}>
+                            className="px-2 rounded-lg w-[120px] py-2 border-[2px] font-semibold hover:font-semibold hover:text-white border-red-600 hover:bg-red-500" onClick={() => navigate("/login")} style={{color:mode=="dark"?"white":""}}>
                             Login/SignUp
                         </button>
                     </div>
