@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import NavBar from "./NavBar";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import "../assets/styles/Header.css";
-import removedbg from "../assets/images/removedbg.png";
+import removedbg from "../assets/images/logo2.png";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../services/operations/authAPI";
 import 'bootstrap-icons/font/bootstrap-icons.css';
