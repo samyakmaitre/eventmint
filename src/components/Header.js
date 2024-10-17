@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import NavBar from "./NavBar";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import "../assets/styles/Header.css";
-import removedbg from "../assets/images/logo1.png";
+import Logo from "../assets/images/logo1.png";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../services/operations/authAPI";
 import 'bootstrap-icons/font/bootstrap-icons.css';
@@ -49,7 +49,7 @@ function Header({ onSearch }) {
         <header className="header container-fluid d-flex align-items-center justify-content-between p-3" style={{backgroundColor:mode=="dark"?"black":"", boxShadow:mode=="dark"?"0 4px 4px rgba(255, 255, 255, 0.2)":"" }}>
             <div className="logo ">
                 <a href="https://eventmint.vercel.app/">
-                    <img src={removedbg} alt="Logo" className="aspect-[3/2] object-contain" />
+                    <img src={Logo} alt="Logo" className="aspect-[3/2] object-contain" />
                 </a>
             </div>
             <div className="search-location-container d-flex align-items-center justify-content-between w-100">
