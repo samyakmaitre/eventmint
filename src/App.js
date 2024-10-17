@@ -10,6 +10,7 @@ import MovieDetails from './components/MovieDetails';
 import AboutUs from "./components/AboutUs";
 import Offers from "./components/Offers";
 import MoviesPage from "./Pages/MoviesPage";
+import StreamEventsPage from "./Pages/EventsPage";
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
 					 <Route path="/movies" element={<MoviesPage/>} /> 
 					<Route path="/about-us" element={<AboutUs />} />
 					<Route path="/offers" element={<Offers/>}/>
+					<Route path="/stream-events" element={<StreamEventsPage/>} />
 				</Routes>
 			</Router>
 		</div>

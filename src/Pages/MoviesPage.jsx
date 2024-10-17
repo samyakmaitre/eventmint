@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Movie from '../components/Movie';
 import '../assets/styles/MoviesPage.css'; 
-
+import StreamNavBar from '../components/StreamNavBar';
 import poster1 from '../assets/images/poster1.jpg';
 import poster2 from '../assets/images/poster2.jpg';
 import poster3 from '../assets/images/poster3.jpg';
@@ -76,6 +76,7 @@ const MoviesPage = () => {
 
   return (
     <div className="movies-page">
+      <StreamNavBar />
       <h1 className="page-title">Movies List</h1>
 
       <input
