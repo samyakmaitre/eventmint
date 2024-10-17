@@ -6,6 +6,7 @@ import removedbg from "../assets/images/removedbg.png";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../services/operations/authAPI";
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import SideMenu from "./SideMenu";
 
 function Header({ onSearch }) { 
     const [searchTerm, setSearchTerm] = useState(""); 
@@ -13,6 +14,7 @@ function Header({ onSearch }) {
     const dispatch = useDispatch();
     const { user } = useSelector((state) => state.profile);
     const location = useLocation();
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const [mode,setMode]=useState("light");
 
@@ -36,13 +38,16 @@ function Header({ onSearch }) {
         onSearch(e.target.value); 
     };
 
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+        console.log(isMenuOpen);
+        
+    };
+
     return (
-        <header className="header container-fluid d-flex align-items-center justify-content-between p-3" 
-        style={{
-            // backgroundColor:mode=="dark"?"black":"", 
-            backgroundColor: mode === "dark" ? "#333" : "#f8f9fa",
-        boxShadow:mode=="dark"?"0 4px 4px rgba(255, 255, 255, 0.2)":"" }}>
-            <div className="logo">
+
+        <header className="header container-fluid d-flex align-items-center justify-content-between p-3" style={{backgroundColor:mode=="dark"?"black":"", boxShadow:mode=="dark"?"0 4px 4px rgba(255, 255, 255, 0.2)":"" }}>
+            <div className="logo ">
                 <a href="https://eventmint.vercel.app/">
                     <img src={removedbg} alt="Logo" className="aspect-[3/2] object-contain" />
                 </a>
@@ -90,6 +95,16 @@ function Header({ onSearch }) {
                         </button>
                     </div>
                 )}
+            <div className="side-menu-toggle ml-4">
+                <button
+                    className="btn btn-outline-secondary"
+                    onClick={toggleMenu}>
+                    ☰
+                </button>
+            </div>
+                
+                
+            <SideMenu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} /> 
             </div>
         </header>
     );
