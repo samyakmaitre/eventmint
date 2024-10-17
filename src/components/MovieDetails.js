@@ -7,6 +7,7 @@ import Header from "./Header.js";
 import "../assets/styles/MovieDetails.css";
 import Navbar from './NavBar.js';
 import Footer from './Footer.js';
+import BookTicketPage from '../Pages/BookTicketPage.jsx';
 
 // Import movie stills
 import moviestill1 from "../assets/images/moviestill1.jpg";
@@ -341,8 +342,8 @@ const MovieDetails = () => {
                   <Link to="/book-tickets">
                     <button className='book-tickets-button'>Book Tickets</button>
                   </Link>
-                  <Link to="/">
-                    <button className='book-tickets-button'>Back</button>
+                  <Link to={`/book-tickets/${id}`}>
+                      <button className="book-tickets-button">Book Tickets</button>
                   </Link>
                   
                 </div>
