@@ -12,6 +12,9 @@ import AboutUs from "./components/AboutUs";
 import PasswordRecovery from "./components/Auth/PasswordRecovery";
 
 import Offers from "./components/Offers";
+import ListShows from "./components/ListShows";
+import SportsActivitiesPage from "./components/SportsActivitiesPage";
+import SportDetails from "./components/SportsDetails";
 
 
 
@@ -39,6 +42,9 @@ function App() {
 					<Route path="/movies/:id" element={<MovieDetails />} />
 					<Route path="/about-us" element={<AboutUs />} />
 					<Route path="/offers" element={<Offers/>}/>
+					<Route path="/list-shows" element={<ListShows/>}/>
+					<Route path="/sports-activities" element={<SportsActivitiesPage/>}/>
+					<Route path="/sports/:id" element={<SportDetails />} />
 				</Routes>
 			</Router>
 		</div>

@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import NavBar from "./NavBar";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import "../assets/styles/Header.css";
-import removedbg from "../assets/images/removedbg.png";
+import Logo from "../assets/images/logo1.png";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../services/operations/authAPI";
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import SideMenu from "./SideMenu";
 
 function Header({ onSearch }) { 
     const [searchTerm, setSearchTerm] = useState(""); 
@@ -13,13 +14,13 @@ function Header({ onSearch }) {
     const dispatch = useDispatch();
     const { user } = useSelector((state) => state.profile);
     const location = useLocation();
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const [mode,setMode]=useState("light");
 
     if (location.pathname === "/signup" || location.pathname === "/login") {
         return null;
     }
-
     
     function handleMode(){
         if(mode==="light"){
@@ -37,15 +38,18 @@ function Header({ onSearch }) {
         onSearch(e.target.value); 
     };
 
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+        console.log(isMenuOpen);
+        
+    };
+
     return (
-        <header className="header container-fluid d-flex align-items-center justify-content-between p-3" 
-        style={{
-            // backgroundColor:mode=="dark"?"black":"", 
-            backgroundColor: mode === "dark" ? "#333" : "#f8f9fa",
-        boxShadow:mode=="dark"?"0 4px 4px rgba(255, 255, 255, 0.2)":"" }}>
-            <div className="logo">
+
+        <header className="header container-fluid d-flex align-items-center justify-content-between p-3" style={{backgroundColor:mode=="dark"?"black":"", boxShadow:mode=="dark"?"0 4px 4px rgba(255, 255, 255, 0.2)":"" }}>
+            <div className="logo ">
                 <a href="https://eventmint.vercel.app/">
-                    <img src={removedbg} alt="Logo" className="aspect-[3/2] object-contain" />
+                    <img src={Logo} alt="Logo" className="aspect-[3/2] object-contain" />
                 </a>
             </div>
             <div className="search-location-container d-flex align-items-center justify-content-between w-100">
@@ -86,11 +90,21 @@ function Header({ onSearch }) {
                 ) : (
                     <div className="flex flex-row gap-2 justify-center items-center">
                         <button
-                            className="px-3 rounded-lg w-[120px] py-2 border-[2px] font-semibold hover:font-semibold hover:text-white border-red-600 hover:bg-red-500" onClick={() => navigate("/login")} style={{color:mode=="dark"?"white":""}}>
-                            Sign in
+                            className="px-2 rounded-lg w-[120px] py-2 border-[2px] font-semibold hover:font-semibold hover:text-white border-red-600 hover:bg-red-500" onClick={() => navigate("/login")} style={{color:mode=="dark"?"white":""}}>
+                            Login/SignUp
                         </button>
                     </div>
                 )}
+            <div className="side-menu-toggle ml-4">
+                <button
+                    className="btn btn-outline-secondary"
+                    onClick={toggleMenu}>
+                    ☰
+                </button>
+            </div>
+                
+                
+            <SideMenu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} /> 
             </div>
         </header>
     );

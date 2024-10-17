@@ -1,57 +1,72 @@
 .movie {
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    overflow: hidden;
-    width: 200px;
-    text-align: center;
-    margin: 10px;
-    font-family: Arial, sans-serif;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: all 0.2s;
-  }
-
-.movie:hover{
-  scale: 1.02;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.384)
+  border-radius: 10px;
+  overflow: hidden;
+  width: 235px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  transition: all 0.2s;
+  position: relative;
 }
-  
-  .movie-poster {
-    width: 100%;
-    height: auto;
-  }
-  
-  .movie-title {
-    font-size: 18px;
-    margin: 10px 0;
-  }
-  
-  .movie-rating {
-    font-size: 14px;
-    color: #888;
-  }
-  
-  .rating-star {
-    color: red;
-  }
-  
-  .votes {
-    font-size: 12px;
-  }
-  
-  .movie-genre {
-    font-size: 14px;
-    margin: 10px 0;
-  }
-  
-  .book-tickets-button {
-    background-color: #ff4500;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    cursor: pointer;
-  }
-  
-  .book-tickets-button:hover {
-    background-color: #ff6500;
-  }
+
+.movie:hover {
+  scale: 1.02;
+}
+
+.movie-poster {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.movie-rating {
+  position: absolute;
+  text-align: left;
+  bottom: 97px;
+  width: 100%;
+  color: white;
+  background-color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.rating-star {
+  color: red;
+}
+
+.rating-points{
+  color: white;
+  font-size: 12px;
+}
+
+.votes {
+  font-size: 12px;
+  color: white;
+}
+
+.movie-title {
+  font-size: 18px;
+  text-align: left;
+  margin: 10px 0;
+}
+
+.movie-genre {
+  font-size: 10px;
+  margin: 10px 0;
+  text-align: left;
+}
+
+.book-tickets-button {
+  background-color: #ff4500;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.book-tickets-button:hover {
+  background-color: #ff6500;
+}
+

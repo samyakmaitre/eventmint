@@ -7,20 +7,29 @@
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  z-index: 1000;
-  width: 100%;
-  align-items: center;
-  padding: 10px 10px 10px 10px;
-  color: #000000;
-  background-color: #fff;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
-  position: relative;
-  z-index: 1000;
-
-  height: 81px;
-}
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+    width: 100%;
+    align-items: center;
+    padding: 10px 10px 10px 10px;
+    color: #000000;
+    background-color: #fff;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1000;
+  
+    height: 81px;
+  }
+  
+  .logo {
+    display: flex;
+    justify-content: center; /* Center the logo horizontally */
+    align-items: center;     /* Center the logo vertically */
+    padding: 10px;           /* Add some padding around the logo */
+    background-color: #fff;  /* Set background color if needed */
+    height: 10px;           /* Adjust height as per requirement */
+  }
 
 .logo {
   display: flex;
