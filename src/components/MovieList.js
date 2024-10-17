@@ -62,7 +62,7 @@ function MovieList({ searchTerm }) {
   ); 
 
   return (
-    <div className="movie-list mt-20">
+    <div className="flex gap-5 flex-col mt-[-400px] lg:flex-none lg:gap-0 lg:flex-row lg:movie-list lg:mt-20">
       {filteredMovies.map((movie, index) => (
         <Movie
           key={index}

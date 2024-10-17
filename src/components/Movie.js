@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Movie({ id, poster, title, rating, votes, genre }) {
   return (
-    <div className="movie">
+    <div className="movie m-auto justify-center ">
       <img src={poster} alt={`${title} poster`} className="movie-poster" />
       <p className="movie-rating">
         <span className="rating-star">★</span>
