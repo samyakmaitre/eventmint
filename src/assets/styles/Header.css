@@ -161,10 +161,6 @@
   cursor: pointer;
 }
 
-.dark-mode {
-  background-color: #151414f9;
-}
-
 .bi-brightness-high-fill,
 .bi-moon-fill {
   font-size: 25px;
