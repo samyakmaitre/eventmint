@@ -41,7 +41,7 @@ function Header({ onSearch }) {
           <img src={Logo} alt="Logo" className="aspect-[3/2] object-contain"/>
         </a>
       </div>
-      <div className="search-location-container d-flex align-items-center justify-content-between w-100">
+      <div className="search-location-container d-flex align-items-center w-100">
         <div
           className="search-bar input-group w-75"
           style={{ marginLeft: "20px" }}
@@ -57,12 +57,8 @@ function Header({ onSearch }) {
             <i className="bi bi-search"></i>
           </span>
         </div>
-        <div className="mode">
-          <i class="bi bi-brightness-high-fill"></i>
-        </div>
         <select
-          className="location form-select w-auto"
-          style={{ marginLeft: "10px" }}
+          className="location form-select w-auto ml-10"
         >
           <option value="Nagpur">Nagpur</option>
           <option value="Mumbai">Mumbai</option>
