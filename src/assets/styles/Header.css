@@ -15,7 +15,7 @@
   padding: 10px 10px 10px 10px;
   color: #000000;
   background-color: #fff;
-  box-shadow: 0 4px 4px rgba(9, 2, 2, 0.3);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
   position: relative;
   z-index: 1000;
 
@@ -27,14 +27,14 @@
   justify-content: center;
   /* Center the logo horizontally */
   align-items: center;
-  /* Center the logo vertically */
+   /* Center the logo vertically */
   padding: 10px;
   /* Add some padding around the logo */
   /* background-color: #fff;  */
   /* Set background color if needed */
-  height: 100px;
+  height: 10px;
   /* Adjust height as per requirement */
-  position: fixed;
+  background-color: #fff;
 }
 
 .logo img {
