@@ -85,6 +85,22 @@ header nav ul li {
   background-color: #282c34;
 }
 
+.movie {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 1rem;
+  padding: 1rem;
+  width: 280px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.movie:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
 
 
 
@@ -119,6 +135,7 @@ header nav ul li {
 }
 
 .movie button {
+  background: linear-gradient(45deg,#ff6b6b,#d90429);
   background-color: #f44141;
   border: none;
   color: white;
@@ -130,7 +147,20 @@ header nav ul li {
 }
 
 .movie button:hover {
+  background: linear-gradient(45deg, #d90429, #ff6b6b);
   background-color: #d00404;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.movie {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.movie.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 

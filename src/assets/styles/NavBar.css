@@ -1,5 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+header {
+  background: linear-gradient(135deg, #ff4500, #282c34);
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+header nav ul li {
+  margin: 0 1rem;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #282c34;
+  transition: background-color 0.3s ease, transform 0.3s;
+}
+
+header nav ul li:hover {
+  background-color: #ff4500;
+  transform: scale(1.1);
+}
+
+
 .navbar {
   background: rgba(47, 46, 46, 0.7);
   backdrop-filter: blur(10px);
@@ -24,6 +46,7 @@
 .nav-link:hover {
   color: #ef502c;
   transform: scale(1.05);
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
 }
 
 @media (max-width: 768px) {
@@ -73,6 +96,22 @@
 .nav-link.active {
   color: #f32809;
 }
+html {
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 5px 10px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+    padding: 5px 0;
+  }
+}
+
+
 
 
 
