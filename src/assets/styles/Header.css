@@ -7,29 +7,30 @@
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    z-index: 1000;
-    width: 100%;
-    align-items: center;
-    padding: 10px 10px 10px 10px;
-    color: #000000;
-    background-color: #fff;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
-    position: relative;
-    z-index: 1000;
-  
-    height: 81px;
-  }
-  
-  .logo {
-    display: flex;
-    justify-content: center; /* Center the logo horizontally */
-    align-items: center;     /* Center the logo vertically */
-    padding: 10px;           /* Add some padding around the logo */
-    background-color: #fff;  /* Set background color if needed */
-    height: 10px;           /* Adjust height as per requirement */
-  }
+  display: flex;
+  justify-content: space-between;
+  z-index: 1000;
+  width: 100%;
+  align-items: center;
+  padding: 10px 10px 10px 10px;
+  color: #000000;
+  background-color: #fff;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  height: 81px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center; /* Center the logo horizontally */
+  align-items: center; /* Center the logo vertically */
+  padding: 10px; /* Add some padding around the logo */
+  background-color: #fff; /* Set background color if needed */
+  height: 10px; /* Adjust height as per requirement */
+}
 
 .logo {
   display: flex;
@@ -69,7 +70,6 @@
   padding: 10px 15px;
   width: 100%;
   outline: none;
-
 }
 
 .input-group-text {
@@ -80,7 +80,6 @@
   padding: 10px 15px;
   display: flex;
   align-items: center;
-
 }
 
 .bi-search {
@@ -91,7 +90,6 @@
 .search-bar .form-control:focus {
   box-shadow: none;
 }
-
 
 .search-bar:focus-within .input-group-text {
   box-shadow: 4px 4px 8px rgba(0, 123, 255, 0.5);
@@ -127,7 +125,7 @@
 }
 
 .btn-outline-primary:hover {
-  background-color: #0D6EFD;
+  background-color: #0d6efd;
   color: white;
 }
 
@@ -152,7 +150,6 @@
   cursor: pointer;
 }
 
-
 .mode {
   margin-right: 10px;
 }
@@ -164,7 +161,7 @@
 .bi-brightness-high-fill,
 .bi-moon-fill {
   font-size: 25px;
-  margin-left: .5rem;
+  margin-left: 0.5rem;
 }
 
 .bi-moon-fill {
