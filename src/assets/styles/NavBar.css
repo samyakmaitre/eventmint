@@ -70,7 +70,7 @@
   width: 100%;
 }
 
-.nav-link.active {
+.nav-link:hover {
   color: #FF6B6B;
 }
 
