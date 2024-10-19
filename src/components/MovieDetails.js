@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import YouTube from 'react-youtube';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
@@ -7,6 +7,8 @@ import Header from "./Header.js";
 import "../assets/styles/MovieDetails.css";
 import Navbar from './NavBar.js';
 import Footer from './Footer.js';
+
+
 
 // Import movie stills
 import moviestill1 from "../assets/images/moviestill1.jpg";
@@ -35,6 +37,7 @@ const MovieDetails = () => {
   const [photos, setPhotos] = useState([]);
   const [showtimes, setShowtimes] = useState([]);
   const { id } = useParams();
+  const menuRef = useRef(null);
 
   // Updated movies array with the imported poster images
   const movies = [
@@ -209,13 +212,24 @@ const MovieDetails = () => {
     return <div>Error loading movie details: {error.message}</div>;
   }
 
+  const CustomLeftArrow = ({ onClick }) => (
+    <button className="custom-arrow custom-arrow-left" onClick={onClick}>
+      &#9664;
+    </button>
+  );
+
+  const CustomRightArrow = ({ onClick }) => (
+    <button className="custom-arrow custom-arrow-right" onClick={onClick}>
+      &#9654; {/* Right arrow symbol */}
+    </button>
+  );
+
   return (
     <>
       <Header />
       <Navbar />
       <div className="movie-details-container">
         <div className="left-section">
-
           <div className="movie-poster">
             <img src={movie.poster} alt={`${movie.title} poster`} />
           </div>
@@ -223,15 +237,12 @@ const MovieDetails = () => {
         <div className="right-section">
           <div className="title-rating">
             <div className="movie-title">{movie.title}</div>
-
             <div className="rating">
               Rating: {movie.rating}/10 ({movie.votes} votes)
             </div>
           </div>
-
           <div className="movie-description">{movie.description}</div>
           <div className="movie-genre">{movie.genre}</div>
-
           <div className="movie-showtimes">
             <h3>Showtimes</h3>
             {showtimes.map((showtime, index) => (
@@ -241,7 +252,6 @@ const MovieDetails = () => {
             ))}
           </div>
         </div>
-
         <div className="bottom-section">
           <div className="movie-cast">
             <h3>Cast</h3>
@@ -252,6 +262,8 @@ const MovieDetails = () => {
               centerMode={false}
               className=""
               containerClass="carousel-container"
+              customLeftArrow={<CustomLeftArrow />}
+              customRightArrow={<CustomRightArrow />}
               draggable
               focusOnSelect={false}
               infinite
@@ -324,6 +336,8 @@ const MovieDetails = () => {
               showDots={false}
               sliderClass=""
               swipeable
+              customLeftArrow={<CustomLeftArrow />}
+              customRightArrow={<CustomRightArrow />}
             >
               {photos.map((photo, index) => (
                 <div className="photo" key={index}>
@@ -345,7 +359,6 @@ const MovieDetails = () => {
               />
             )}
           </div>
-
           <div className='buttons-sec'>
             <Link to="/book-tickets">
               <button className='book-tickets-button'>Book Tickets</button>
@@ -353,7 +366,6 @@ const MovieDetails = () => {
             <Link to="/">
               <button className='book-tickets-button'>Back</button>
             </Link>
-
           </div>
         </div>
       </div>

@@ -28,7 +28,6 @@ footer {
 
 .movie-details-container {
   width: 800px;
-
   margin: 40px auto;
   padding: 25px;
   background-color: #fff;
@@ -39,7 +38,6 @@ footer {
   display: grid;
   grid-template-columns: 1fr;
 }
-
 
 .left-section {
   flex: 50%;
@@ -56,7 +54,6 @@ footer {
 .movie-poster img:hover {
   transform: scale(1.05);
 }
-
 
 .right-section {
   flex: 50%;
@@ -113,12 +110,18 @@ footer {
 /* Carousel Styles */
 .carousel-container {
   margin: 20px 0;
+  margin-left: 10px;
 }
 
 .cast-member,
 .photo {
   text-align: center;
   margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
 }
 
 .cast-member img,
@@ -154,6 +157,39 @@ footer {
   margin-top: 30px;
   display: flex;
   justify-content: space-between;
+}
+
+/* Custom Arrow Styles */
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.custom-arrow-left {
+   left: 0px; 
+}
+
+.custom-arrow-right {
+  right: 0px;
+}
+
+.rotate-on-hover:hover {
+  transform: rotate(90deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.rotate-90 {
+  transform: rotate(90deg);
 }
 
 @media(min-width: 300px) {
