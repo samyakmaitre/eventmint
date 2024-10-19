@@ -76,7 +76,8 @@
 }
 
 .nav-link:hover {
-  color: #FF6B6B;
+  color: #ff6b6b;
+}
 .nav-link.active {
   color: #ff6b6b;
 }
