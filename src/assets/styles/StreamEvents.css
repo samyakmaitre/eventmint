@@ -1,0 +1,121 @@
+/* Container for the entire event card */
+.stream-event {
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 15px;
+    width: 320px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  /* Hover effect for the event card */
+  .stream-event:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Styling for the event poster */
+  .stream-event-poster {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  /* Styling for the event rating */
+  .stream-event-rating {
+    font-size: 1rem;
+    color: #ffa41b;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .rating-star {
+    color: #f5c518;
+    font-size: 1.5rem;
+    margin-right: 5px;
+  }
+  
+  .rating-points {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  
+  .votes {
+    font-size: 0.9rem;
+    color: #6c757d;
+  }
+  
+  /* Styling for the event title */
+  .stream-event-title {
+    font-size: 1.8rem;
+    color: #343a40;
+    font-weight: bold;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Styling for the genre information */
+  .stream-event-genre {
+    font-size: 1rem;
+    color: #6c757d;
+    font-style: italic;
+    margin-bottom: 12px;
+  }
+  
+  /* Styling for the event date and time */
+  .stream-event-date-time {
+    font-size: 1rem;
+    color: #495057;
+    margin-bottom: 20px;
+  }
+  
+  .event-label {
+    font-weight: bold;
+    color: #007bff;
+    margin-right: 5px;
+  }
+  
+  /* Styling for the 'Watch Now' button */
+  .stream-tickets-button {
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  /* Hover effect for the button */
+  .stream-tickets-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .stream-event {
+      width: 100%;
+      padding: 15px;
+    }
+  
+    .stream-event-poster {
+      height: 350px;
+    }
+  
+    .stream-event-title {
+      font-size: 1.5rem;
+    }
+  
+    .stream-tickets-button {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+    }
+  }
+  

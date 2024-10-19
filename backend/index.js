@@ -1,47 +1,29 @@
-/** @format */
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Toaster } from 'react-hot-toast';
+import { Provider } from 'react-redux';
+import rootReducer from "./reducer"
+import { configureStore } from '@reduxjs/toolkit';
 
-// Importing necessary modules and packages
-const express = require("express");
-const app = express();
-const userController = require("./controllers/auth");
-const database = require("./config/database");
-const cookieParser = require("cookie-parser");
-const cors = require("cors");
+const store = configureStore({
+	reducer: rootReducer,
+});
 
-// Loading environment variables from .env file
-require("dotenv").config();
-
-// Setting up port number
-const PORT = process.env.PORT || 4000;
-
-// Connecting to database
-database.dbConnect();
-
-// Middlewares
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.use(cookieParser());
-app.use(
-	cors({
-		origin: "*",
-		credentials: true,
-	})
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+	<React.StrictMode>
+		<Provider store={store}>
+				<App />
+				<Toaster />
+		</Provider>
+	</React.StrictMode>
 );
 
-// Setting up routes
-app.use("/api/v1/auth", userController);
-
-// Testing the server
-app.get("/", (req, res) => {
-	return res.json({
-		success: true,
-		message: "Your server is up and running ...",
-	});
-});
-
-// Listening to the server
-app.listen(PORT, () => {
-	console.log(`App is listening at ${PORT}`);
-});
-
-// End of code.
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();

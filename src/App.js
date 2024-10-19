@@ -15,6 +15,10 @@ import Offers from "./components/Offers";
 import ListShows from "./components/ListShows";
 import SportsActivitiesPage from "./components/SportsActivitiesPage";
 import SportDetails from "./components/SportsDetails";
+import StreamEventsPage from "./components/StreamEventsPage";
+import StreamEventsDetails from "./components/StreamEventsDetails";
+
+
 
 
 
@@ -45,6 +49,9 @@ function App() {
 					<Route path="/list-shows" element={<ListShows/>}/>
 					<Route path="/sports-activities" element={<SportsActivitiesPage/>}/>
 					<Route path="/sports/:id" element={<SportDetails />} />
+					<Route path="/stream-events" element={<StreamEventsPage />} />
+					<Route path="/stream-events/:id" element={<StreamEventsDetails />} />
+					
 				</Routes>
 			</Router>
 		</div>
