@@ -1,6 +1,7 @@
 /** @format */
 
 import React from "react";
+import ScrollToTop from "./ScrollToTop";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom"; // Import Router from react-router-dom
 import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
 import Home from "./components/Home";
@@ -54,6 +55,7 @@ function App() {
 					
 				</Routes>
 			</Router>
+			<ScrollToTop />
 		</div>
 	);
 
