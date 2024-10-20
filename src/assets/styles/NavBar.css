@@ -1,62 +1,131 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-header {
-  background: linear-gradient(135deg, #ff4500, #282c34);
-  color: white;
-  padding: 1rem 0;
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+:root {
+  --primary-color: #ff4500;
+  --secondary-color: #282c34;
+  --text-color: #F0F0F0;
+  --hover-color: #ef502c;
+  --transition-speed: 0.3s;
 }
-header nav ul li {
-  margin: 0 1rem;
-  font-size: 1.2rem;
-  padding: 10px 20px;
-  border-radius: 10px;
-  background-color: #282c34;
-  transition: background-color 0.3s ease, transform 0.3s;
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-header nav ul li:hover {
-  background-color: #ff4500;
-  transform: scale(1.1);
+header {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: var(--text-color);
+  padding: 1.5rem 0;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+header nav ul li {
+  margin: 0 1rem;
+  font-size: 1.1rem;
+}
+
+header nav ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all var(--transition-speed) ease;
+}
+
+header nav ul li a:hover {
+  background-color: var(--hover-color);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 
 .navbar {
-  background: rgba(47, 46, 46, 0.7);
+  background: rgba(40, 44, 52, 0.9);
   backdrop-filter: blur(10px);
-  padding: 10px 20px;
+  padding: 15px 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   position: sticky;
+  top: 0;
   width: 100%;
   z-index: 1000;
-  font-family: 'Roboto', sans-serif;
 }
 
 .nav-link {
-  color: #F0F0F0;
+  color: var(--text-color);
   text-decoration: none;
-  font-size: 18px;
-  transition: color 0.3s, transform 0.3s;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all var(--transition-speed);
+  padding: 8px 15px;
+  border-radius: 20px;
 }
 
 .nav-link:hover {
-  color: #ef502c;
-  transform: scale(1.05);
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  color: var(--hover-color);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar {
+  background: rgba(40, 44, 52, 0.9);
+  backdrop-filter: blur(10px);
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav-link {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all var(--transition-speed);
+  padding: 8px 15px;
+  border-radius: 20px;
+}
+
+.nav-link:hover {
+  color: var(--hover-color);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 @media (max-width: 768px) {
-  .nav-link {
-    font-size: 16px;
-  }
-
   .navbar {
     flex-direction: column;
     align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  header nav ul {
+    flex-direction: column;
+  }
+  header nav ul li {
+    margin: 0.5rem 0;
   }
 
   .container {

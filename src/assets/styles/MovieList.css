@@ -16,6 +16,119 @@
     padding: 10px;
     margin-bottom: 100px;
   }
+
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+:root {
+  --primary-color: #ff6b6b;
+  --secondary-color: #4ecdc4;
+  --text-color: #2d3436;
+  --bg-color: #f7f7f7;
+  --card-bg: #ffffff;
+  --hover-color: #ff8787;
+  --transition-speed: 0.3s;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+header, footer {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+header h1, footer h2 {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.movie-details-container {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 3rem;
+  background-color: var(--card-bg);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.left-section, .right-section {
+  flex: 1;
+  min-width: 300px;
+}
+
+.movie-poster img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.movie-poster img:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.movie-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.movie-description {
+  font-size: 1.1rem;
+  color: #636565;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.movie-genre, .movie-rating {
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.movie-showtimes h3, .movie-cast h3, .movie-photos h3, .movie-trailer h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 0.5rem;
+}
+
+.movie-showtimes div, .movie-cast div {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  margin-bottom: 0.8rem;
+}
+
+.carousel-container {
+  margin: 2rem 0;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 1rem 0;
+}
   
   .movie-list::-webkit-scrollbar {
     display: none; /* Hide scrollbar for better UX */

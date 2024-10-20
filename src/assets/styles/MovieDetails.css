@@ -76,6 +76,133 @@ footer {
   text-decoration: none;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+  --primary-color: #ff4500;
+  --secondary-color: #282c34;
+  --text-color: #F0F0F0;
+  --bg-color: #f4f4f4;
+  --card-bg: #ffffff;
+  --hover-color: #ef502c;
+  --transition-speed: 0.3s;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: var(--secondary-color);
+  background-color: var(--bg-color);
+}
+
+header, footer {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: var(--text-color);
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  margin-top: 2rem;
+}
+
+.movie-details-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--card-bg);
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.left-section, .right-section {
+  flex: 1;
+  min-width: 300px;
+}
+
+.movie-poster img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform var(--transition-speed) ease;
+}
+
+.movie-poster img:hover {
+  transform: scale(1.05);
+}
+
+.movie-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--secondary-color);
+}
+
+.movie-description {
+  font-size: 1rem;
+  color: #636565;
+  margin-bottom: 1.5rem;
+}
+
+.movie-genre, .movie-rating {
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.movie-showtimes h3, .movie-cast h3, .movie-photos h3, .movie-trailer h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--secondary-color);
+}
+
+.movie-showtimes div, .movie-cast div {
+  font-size: 1rem;
+  color: #7f8c8d;
+  margin-bottom: 0.5rem;
+}
+
+.carousel-container {
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.cast-member, .photo {
+  display: inline-block;
+  text-align: center;
+  margin-right: 1rem;
+}
+
+.cast-member img, .photo img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform var(--transition-speed) ease;
+}
+
+.cast-member img:hover, .photo img:hover {
+  transform: scale(1.1);
+}
+
+.cast-member div, .photo div {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
 .movie-genre, .movie-rating {
   font-size: 18px;
   color: #34495e;
