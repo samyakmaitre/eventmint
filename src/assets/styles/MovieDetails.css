@@ -156,9 +156,8 @@ footer {
   margin-bottom: 1.5rem;
 }
 
-.movie-genre, .movie-rating {
+.movie-genre {
   font-size: 1.1rem;
-  color: var(--secondary-color);
   margin-bottom: 1rem;
 }
 

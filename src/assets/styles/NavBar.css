@@ -61,17 +61,7 @@ header nav ul li a:hover {
   top: 0;
   width: 100%;
   z-index: 100;
-  font-family: 'Roboto',sans-serif;
-}
-
-.nav-link {
-  color: var(--text-color);
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 600;
-  transition: all var(--transition-speed);
-  padding: 8px 15px;
-  border-radius: 20px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .nav-link:hover {
@@ -135,11 +125,8 @@ header nav ul li a:hover {
   width: 100%;
 }
 
-.nav-link.active {
-  color: #f32809;
-}
-html {
-  scroll-behavior: smooth;
+.nav-link:hover {
+  color: #FF6B6B;
 }
 
 @media (max-width: 480px) {
