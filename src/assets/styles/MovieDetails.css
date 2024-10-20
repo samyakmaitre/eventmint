@@ -160,7 +160,14 @@ footer {
   font-size: 1.1rem;
   margin-bottom: 1rem;
 }
-
+.rating {
+  font-size: 18px;
+  background-color: black;
+  color: yellow;
+  width: 300px;
+  align-self: flex-start;
+  font-weight: bold;
+}
 .movie-showtimes h3, .movie-cast h3, .movie-photos h3, .movie-trailer h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
