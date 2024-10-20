@@ -68,6 +68,19 @@ footer {
   margin-bottom: 15px;
   color: #19191a;
 }
+.movie-genre {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+.rating {
+  font-size: 18px;
+  background-color: black;
+  color: yellow;
+  width: 300px;
+  align-self: flex-start;
+  font-weight: bold;
+}
+
 
 .movie-description {
   font-size: 16px;
@@ -209,11 +222,6 @@ footer {
   font-size: 0.9rem;
 }
 
-.movie-genre, .movie-rating {
-  font-size: 18px;
-  color: #34495e;
-  margin-bottom: 15px;
-}
 
 .movie-showtimes h3, .movie-cast h3, .movie-photos h3, .movie-trailer h3 {
   font-size: 22px;
