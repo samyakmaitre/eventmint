@@ -1,36 +1,27 @@
-/* SportList.css */
+/* SportsList.css */
 
-.sport-list {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 10px;
+.sports-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
 
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 100vh;
-    margin-inline: auto;
-    position: relative;
+.sports-list-item {
+  background: linear-gradient(145deg, #f0f0f3, #d9d9d9);
+  border-radius: 15px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
 
-    padding: 10px;
-    margin-bottom: 100px;
-  }
-  
-  .sport-list::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for better UX */
-  }
-  
-  @media screen and (max-width:1100px) {
-    .sport-list{
-      top: 80px;
-      margin-bottom: 40px;
-    }
-  }
+.sports-list-item:hover {
+  transform: scale(1.05);
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.15);
+}
 
-  @media screen and (max-width:800px) {
-    .sport-list{
-      top: 0px;
-      margin-bottom: -45px;
-    }
-  }
+.sports-list-item h3 {
+  text-align: center;
+  margin-top: 10px;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
