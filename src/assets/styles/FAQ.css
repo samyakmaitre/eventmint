@@ -1,0 +1,44 @@
+.faq {
+    padding: 20px;
+  }
+  
+  .faq-header {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 1000;
+  }
+  
+  .faq-body {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .faq-body .border-b {
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .faq-body button {
+    width: 100%;
+    padding: 15px;
+    color: #E0C8E5 ;
+    border-radius: 10px;
+    background-color: #301C35;
+    border: 5px solid #010001;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .faq-body button:hover {
+    background-color: #6D1483;
+  }
+  
+  .faq-body .p-4 {
+    padding: 15px;
+  }
+  
+  .faq-body .bg-gray-100 {
+    background-color: #D7B0E1;
+    border-radius: 10px;
+  }
+  
