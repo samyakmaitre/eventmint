@@ -6,6 +6,7 @@ import Header from "./Header";
 import Heading from "./heading";
 import Chatbot from "../chatbot";
 import Loader from "./Loader";
+import FAQ from "./FAQ";
 import "../App.css";
 
 const Home = () => {
@@ -30,6 +31,7 @@ const Home = () => {
       <Heading />
       <ImageSlider />
       <MovieList searchTerm={searchTerm} />
+      <FAQ />
       <Footer />
     </div>
   );
