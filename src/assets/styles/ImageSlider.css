@@ -36,6 +36,12 @@
   padding: 10px;
   cursor: pointer;
   z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.slider-container:hover .custom-arrow {
+  opacity: 1;
 }
 
 .custom-prev {
