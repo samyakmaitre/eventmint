@@ -71,13 +71,10 @@
   transform: translateX(-50%);
 }
 
-.nav-link:hover::after {
+.nav-link.active::after {
   width: 100%;
 }
 
-.nav-link:hover {
-  color: #ff6b6b;
-}
 .nav-link.active {
-  color: #ff6b6b;
+  color: #FF6B6B;
 }
