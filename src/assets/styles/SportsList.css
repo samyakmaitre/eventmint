@@ -12,9 +12,10 @@
     min-height: 100vh;
     margin-inline: auto;
     position: relative;
+    flex-wrap: wrap;
 
     padding: 10px;
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
   }
   
   .sport-list::-webkit-scrollbar {
