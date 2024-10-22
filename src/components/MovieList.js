@@ -62,7 +62,7 @@ function MovieList({ searchTerm }) {
   ); 
 
   return (
-    <div className="movie-list mt-20">
+    <div className="movie-list">
       {filteredMovies.map((movie, index) => (
         <Movie
           key={index}
