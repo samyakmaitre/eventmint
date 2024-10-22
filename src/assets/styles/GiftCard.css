@@ -1,0 +1,111 @@
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 16px;
+  }
+  
+  .gift-button {
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .gift-button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 0 20px rgba(0, 123, 255, 1), 0 0 40px rgba(0, 123, 255, 1); /* Neon effect */
+  }
+  
+  .egift-container {
+    background-color: white; /* White background */
+    padding: 20px; /* Add some padding */
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for depth */
+    margin: 20px auto; /* Center the container with margin */
+    max-width: 1200px; /* Optional: maximum width for the container */
+  }
+  .egift-container h1 {
+    text-align: center;  /* Center the text */
+    font-weight: bold;   /* Make the text bold */
+    margin-bottom: 20px; /* Optional: space below the title */
+  }
+  
+  
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 16px; /* Adjust spacing between grid items */
+    margin-top: 20px;
+  }
+  
+  .grid-row {
+    display: contents; /* Allows grid rows to act as a single unit */
+  }
+  
+  .grid-item {
+    display: flex; /* Center content within each grid item */
+    justify-content: center; /* Center images horizontally */
+    align-items: center; /* Center images vertically */
+  }
+  
+  
+  
+  
+  .card-image {
+    width: 90%;
+    max-width: 110%; 
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Dark shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s; /* Add box-shadow transition */
+    margin-bottom: 2rem;
+  }
+  
+  .card-image:hover {
+    transform: translateY(-10%); /* Lift effect for 3D */
+    box-shadow: 0 20% 40% rgba(0, 0, 0, 0.7); /* Darker and more pronounced shadow */
+  }
+  .terms-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    
+  }
+  
+  .terms {
+    color: red; /* Set the text color to red */
+    cursor: pointer; /* Change the cursor to pointer on hover */
+    transition: color 0.3s; /* Smooth transition for color change */
+    margin-right: 5%;
+  }
+  
+  .terms:hover {
+    color: darkred; /* Change to a darker red on hover */
+  }
+  .book-show-section {
+    background-color: white; /* White background */
+    padding: 20px; /* Add some padding */
+    margin: 20px 0; /* Add margin for spacing */
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: add shadow */
+  }
+  
+  .book-show-title {
+    text-align: center; /* Center the title */
+    color: #333; /* Change to desired title color */
+    margin-bottom: 10px; /* Space below the title */
+  }
+  
+  .book-show-content {
+    color: #555; /* Change to desired content color */
+    text-align: left; /* Align content text to the left */
+  }
+  
