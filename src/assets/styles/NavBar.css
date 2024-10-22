@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 .navbar {
   background: rgba(42, 42, 42, 0.7);
@@ -8,21 +8,26 @@
   align-items: center;
   justify-content: space-between;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  top: 0;
   position: sticky;
   width: 100%;
   z-index: 100;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+.secondsnav {
+  position: fixed;
+  top: 80px;
 }
 
 .nav-link {
-  color: #F0F0F0;
+  color: #f0f0f0;
   text-decoration: none;
   font-size: 18px;
   transition: color 0.3s, transform 0.3s;
 }
 
 .nav-link:hover {
-  color: #FF6B6B;
+  color: #ff6b6b;
   transform: scale(1.05);
 }
 
@@ -54,11 +59,11 @@
 }
 
 .nav-link::after {
-  content: '';
+  content: "";
   display: block;
   width: 0;
   height: 3px;
-  background: #FF6B6B;
+  background: #ff6b6b;
   transition: width 0.3s ease;
   position: absolute;
   left: 50%;
@@ -73,7 +78,3 @@
 .nav-link.active {
   color: #FF6B6B;
 }
-
-
-
-
