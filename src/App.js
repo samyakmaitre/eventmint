@@ -16,7 +16,7 @@ import Offers from "./components/Offers";
 import ListShows from "./components/ListShows";
 import SportsActivitiesPage from "./components/SportsActivitiesPage";
 import SportDetails from "./components/SportsDetails";
-
+import GiftCard from "./components/GiftCard";
 
 
 function App() {
@@ -46,6 +46,8 @@ function App() {
 					<Route path="/list-shows" element={<ListShows/>}/>
 					<Route path="/sports-activities" element={<SportsActivitiesPage/>}/>
 					<Route path="/sports/:id" element={<SportDetails />} />
+					<Route path="/gift-cards" element={<GiftCard />} />
+					
 				</Routes>
 			</Router>
 			<ScrollToTop />
