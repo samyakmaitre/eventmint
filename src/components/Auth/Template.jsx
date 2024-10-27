@@ -18,7 +18,7 @@ function Template({ formType }) {
 				{loading ? (
 					<div className="spinner"></div>
 				) : (
-					<div className="mx-auto flex w-11/12 max-w-maxContent flex-col-reverse justify-between gap-y-12 py-12 md:flex-row md:gap-y-0 md:gap-x-12 text-black">
+					<div className="mx-auto flex w-11/12 max-w-maxContent flex-col-reverse justify-between gap-y-12 py-7 md:flex-row-reverse md:gap-y-0 md:gap-x-12 text-black">
 						<div className="mx-auto w-11/12 max-w-[450px] md:mx-0">
 							<h1 className="text-[30px] font-semibold leading-[2.375rem] text-richblack-5">
 								{formType === "signup"?"Signup Page": "Login Page"}
@@ -30,7 +30,7 @@ function Template({ formType }) {
 							</p>
 							{formType === "signup" ? <SignupForm /> : <LoginForm />}
 						</div>
-						<div className="relative mx-auto w-11/12 mt-[50px] max-w-[450px] md:mx-0">
+						<div className="relative mx-auto w-11/12 mt-[50px] max-w-[450px] flex md:mx-0 md:items-center">
 							<img
 								src={formType === "signup" ? SignupImg : LoginImg}
 								alt="Pattern"
