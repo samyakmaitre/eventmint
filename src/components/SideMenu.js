@@ -59,7 +59,7 @@ const SideMenu = ({ isMenuOpen, toggleMenu }) => {
     <>
       <div
         ref={menuRef}
-        className={`fixed top-0 right-0 h-full w-[20%] bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 h-full w-[20%] bg-white shadow-lg transform transition-transform duration-300 ease-in-out w-auto ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         } z-50`}
       >
@@ -83,8 +83,8 @@ const SideMenu = ({ isMenuOpen, toggleMenu }) => {
             <div className="h-10 min-w-10 bg-red-500 rounded-full flex items-center justify-center">
               <Gift className="text-white" size={18} />
             </div>
-            <div className="flex flex-col justify-center px-2">
-              <p className="text-sm text-gray-100 leading-none">
+            <div className="flex flex-col justify-center px-2 h-9">
+              <p className="text-sm text-gray-100 leading-none h-0">
                 Unlock special offers & benefits
               </p>
             </div>
