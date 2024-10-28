@@ -67,7 +67,7 @@
   transition: width 0.3s ease;
   position: absolute;
   left: 50%;
-  bottom: -5px;
+  bottom:0px;
   transform: translateX(-50%);
 }
 

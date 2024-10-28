@@ -41,10 +41,10 @@ function Header({ onSearch }) {
           <img src={Logo} alt="Logo" className="aspect-[3/2] object-contain"/>
         </a>
       </div>
-      <div className="search-location-container d-flex align-items-center w-100">
+      <div className="search-location-container d-flex justify-center align-items-center w-100">
         <div
           className="search-bar input-group w-75"
-          style={{ marginLeft: "20px" }}
+          style={{ marginLeft: "5px", marginRight:"-17px" }}
         >
           <input
             type="text"
@@ -79,7 +79,7 @@ function Header({ onSearch }) {
         ) : (
           <div className="flex flex-row gap-2 justify-center items-center">
             <button
-              className="px-2 rounded-lg w-[120px] py-2 border-[2px] font-semibold hover:font-semibold hover:text-white border-red-600 hover:bg-red-500"
+              className="hidden sm:block px-2 rounded-lg w-[120px] py-2 border-[2px] font-semibold hover:font-semibold hover:text-white border-red-600 hover:bg-red-500"
               onClick={() => navigate("/login")}
             >
               Login/SignUp

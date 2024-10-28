@@ -7,7 +7,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar secondsnav">
-      <div className="container mx-auto px-4 py-3 flex justify-between items-center ">
+      <div className="container mx-auto px-4 py-3 flex justify-center items-center gap-x-10" style={{justifyContent:"center"}}>
         <div className="flex space-x-8">
           <NavLink
             to="/movies"
