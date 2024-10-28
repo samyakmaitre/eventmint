@@ -62,7 +62,15 @@ function MovieList({ searchTerm }) {
   ); 
 
   return (
-    <div className="movie-list mt-20">
+    <div className='flex flex-col bg-slate-700 justify-center my-24'>
+      <div className='flex justify-start gap-3 w-[40%] ml-8 mt-8 p-2'>
+        <img src='/play-button.png' className='w-16 h-16 '></img>
+        <div className='w-72 p-1 text-left'>
+          <h3 className='text-md font-semibold tracking-widest text-white'>PREMIERE</h3>
+          <p className='text-sm text-zinc-300'>Watch new movies at home ,every Friday</p>
+        </div>
+      </div>
+      <div className="movie-list">
       {filteredMovies.map((movie, index) => (
         <Movie
           key={index}
@@ -74,6 +82,7 @@ function MovieList({ searchTerm }) {
           genre={movie.genre}
         />
       ))}
+    </div>
     </div>
   );
 }
