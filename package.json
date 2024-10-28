@@ -13,15 +13,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@radix-ui/react-accordion": "^1.2.1",
-    "@radix-ui/react-slot": "^1.1.0",
     "@reduxjs/toolkit": "^2.2.7",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/react-router-dom": "^5.3.3",
     "axios": "^1.7.7",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "concurrently": "^9.0.1",
+    "depcheck": "^1.4.7",
     "eventmint": "file:",
     "firebase": "^10.14.0",
     "framer-motion": "^11.11.1",
@@ -60,8 +57,6 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@shadcn/ui": "^0.0.4",
     "@testing-library/jest-dom": "^6.5.0",
     "@testing-library/react": "^16.0.1",
     "gh-pages": "^6.1.1",
