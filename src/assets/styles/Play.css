@@ -1,0 +1,95 @@
+:root {
+    --primary-color: #ff4500;
+    --secondary-color: #ff6500;
+    --text-color: #ffffff;
+    --bg-color: #000000;
+    --font-family: 'Arial', sans-serif;
+  }
+  
+  .play {
+    border-radius: 15px;
+    overflow: hidden;
+    width: 250px;
+    text-align: center;
+    font-family: var(--font-family);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #f8f8f8;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  .play:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .play-poster {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 40px;
+  }
+  
+  .play-ranking {
+    position: absolute;
+    text-align: left;
+    bottom: 100px;
+    width: 230px;
+    color: var(--text-color);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .ranking-badge {
+    color: var(--primary-color);
+  }
+  
+  .ranking-points {
+    color: var(--text-color);
+    font-size: 12px;
+  }
+  
+  .participants {
+    font-size: 12px;
+    color: var(--text-color);
+  }
+  
+  .play-name {
+    font-size: 20px;
+    text-align: left;
+    margin: 15px 0 5px 10px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .play-category {
+    font-size: 12px;
+    margin: 5px 0 15px 10px;
+    text-align: left;
+    color: #777;
+  }
+  
+  .more-details-button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+  }
+  
+  .more-details-button:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  .book-tickets-button:hover {
+    background-color: var(--secondary-color);
+  }
+  
