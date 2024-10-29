@@ -62,7 +62,6 @@ function MovieList({ searchTerm }) {
   ); 
 
   return (
-    
     <div className='flex flex-col bg-slate-700 justify-center my-24'>
       <div className='flex justify-start gap-3 w-[40%] ml-8 mt-8 p-2'>
         <img src='/play-button.png' className='w-16 h-16 '></img>
