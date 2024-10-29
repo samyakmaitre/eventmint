@@ -40,7 +40,7 @@ const ImageSlider = () => {
   };
 
   return (
-    <div className="slider-container">
+    <div className="slider-container xl:pt-0 pt-6">
       <Slider {...settings}>
         <div>
           <ImageWithNoEffect imageSrc={image1} altText="Image 1" />

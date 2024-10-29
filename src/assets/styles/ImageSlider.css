@@ -8,11 +8,11 @@
 }
 
 .slick-slide {
-  padding: 0 5px; 
+  padding: 0 5px;
 }
 
 .slick-list {
-  overflow: visible; 
+  overflow: visible;
 }
 
 .slick-track {
@@ -40,18 +40,19 @@
 }
 
 .custom-prev {
-  left: 20px; 
+  left: 20px;
 }
 
 .custom-next {
-  right: 20px; 
+  right: 20px;
 }
 
-.slick-prev, .slick-next {
+.slick-prev,
+.slick-next {
   display: none !important;
 }
 
 .slick-dots li button:before {
   font-size: 12px;
-  color: rgb(26, 23, 23); 
+  color: rgb(26, 23, 23);
 }

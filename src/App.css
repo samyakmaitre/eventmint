@@ -100,11 +100,12 @@ header nav ul li {
 .movie h2, .sport h2 {
   font-size: 15px;
   margin: 0.5rem 0;
+  color: white;
 }
 
 .movie p, .sport p {
   font-size: 14px;
-  color: #555;
+  color: #c1bdbd;
 }
 
 .movie button, .sport button {
