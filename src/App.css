@@ -85,30 +85,30 @@ header nav ul li {
 }
 
 
-.movie-list {
+.movie-list, .sport-list {
   display: grid; 
   grid-template-columns: repeat(5, 1fr);
   justify-items: center;
   align-items: center;
 }
 
-.movie {
+.movie, .sport {
   border-radius: 5px;
   text-align: center;
 }
 
-.movie h2 {
+.movie h2, .sport h2 {
   font-size: 15px;
   margin: 0.5rem 0;
   color: white;
 }
 
-.movie p {
+.movie p, .sport p {
   font-size: 14px;
   color: #c1bdbd;
 }
 
-.movie button {
+.movie button, .sport button {
   background-color: #ff0000;
   border: none;
   color: white;

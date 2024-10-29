@@ -9,7 +9,7 @@ function Sport({ id, image, name, ranking, participants, category }) {
       <p className="sport-ranking">
         <span className="ranking-badge">🏅</span>
         <span className="ranking-points"> {ranking} </span>
-        <span className="participants">({participants} Participants)</span>
+        <span className="participants-inlist">&nbsp;({participants} Participants)</span>
       </p>
       <h2 className="sport-name">{name}</h2>
       <p className="sport-category">{category}</p>

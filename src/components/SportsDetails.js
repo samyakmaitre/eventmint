@@ -102,36 +102,38 @@ const SportDetails = () => {
     <>
       <Header />
       <Navbar />
-      <div className="sport-details-container">
-        <div className="left-section">
-          <div className="sport-image">
-            <img src={sport.image} alt={`${sport.name}`} />
-          </div>
-        </div>
-        <div className="right-section">
-          <div className="name-ranking">
-            <div className="sport-name">{sport.name}</div>
-            <div className="ranking">
-              Ranking: {sport.ranking}
+      <div className="sports-details-container">
+        <div className="sub-container">
+          <div className="left-section">
+            <div className="sport-image">
+              <img src={sport.image} alt={`${sport.name}`} />
             </div>
           </div>
-          <div className="participants">
-            Participants: {sport.participants}
-          </div>
-          <div className="category">
-            Category: {sport.category}
+          <div className="right-section">
+            <div className="name-ranking">
+              <div className="sport-name">{sport.name}</div>
+              <div className="ranking">
+                Ranking: {sport.ranking}
+              </div>
+            </div>
+            <div className="participants">
+              Participants: {sport.participants}
+            </div>
+            <div className="category">
+              Category: {sport.category}
+            </div>
           </div>
         </div>
 
-        
+
         <div className='buttons-sec'>
-            <Link to="/book-tickets">
-              <button className='book-tickets-button'>Book Tickets</button>
-            </Link>
-            <Link to="/sports-activities">
-              <button className='back-button'>Back</button>
-            </Link>
-          </div>
+          <Link to="/book-tickets">
+            <button className='book-tickets-button'>Book Tickets</button>
+          </Link>
+          <Link to="/sports-activities">
+            <button className='back-button'>Back</button>
+          </Link>
+        </div>
       </div>
       <Footer />
     </>
