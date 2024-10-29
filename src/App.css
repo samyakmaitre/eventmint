@@ -3,6 +3,10 @@
 @import "slick-carousel/slick/slick.css";
 @import "slick-carousel/slick/slick-theme.css";
 
+*{
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
   margin: 0px;
@@ -123,5 +127,8 @@ header nav ul li {
   background-color: #ff0000;
 }
 
-
+.slider-container{
+  width: 100%;
+  overflow: hidden;
+}
 
