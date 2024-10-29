@@ -4,7 +4,7 @@ import MovieList from "./MovieList";
 import Footer from "./Footer";
 import Header from "./Header";
 import Heading from "./heading";
-import Chatbot from "../chatbot";
+//import Chatbot from "../chatbot";
 import Loader from "./Loader";
 import "../App.css";
 
@@ -26,7 +26,7 @@ const Home = () => {
   return (
     <div className="App">
       <Header onSearch={setSearchTerm} />
-      <Chatbot />
+      
       <Heading />
       <ImageSlider />
       <MovieList searchTerm={searchTerm} />

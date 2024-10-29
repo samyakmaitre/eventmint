@@ -1,6 +1,6 @@
 /* SportList.css */
 
-.sport-list {
+.play-list {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -12,25 +12,24 @@
     min-height: 100vh;
     margin-inline: auto;
     position: relative;
-    flex-wrap: wrap;
 
     padding: 10px;
-    /* margin-bottom: 100px; */
+    margin-bottom: 100px;
   }
   
-  .sport-list::-webkit-scrollbar {
+  .play-list::-webkit-scrollbar {
     display: none; /* Hide scrollbar for better UX */
   }
   
   @media screen and (max-width:1100px) {
-    .sport-list{
+    .play-list{
       top: 80px;
       margin-bottom: 40px;
     }
   }
 
   @media screen and (max-width:800px) {
-    .sport-list{
+    .play-list{
       top: 0px;
       margin-bottom: -45px;
     }

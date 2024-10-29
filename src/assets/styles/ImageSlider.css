@@ -4,6 +4,7 @@
   position: relative;
   top: 75px;
   min-height: 45vh;
+  overflow: hidden;
 }
 
 .slick-slide {
