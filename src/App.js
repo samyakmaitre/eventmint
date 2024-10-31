@@ -18,6 +18,7 @@ import SportsActivitiesPage from "./components/SportsActivitiesPage";
 import SportDetails from "./components/SportsDetails";
 import GiftCard from "./components/GiftCard";
 import PlaysPage from "./components/PlaysPage";
+import MoviePage from "./components/MoviePage";
 
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
 					/>
 					 <Route path="/password-recovery" element={<PasswordRecovery />} />
 					
+					<Route path="/movies" element={<MoviePage />} />
 					<Route path="/movies/:id" element={<MovieDetails />} />
 					<Route path="/about-us" element={<AboutUs />} />
 					<Route path="/offers" element={<Offers/>}/>
