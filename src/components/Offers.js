@@ -1,4 +1,7 @@
 import React from "react";
+import Header from './Header';
+import Navbar from './NavBar';
+import Footer from './Footer';
 
 function Offers() {
   const offers = [
@@ -37,7 +40,10 @@ function Offers() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-100 py-10">
+    <>
+    <Header/>
+    <Navbar/>
+    <div className="min-h-screen bg-gray-100 py-10 mt-5">
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold text-red-600 mb-6 text-center">
           Special Offers
@@ -69,6 +75,8 @@ function Offers() {
         </div>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 }
 
