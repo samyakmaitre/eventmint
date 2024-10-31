@@ -173,4 +173,25 @@ router.post("/signup", async (req, res) => {
   }
 });
 
+router.post("/userexits", async (req, resp) => {
+  try {
+    const { email } = req.body;
+    const userexist = await User.findOne({ email });
+
+    if (userexist) {
+      return resp.status(200).send({
+        exist: true,
+      });
+    }
+    return resp.status(200).send({
+      exist: false,
+    });
+  } catch (error) {
+    return resp.status(500).send({
+      success: false,
+      message: "internal server error",
+    });
+  }
+});
+
 module.exports = router;
