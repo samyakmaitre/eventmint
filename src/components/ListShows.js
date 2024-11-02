@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import Header from './Header';
+import Navbar from './NavBar';
+import Footer from './Footer';
 
 function ListShows() {
   const [formData, setFormData] = useState({
@@ -25,7 +28,10 @@ function ListShows() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 py-10">
+    <>
+    <Header/>
+    <Navbar/>
+    <div className="min-h-screen bg-gray-100 py-10 mt-5">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h1 className="text-5xl font-bold text-red-600 mb-4">
@@ -153,6 +159,8 @@ function ListShows() {
         </form>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 }
 
