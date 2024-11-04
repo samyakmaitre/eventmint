@@ -51,6 +51,7 @@ function App() {
 					<Route path="/plays" element={<PlaysPage/>}/>
 					<Route path="/sports/:id" element={<SportDetails />} />
 					<Route path="/gift-cards" element={<GiftCard />} />
+							<Route path="*" element={<NothingPage />} />
 					
 				</Routes>
 			</Router>
