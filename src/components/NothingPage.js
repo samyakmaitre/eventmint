@@ -1,21 +1,8 @@
-import React, { Component } from 'react';  
-import styled, { keyframes } from 'styled-components';  
+import React from 'react';  
+import styled from '@emotion/styled';  
+import { motion } from 'framer-motion';  
 
-
-const float = keyframes`  
-  0% {  
-    transform: translateY(0);  
-  }  
-  50% {  
-    transform: translateY(-20px);  
-  }  
-  100% {  
-    transform: translateY(0);  
-  }  
-`;  
-
-
-const Container = styled.div`  
+const Container = styled(motion.div)`  
   display: flex;  
   flex-direction: column;  
   align-items: center;  
@@ -24,26 +11,55 @@ const Container = styled.div`
   background-color: #f0f0f0;  
 `;  
 
-const Astronaut = styled.img`  
+const Astronaut = styled(motion.img)`  
   width: 200px;  
-  animation: ${float} 3s ease-in-out infinite;  
+  margin-bottom: 20px;  
 `;  
 
-const Message = styled.h1`  
+const Message = styled(motion.h1)`  
   font-size: 3rem;  
   font-weight: bold;  
-  margin-top: 2rem;  
+  color: #333;  
 `;  
 
-class NothingPage extends Component {  
-  render() {  
-    return (  
-      <Container>  
-        <Astronaut src="astronaut.png" alt="Astronaut" />  
-        <Message>404 - Page Not Found</Message>  
-      </Container>  
-    );  
-  }  
-}  
+const NothingPage = () => {  
+  const containerVariants = {  
+    hidden: { opacity: 0 },  
+    visible: { opacity: 1, transition: { duration: 0.5 } },  
+  };  
+
+  const astronautVariants = {  
+    float: {  
+      y: [0, -20, 0],  
+      transition: {  
+        duration: 3,  
+        ease: "easeInOut",  
+        loop: Infinity,  
+      }  
+    }  
+  };  
+
+  return (  
+    <Container   
+      variants={containerVariants}   
+      initial="hidden"   
+      animate="visible"  
+    >  
+      <Astronaut   
+        src="astronaut.png"   
+        alt="Astronaut"   
+        variants={astronautVariants}   
+        animate="float"  
+      />  
+      <Message   
+        initial={{ opacity: 0, y: -20 }}   
+        animate={{ opacity: 1, y: 0 }}   
+        exit={{ opacity: 0, y: -20 }}  
+      >  
+        404 - Page Not Found  
+      </Message>  
+    </Container>  
+  );  
+};  
 
 export default NothingPage;
