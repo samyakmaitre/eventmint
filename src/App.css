@@ -1,16 +1,16 @@
-
-
 @import "slick-carousel/slick/slick.css";
 @import "slick-carousel/slick/slick-theme.css";
 
-*{
+* {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .App {
   text-align: center;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 .App-logo {
@@ -23,7 +23,6 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
 
 .App-header {
   background-color: #282c34;
@@ -52,8 +51,6 @@
 /* General Styles */
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
   background-color: #f4f4f4;
 }
 
@@ -63,7 +60,6 @@ header {
   color: white;
   padding: 1rem 0;
   text-align: center;
-  
 }
 
 header h1 {
@@ -73,11 +69,9 @@ header h1 {
 
 header nav ul {
   list-style: none;
-  padding: 0;
   display: flex;
   justify-content: center;
   margin-top: 1rem;
-  
 }
 
 header nav ul li {
@@ -86,49 +80,68 @@ header nav ul li {
   padding: 10px;
   border-radius: 10px;
   background-color: #282c34;
+  transition: background-color 0.3s ease;
 }
 
+header nav ul li:hover {
+  background-color: #444;
+}
 
+/* Grid List Styles */
 .movie-list, .sport-list {
   display: grid; 
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
   justify-items: center;
   align-items: center;
+  padding: 20px;
 }
 
 .movie, .sport {
   border-radius: 5px;
   text-align: center;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie:hover, .sport:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 .movie h2, .sport h2 {
-  font-size: 15px;
+  font-size: 1rem;
   margin: 0.5rem 0;
-  color: white;
+  color: #333;
 }
 
 .movie p, .sport p {
-  font-size: 14px;
-  color: #c1bdbd;
+  font-size: 0.875rem;
+  color: #666;
 }
 
+/* Button Styles */
 .movie button, .sport button {
   background-color: #ff0000;
   border: none;
   color: white;
   cursor: pointer;
-  font-size: 13px;
+  font-size: 0.875rem;
   padding: 0.5rem 1rem;
   border-radius: 3px;
   transition: background-color 0.3s ease;
 }
 
-.movie button:hover {
-  background-color: #ff0000;
+.movie button:hover, .sport button:hover {
+  background-color: #cc0000;
 }
 
-.slider-container{
+/* Slider Styles */
+.slider-container {
   width: 100%;
   overflow: hidden;
+  margin: 20px 0;
 }
 

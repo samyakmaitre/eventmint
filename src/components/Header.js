@@ -24,42 +24,40 @@ function Header({ onSearch }) {
 
   const handleSearch = (e) => {
     setSearchTerm(e.target.value);
-    onSearch(e.target.value);
+    if (onSearch) {
+      onSearch(e.target.value);
+    }
   };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-    console.log(isMenuOpen);
   };
 
   return (
-    <header
-      className="header container-fluid d-flex align-items-center justify-content-between p-3"
-    >
-      <div className="logo " style={{height:"70px"}}>
+    <header className="header container-fluid d-flex align-items-center justify-content-between p-3">
+      <div className="logo" style={{ height: "70px" }}>
         <a href="https://eventmint.vercel.app/">
-          <img src={Logo} alt="Logo" className="aspect-[3/2] object-contain"/>
+          <img src={Logo} alt="Logo" className="aspect-[3/2] object-contain" />
         </a>
       </div>
+
       <div className="search-location-container d-flex justify-center align-items-center w-100">
-        <div
-          className="search-bar input-group w-75"
-          style={{ marginLeft: "5px", marginRight:"-17px" }}
-        >
+        <div className="search-bar input-group w-75" style={{ marginLeft: "5px", marginRight: "-17px" }}>
+          <label htmlFor="search-input" className="visually-hidden">Search</label>
           <input
+            id="search-input"
             type="text"
             className="form-control"
             placeholder="Search for Movies, Events, Plays, Sports and Activities"
             value={searchTerm}
-            onChange={handleSearch} // Update the search term on input change
+            onChange={handleSearch}
           />
           <span className="input-group-text">
             <i className="bi bi-search"></i>
           </span>
         </div>
-        <select
-          className="location form-select w-auto ml-10"
-        >
+
+        <select className="location form-select w-auto ml-10">
           <option value="Nagpur">Nagpur</option>
           <option value="Mumbai">Mumbai</option>
           <option value="Delhi">Delhi</option>
@@ -70,10 +68,7 @@ function Header({ onSearch }) {
 
       <div className="location-signin d-flex align-items-center">
         {user ? (
-          <button
-            className="btn btn-outline-primary"
-            onClick={() => dispatch(logout(navigate))}
-          >
+          <button className="btn btn-outline-primary" onClick={() => dispatch(logout(navigate))}>
             Log out
           </button>
         ) : (
@@ -86,6 +81,7 @@ function Header({ onSearch }) {
             </button>
           </div>
         )}
+
         <div className="side-menu-toggle ml-4">
           <button className="btn btn-outline-secondary" onClick={toggleMenu}>
             ☰
