@@ -7,6 +7,9 @@
   }
   
   .play {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     border-radius: 15px;
     overflow: hidden;
     width: 250px;
@@ -27,15 +30,15 @@
   
   .play-poster {
     width: 100%;
-    height: auto;
+    /* height: auto; */
     border-radius: 10px 10px 0 0;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
   
   .play-ranking {
     position: absolute;
     text-align: left;
-    bottom: 100px;
+    top: 50%;
     width: 230px;
     color: var(--text-color);
     background-color: rgba(0, 0, 0, 0.8);
