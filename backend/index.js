@@ -5,6 +5,7 @@ const express = require("express");
 const app = express();
 const userController = require("./controllers/auth");
 const AddShow = require("./controllers/Shows");
+const Newletter = require("./controllers/newsletter");
 const database = require("./config/database");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
@@ -33,7 +34,7 @@ app.use(
 app.use("/api/v1/auth", userController);
 
 app.use("/api/v1/shows", AddShow);
-
+app.use("/api/v1/newsletter", Newletter);
 // Testing the server
 app.get("/", (req, res) => {
   return res.json({
