@@ -3,39 +3,32 @@
 const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcrypt");
-const User = require("../models/User");
 const jwt = require("jsonwebtoken");
-//import express rate limiter
 const rateLimit = require("express-rate-limit");
+const User = require("../models/User");
 require("dotenv").config();
 
-const checkPasswordStrength = (password) => {
-  const UpperCase = /[A-Z]/.test(password);
-  const LowerCase = /[a-z]/.test(password);
-  const Numbers = /\d/.test(password);
-  const SpecialCharacter = /[!@#$%^&*(),.?":{}|<>]/.test(password);
-  const length = password.length;
-
-  if (length < 7) {
-    return "Weak";
-  }
-
-  if (UpperCase && LowerCase && Numbers && SpecialCharacter && length >= 10) {
-    return "Strong";
-  } else if (
-    (UpperCase && LowerCase && Numbers) ||
-    (LowerCase && SpecialCharacter && length >= 7)
-  ) {
-    return "Medium";
-  } else {
-    return "Weak";
-  }
+// Helper function to send error response
+const sendErrorResponse = (res, status, message) => {
+  return res.status(status).json({ success: false, message });
 };
 
-//  rate limiter middleware
+// Password strength checker function
+const checkPasswordStrength = (password) => {
+  const hasUpperCase = /[A-Z]/.test(password);
+  const hasLowerCase = /[a-z]/.test(password);
+  const hasNumber = /\d/.test(password);
+  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+
+  if (password.length < 7) return "Weak";
+  if (hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar && password.length >= 10) return "Strong";
+  return "Medium";
+};
+
+// Rate limiter middleware for login attempts
 const loginLimiter = rateLimit({
   windowMs: 5 * 60 * 1000, // 5 minutes
-  max: 7, // Limit each IP to 7 requests changr this as you want
+  max: 7, // Limit each IP to 7 requests
   message: {
     success: false,
     message: "Too many login attempts. Please try again later.",
@@ -44,113 +37,59 @@ const loginLimiter = rateLimit({
   legacyHeaders: false,
 });
 
-// Route for user login with rate limiter
+// Login route with rate limiter
 router.post("/login", loginLimiter, async (req, res) => {
   try {
     const { email, password } = req.body;
 
-    if (!email || !password) {
-      return res.status(400).json({
-        success: false,
-        message: `All fields are required!`,
-      });
-    }
+    if (!email || !password) return sendErrorResponse(res, 400, "All fields are required!");
 
     const user = await User.findOne({ email });
+    if (!user) return sendErrorResponse(res, 401, "User is not registered. Please sign up.");
 
-    if (!user) {
-      return res.status(401).json({
-        success: false,
-        message: `User is not Registered with Us Please SignUp to Continue`,
-      });
-    }
+    const isPasswordMatch = await bcrypt.compare(password, user.password);
+    if (!isPasswordMatch) return sendErrorResponse(res, 401, "Password is incorrect");
 
-    if (await bcrypt.compare(password, user.password)) {
-      const token = jwt.sign(
-        {
-          email: user.email,
-          id: user._id,
-        },
-        process.env.JWT_SECRET,
-        {
-          expiresIn: "24h",
-        }
-      );
+    const token = jwt.sign({ email: user.email, id: user._id }, process.env.JWT_SECRET, { expiresIn: "24h" });
+    user._doc.token = token;
+    user._doc.password = undefined;
 
-      user._doc.token = token;
-      user._doc.password = undefined;
-
-      const options = {
-        expires: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000),
-        httpOnly: true,
-      };
-
-      res.cookie("token", token, options).status(200).json({
+    res.cookie("token", token, { expires: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000), httpOnly: true })
+      .status(200)
+      .json({
         success: true,
         token,
         user,
-        message: `User Login Successfully!`,
+        message: "User logged in successfully!",
       });
-    } else {
-      return res.status(401).json({
-        success: false,
-        message: `Password is incorrect`,
-      });
-    }
   } catch (error) {
     console.error(error);
-    return res.status(500).json({
-      success: false,
-      message: `Login Failure, Please Try Again!`,
-    });
+    sendErrorResponse(res, 500, "Login failure. Please try again!");
   }
 });
 
+// Signup route
 router.post("/signup", async (req, res) => {
   try {
     const { firstName, lastName, email, password, confirmPassword } = req.body;
 
-    if (!firstName || !lastName || !email || !password || !confirmPassword) {
-      return res.status(403).send({
-        success: false,
-        message: "All Fields are required",
-      });
-    }
+    if (!firstName || !lastName || !email || !password || !confirmPassword) 
+      return sendErrorResponse(res, 403, "All fields are required.");
 
-    if (!email.includes("@gmail.com")) {
-      return res.status(400).send({
-        success: false,
-        message: "Invalid Email!",
-      });
-    }
+    if (!/^[\w-.]+@gmail\.com$/.test(email)) 
+      return sendErrorResponse(res, 400, "Invalid email format. Only Gmail addresses are allowed.");
 
-    if (password !== confirmPassword) {
-      return res.status(400).json({
-        success: false,
-        message:
-          "Password and Confirm Password do not match. Please try again.",
-      });
-    }
+    if (password !== confirmPassword) 
+      return sendErrorResponse(res, 400, "Passwords do not match.");
 
     const passwordStrength = checkPasswordStrength(password);
-    if (passwordStrength === "Weak") {
-      return res.status(400).json({
-        success: false,
-        message:
-          "Password is too weak. Please use a stronger password with at least 8 characters, a mix of uppercase, lowercase, numbers, and special characters.",
-      });
-    }
+    if (passwordStrength === "Weak") 
+      return sendErrorResponse(res, 400, "Weak password. Use at least 8 characters, uppercase, lowercase, numbers, and special characters.");
 
     const existingUser = await User.findOne({ email });
-    if (existingUser) {
-      return res.status(400).json({
-        success: false,
-        message: "User already exists. Please login to continue.",
-      });
-    }
+    if (existingUser) return sendErrorResponse(res, 400, "User already exists. Please log in.");
 
     const hashedPassword = await bcrypt.hash(password, 10);
-
     const user = await User.create({
       firstName,
       lastName,
@@ -159,38 +98,22 @@ router.post("/signup", async (req, res) => {
       image: `https://api.dicebear.com/5.x/initials/svg?seed=${firstName} ${lastName}`,
     });
 
-    return res.status(200).json({
-      success: true,
-      user,
-      message: "User registered successfully!",
-    });
+    res.status(200).json({ success: true, user, message: "User registered successfully!" });
   } catch (error) {
-    console.log(error.message);
-    return res.status(500).json({
-      success: false,
-      message: "User cannot be registered, Please try again!",
-    });
+    console.error(error.message);
+    sendErrorResponse(res, 500, "User registration failed. Please try again!");
   }
 });
 
-router.post("/userexits", async (req, resp) => {
+// Check if user exists route
+router.post("/userexists", async (req, res) => {
   try {
     const { email } = req.body;
-    const userexist = await User.findOne({ email });
+    const userExist = await User.findOne({ email });
 
-    if (userexist) {
-      return resp.status(200).send({
-        exist: true,
-      });
-    }
-    return resp.status(200).send({
-      exist: false,
-    });
+    res.status(200).send({ exist: !!userExist });
   } catch (error) {
-    return resp.status(500).send({
-      success: false,
-      message: "internal server error",
-    });
+    sendErrorResponse(res, 500, "Internal server error");
   }
 });
 
