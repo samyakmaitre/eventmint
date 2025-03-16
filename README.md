@@ -1,3 +1,14 @@
+**📋 Prerequisites**
+Before you start contributing or running the project locally, ensure you have the following installed:
+
+**Node.js**: Download Node.js
+
+**npm or yarn**: npm comes bundled with Node.js, or you can install Yarn
+
+**MongoDB**: Install MongoDB
+
+**Stripe API Key**: Get Stripe API Key
+
 <div align="center">
 <h1>Event Mint : Seamless Event Experience</h1>
 </div>
